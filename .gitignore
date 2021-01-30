@@ -4,3 +4,4 @@ webroot/media/
 webroot/imports/
 config/*.env
 vendor/
+webroot/files/
