@@ -1,0 +1,68 @@
+.error {
+    border-top: 4px solid red;
+    background: #fff;
+    padding: 10px;
+    font-size: 12px;
+    margin-top: 16px;
+    position: relative;
+    display: none;
+}
+.error-message{
+    color: red;
+}
+.form-group .error{
+    border-top: 0px solid red;
+    background: transparent;
+    padding: 0px;
+    font-size: small;
+    margin-top: 0px;
+    position: relative;
+    display: block;
+}
+.error p{
+    margin-bottom: 7px;
+}
+.error>p>span {
+    background: red;
+    padding: 3px 6px;
+    border-radius: 0%;
+    color: #fff;
+    font-size: 11px;
+    margin-right: 10px;
+}
+.error_cls {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.prograss_bar {
+    width: 80%;
+    height: 10px;
+    background: #c5c5c5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+}
+.prograss_bar span {
+    background: #0058ff;
+    height: 10px;
+    width: 0%;
+    display: block;
+}
+.error-flash{
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 10px;
+}
+.success{
+    border-color: #0c900a;
+}
+.success p span{
+    background-color: #0c900a;
+}

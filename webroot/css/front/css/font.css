@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'Hp-Singh-icon';
+  src:  url('../fonts/Hp-Singh-icon.eot?1hqrb2');
+  src:  url('../fonts/Hp-Singh-icon.eot?1hqrb2#iefix') format('embedded-opentype'),
+    url('../fonts/Hp-Singh-icon.ttf?1hqrb2') format('truetype'),
+    url('../fonts/Hp-Singh-icon.woff?1hqrb2') format('woff'),
+    url('../fonts/Hp-Singh-icon.svg?1hqrb2#Hp-Singh-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Hp-Singh-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hpsinghaddress:before {
+  content: "\e900";
+}
+.icon-hpsingharrow-1:before {
+  content: "\e901";
+}
+.icon-hpsingharrow-2:before {
+  content: "\e902";
+}
+.icon-hpsingharrow-3:before {
+  content: "\e903";
+}
+.icon-hpsinghbulk-enquiry:before {
+  content: "\e904";
+}
+.icon-hpsinghcustom-design:before {
+  content: "\e905";
+}
+.icon-hpsinghdelete:before {
+  content: "\e906";
+  color: #055864;
+}
+.icon-hpsinghedit:before {
+  content: "\e907";
+  color: #055864;
+}
+.icon-hpsinghlogin .path1:before {
+  content: "\e908";
+  color: rgb(255, 157, 58);
+}
+.icon-hpsinghlogin .path2:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(5, 88, 100);
+}
+.icon-hpsinghmail-icon:before {
+  content: "\e90a";
+}
+.icon-hpsinghminus:before {
+  content: "\e90b";
+  color: #449fdc;
+}
+.icon-hpsinghminus1:before {
+  content: "\e90c";
+  color: #449fdc;
+}
+.icon-hpsinghmobile:before {
+  content: "\e90d";
+}
+.icon-hpsinghon-time-delivery:before {
+  content: "\e90e";
+}
+.icon-hpsinghplus:before {
+  content: "\e90f";
+  color: #449fdc;
+}
+.icon-hpsinghsearch:before {
+  content: "\e910";
+}
+.icon-hpsinghShopping-bag .path1:before {
+  content: "\e911";
+  color: rgb(5, 88, 100);
+}
+.icon-hpsinghShopping-bag .path2:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(255, 157, 58);
+}
+.icon-hpsinghsupport:before {
+  content: "\e913";
+}
+.icon-hpsinghwishlist:before {
+  content: "\e914";
+  color: #ff9d3a;
+}
+.icon-hpsinghmic:before {
+  content: "\e91e";
+}
+.icon-hpsinghbubbles2:before {
+  content: "\e96d";
+}
+.icon-hpsinghspinner11:before {
+  content: "\e984";
+}
+.icon-hpsinghenlarge2:before {
+  content: "\e98b";
+}
+.icon-hpsinghshrink2:before {
+  content: "\e98c";
+}
+.icon-hpsinghcross:before {
+  content: "\ea0f";
+}
+.icon-hpsinghcheckmark:before {
+  content: "\ea10";
+}
