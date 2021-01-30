@@ -23,10 +23,10 @@ $this->assign('title', 'Hpsingh - Login');
                     </div>
                     <div class="form-group">
                         <button type="submit">LOGIN</button>
-                        <!-- <div class="sub_login_bttn">
+                        <div class="sub_login_bttn">
                             <?= $this->Media->renderImage('img/google_icon.svg', ['alt' => ""]) ?><a class="login-btn" href="<?= $this->Url->build(['action' => 'googleLogin']) ?>">Google Login</a>
                             <?= $this->Media->renderImage('img/facebook_icon.svg', ['alt' => ""]) ?><a class="login-btn" href="<?= $this->Url->build(['action' => 'facebookLogin']) ?>">Facebook Login</a>
-                        </div> -->
+                        </div>
                     </div>
                     <?= $this->Form->end() ?>
                     <p class="forgot_psd_btn"><a href="javascript:void(0);">Forgot Password?</a></p>

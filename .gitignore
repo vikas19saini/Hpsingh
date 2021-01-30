@@ -5,3 +5,4 @@ webroot/imports/
 config/*.env
 vendor/
 webroot/files/
+config/paths.php

@@ -31,8 +31,8 @@ class CustomerController extends AppController
         $this->Security->setConfig('unlockedActions', ['verification', 'profile', 'deleteAddress']);
     }
 
-    public function React(){
-
+    public function React()
+    {
     }
 
     public function signup()
@@ -102,9 +102,9 @@ class CustomerController extends AppController
                     $this->Users->save($user);
 
                     return $this->redirect($this->Auth->redirectUrl());
-                } elseif($user->activation_key === 'suspend'){
+                } elseif ($user->activation_key === 'suspend') {
                     $this->Flash->error(_('Your account is suspended. Contact us for more details.'));
-                }else {
+                } else {
                     $user = $this->Users->get($user['id']);
                     $otp_key = $this->__generate_otp_and_key();
                     $user = $this->Users->patchEntity($user, ['activation_key' => json_encode($otp_key)]);
@@ -124,7 +124,6 @@ class CustomerController extends AppController
 
     public function myAccount()
     {
-
     }
 
     public function profile()
@@ -511,98 +510,99 @@ class CustomerController extends AppController
 
         return $this->response->withType('json')->withStringBody(json_encode($zones));
     }
- 
-	public function googleLogin(){
-		if (!is_null($this->Auth->user())) {
+
+    public function googleLogin()
+    {
+        if (!is_null($this->Auth->user())) {
             return $this->redirect(['action' => 'myAccount']);
         }
-		$client = new \Google_Client();
-		$client->setClientId(GOOGLE_CLIENT_ID);
-		$client->setClientSecret(GOOGLE_CLIENT_SECRET_ID);
-		$client->setRedirectUri(GOOGLE_REDIRECT_URL);
+        $client = new \Google_Client();
+        $client->setClientId(GOOGLE_CLIENT_ID);
+        $client->setClientSecret(GOOGLE_CLIENT_SECRET_ID);
+        $client->setRedirectUri(GOOGLE_REDIRECT_URL);
         $client->addScope('email');
-		
+
         $client->addScope('profile');
 
         return $this->redirect($client->createAuthUrl());
-	}
-	
-	public function googleCallback()
-	{
-		$client = new \Google_Client();
-		$client->setClientId(GOOGLE_CLIENT_ID);
-		$client->setClientSecret(GOOGLE_CLIENT_SECRET_ID);
-		$client->setRedirectUri(GOOGLE_REDIRECT_URL);
-		try {
-			
-			$token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
-			if(!isset($token["error"])){
-				$client->setAccessToken($token['access_token']);
-				$google_oauth = new \Google_Service_Oauth2($client);
-				$google_account_info = $google_oauth->userinfo->get();
-				$email = $google_account_info->email;
-				$name = trim($google_account_info->name);
-				$getUserDetails = $this->Users->find('all', [
-					'conditions' => ['email' => $email]
-				])->contain([
-					'Countries'
-					])
-				->first();
-				if(!$getUserDetails){
-					$user = $this->Users->newEntity();
-					$otp_key = $this->__generate_otp_and_key();
-					$postData['name'] = $name;
-					$postData['email'] = $email;
-					$postData['password'] = $otp_key['otp'];
-					$postData['reset'] =	$otp_key['otp'];
-					//$postData['phone']="";
-					$postData['country_id']= 99;
-					$postData['user_group'] = 'customer';
-					$postData['activation_key']="activated";
-					$user = $this->Users->patchEntity($user, $postData);
-					if ($this->Users->save($user)) {
-						//$this->getMailer('Users')->send('sendOtp', [$user]);
-					}else {
-						$this->Flash->error("Couldn't register please try again!");
-					}
-				}
-				$getUserDetails1 = $this->Users->find('all', [
-					'conditions' => ['email' => $email]
-				])->contain([
-					'Countries'
-					])
-				->first();
-				$this->Auth->setUser($getUserDetails1);
+    }
 
-				// Merging Cart Items After login
-				$this->loadComponent('Cart');
-				$this->Cart->mergeCart();
+    public function googleCallback()
+    {
+        $client = new \Google_Client();
+        $client->setClientId(GOOGLE_CLIENT_ID);
+        $client->setClientSecret(GOOGLE_CLIENT_SECRET_ID);
+        $client->setRedirectUri(GOOGLE_REDIRECT_URL);
+        try {
 
-				$currentTime = Time::now();
-				$currentTime = $currentTime->i18nFormat(\IntlDateFormatter::FULL);
+            $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+            if (!isset($token["error"])) {
+                $client->setAccessToken($token['access_token']);
+                $google_oauth = new \Google_Service_Oauth2($client);
+                $google_account_info = $google_oauth->userinfo->get();
+                $email = $google_account_info->email;
+                $name = trim($google_account_info->name);
+                $getUserDetails = $this->Users->find('all', [
+                    'conditions' => ['email' => $email]
+                ])->contain([
+                    'Countries'
+                ])
+                    ->first();
+                if (!$getUserDetails) {
+                    $user = $this->Users->newEntity();
+                    $otp_key = $this->__generate_otp_and_key();
+                    $postData['name'] = $name;
+                    $postData['email'] = $email;
+                    $postData['password'] = $otp_key['otp'];
+                    $postData['reset'] =    $otp_key['otp'];
+                    //$postData['phone']="";
+                    $postData['country_id'] = 99;
+                    $postData['user_group'] = 'customer';
+                    $postData['activation_key'] = "activated";
+                    $user = $this->Users->patchEntity($user, $postData);
+                    if ($this->Users->save($user)) {
+                        //$this->getMailer('Users')->send('sendOtp', [$user]);
+                    } else {
+                        $this->Flash->error("Couldn't register please try again!");
+                    }
+                }
+                $getUserDetails1 = $this->Users->find('all', [
+                    'conditions' => ['email' => $email]
+                ])->contain([
+                    'Countries'
+                ])
+                    ->first();
+                $this->Auth->setUser($getUserDetails1);
 
-				$user = $this->Users->patchEntity($getUserDetails1, [
-					'login_device' => $this->request->getEnv('HTTP_USER_AGENT'),
-					'last_login' => $currentTime,
-				]);
-				$this->Users->save($user);
-				$this->Flash->success("Login Successfully.");
-				return $this->redirect($this->Auth->redirectUrl());
-				
-			}else{
-				$this->Flash->error(_('Something went wrong, Please try again!'));
-			}
-		} catch (\InvalidArgumentException $e) {
+                // Merging Cart Items After login
+                $this->loadComponent('Cart');
+                $this->Cart->mergeCart();
+
+                $currentTime = Time::now();
+                $currentTime = $currentTime->i18nFormat(\IntlDateFormatter::FULL);
+
+                $user = $this->Users->patchEntity($getUserDetails1, [
+                    'login_device' => $this->request->getEnv('HTTP_USER_AGENT'),
+                    'last_login' => $currentTime,
+                ]);
+                $this->Users->save($user);
+                $this->Flash->success("Login Successfully.");
+                return $this->redirect($this->Auth->redirectUrl());
+            } else {
+                $this->Flash->error(_('Something went wrong, Please try again!'));
+            }
+        } catch (\InvalidArgumentException $e) {
             $this->Flash->error('Oops, something went wrong! please try again to login.');
             return $this->redirect(['_name' => 'home']);
         }
-	}
-	
-	public function facebookLogin() {
-		if (!is_null($this->Auth->user())) {
+    }
+
+    public function facebookLogin()
+    {
+        if (!is_null($this->Auth->user())) {
             return $this->redirect(['action' => 'myAccount']);
         }
-		$fb = new \Facebook\Facebook([
+        $fb = new \Facebook\Facebook([
             'app_id' => FACEBOOK_APP_ID,
             'app_secret' => FACEBOOK_APP_SECRET_ID,
             'default_graph_version' => 'v3.2',
@@ -619,83 +619,81 @@ class CustomerController extends AppController
 
         return $this->redirect(['_name' => 'home']);
     }
-	
-	
-	
-	public function facebookCallback(){
-		$facebook = new \Facebook\Facebook([
-						'app_id'      => FACEBOOK_APP_ID,
-						'app_secret'  => FACEBOOK_APP_SECRET_ID,
-						'default_graph_version'  => 'v2.10'
-					]);
-		
-		$facebook_output = '';
 
-		
-		try{
-			$facebook_helper = $facebook->getRedirectLoginHelper();
-			$accessToken = $facebook_helper->getAccessToken();
-			$facebook->setDefaultAccessToken($accessToken);
-			$graph_response = $facebook->get("/me?fields=name,email", $accessToken);
-			$facebook_user_info = $graph_response->getGraphUser();
-			$email = $facebook_user_info['email'];
-			$name = $facebook_user_info['name'];
-			$getUserDetails = $this->Users->find('all', [
-					'conditions' => ['email' => $email]
-				])->contain([
-					'Countries'
-					])
-				->first();
-			if(!$getUserDetails){
-				$user = $this->Users->newEntity();
-				$otp_key = $this->__generate_otp_and_key();
-				$postData['name'] = $name;
-				$postData['email'] = $email;
-				//$postData['password'] = "123456";
-				$postData['password'] = $otp_key['otp'];
-				$postData['reset'] =	$otp_key['otp'];
-				//$postData['phone']="";
-				$postData['country_id']= 99;
-				$postData['user_group'] = 'customer';
-				$postData['activation_key']="activated";
-				$user = $this->Users->patchEntity($user, $postData);
-				if ($this->Users->save($user)) {
-					//$this->getMailer('Users')->send('sendOtp', [$user]);
-				}else {
-					$this->Flash->error("Couldn't register please try again!");
-				}
-			}
-			$getUserDetails1 = $this->Users->find('all', [
-				'conditions' => ['email' => $email]
-			])->contain([
-				'Countries'
-				])
-			->first();
-			$this->Auth->setUser($getUserDetails1);
 
-			// Merging Cart Items After login
-			$this->loadComponent('Cart');
-			$this->Cart->mergeCart();
 
-			$currentTime = Time::now();
-			$currentTime = $currentTime->i18nFormat(\IntlDateFormatter::FULL);
+    public function facebookCallback()
+    {
+        $facebook = new \Facebook\Facebook([
+            'app_id'      => FACEBOOK_APP_ID,
+            'app_secret'  => FACEBOOK_APP_SECRET_ID,
+            'default_graph_version'  => 'v2.10'
+        ]);
 
-			$user = $this->Users->patchEntity($getUserDetails1, [
-				'login_device' => $this->request->getEnv('HTTP_USER_AGENT'),
-				'last_login' => $currentTime,
-			]);
-			$this->Users->save($user);
-			$this->Flash->success("Login Successfully.");
-			return $this->redirect($this->Auth->redirectUrl());
-			
-			
-			
-		}catch (Facebook\Exceptions\FacebookResponseException $e) {
+        $facebook_output = '';
+
+
+        try {
+            $facebook_helper = $facebook->getRedirectLoginHelper();
+            $accessToken = $facebook_helper->getAccessToken();
+            $facebook->setDefaultAccessToken($accessToken);
+            $graph_response = $facebook->get("/me?fields=name,email", $accessToken);
+            $facebook_user_info = $graph_response->getGraphUser();
+            $email = $facebook_user_info['email'];
+            $name = $facebook_user_info['name'];
+            $getUserDetails = $this->Users->find('all', [
+                'conditions' => ['email' => $email]
+            ])->contain([
+                'Countries'
+            ])
+                ->first();
+            if (!$getUserDetails) {
+                $user = $this->Users->newEntity();
+                $otp_key = $this->__generate_otp_and_key();
+                $postData['name'] = $name;
+                $postData['email'] = $email;
+                //$postData['password'] = "123456";
+                $postData['password'] = $otp_key['otp'];
+                $postData['reset'] =    $otp_key['otp'];
+                //$postData['phone']="";
+                $postData['country_id'] = 99;
+                $postData['user_group'] = 'customer';
+                $postData['activation_key'] = "activated";
+                $user = $this->Users->patchEntity($user, $postData);
+                if ($this->Users->save($user)) {
+                    //$this->getMailer('Users')->send('sendOtp', [$user]);
+                } else {
+                    $this->Flash->error("Couldn't register please try again!");
+                }
+            }
+            $getUserDetails1 = $this->Users->find('all', [
+                'conditions' => ['email' => $email]
+            ])->contain([
+                'Countries'
+            ])
+                ->first();
+            $this->Auth->setUser($getUserDetails1);
+
+            // Merging Cart Items After login
+            $this->loadComponent('Cart');
+            $this->Cart->mergeCart();
+
+            $currentTime = Time::now();
+            $currentTime = $currentTime->i18nFormat(\IntlDateFormatter::FULL);
+
+            $user = $this->Users->patchEntity($getUserDetails1, [
+                'login_device' => $this->request->getEnv('HTTP_USER_AGENT'),
+                'last_login' => $currentTime,
+            ]);
+            $this->Users->save($user);
+            $this->Flash->success("Login Successfully.");
+            return $this->redirect($this->Auth->redirectUrl());
+        } catch (Facebook\Exceptions\FacebookResponseException $e) {
             $this->Flash->error('Oops something went wrong please try again');
         } catch (Facebook\Exceptions\FacebookSDKException $e) {
             $this->Flash->error('Oops something went wrong please try again');
         }
-		
-		return $this->redirect(['_name' => 'home']);
-	}
+
+        return $this->redirect(['_name' => 'home']);
+    }
 }
