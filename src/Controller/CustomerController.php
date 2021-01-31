@@ -517,9 +517,9 @@ class CustomerController extends AppController
             return $this->redirect(['action' => 'myAccount']);
         }
         $client = new \Google_Client();
-        $client->setClientId(GOOGLE_CLIENT_ID);
-        $client->setClientSecret(GOOGLE_CLIENT_SECRET_ID);
-        $client->setRedirectUri(GOOGLE_REDIRECT_URL);
+        $client->setClientId("320168265137-pot5ekhg07ejob9e70or1l71ab93o2o7.apps.googleusercontent.com");
+        $client->setClientSecret("FAc1BGDNfx3ceFXML4UE8SO4");
+        $client->setRedirectUri(\Cake\Routing\Router::url(['action' => 'googleCallback'], true));
         $client->addScope('email');
 
         $client->addScope('profile');
@@ -530,9 +530,9 @@ class CustomerController extends AppController
     public function googleCallback()
     {
         $client = new \Google_Client();
-        $client->setClientId(GOOGLE_CLIENT_ID);
-        $client->setClientSecret(GOOGLE_CLIENT_SECRET_ID);
-        $client->setRedirectUri(GOOGLE_REDIRECT_URL);
+        $client->setClientId("320168265137-pot5ekhg07ejob9e70or1l71ab93o2o7.apps.googleusercontent.com");
+        $client->setClientSecret("FAc1BGDNfx3ceFXML4UE8SO4");
+        $client->setRedirectUri(\Cake\Routing\Router::url(['action' => 'googleCallback'], true));
         try {
 
             $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
@@ -546,8 +546,7 @@ class CustomerController extends AppController
                     'conditions' => ['email' => $email]
                 ])->contain([
                     'Countries'
-                ])
-                    ->first();
+                ])->first();
                 if (!$getUserDetails) {
                     $user = $this->Users->newEntity();
                     $otp_key = $this->__generate_otp_and_key();
@@ -555,7 +554,6 @@ class CustomerController extends AppController
                     $postData['email'] = $email;
                     $postData['password'] = $otp_key['otp'];
                     $postData['reset'] =    $otp_key['otp'];
-                    //$postData['phone']="";
                     $postData['country_id'] = 99;
                     $postData['user_group'] = 'customer';
                     $postData['activation_key'] = "activated";
@@ -570,8 +568,7 @@ class CustomerController extends AppController
                     'conditions' => ['email' => $email]
                 ])->contain([
                     'Countries'
-                ])
-                    ->first();
+                ])->first();
                 $this->Auth->setUser($getUserDetails1);
 
                 // Merging Cart Items After login
@@ -603,17 +600,17 @@ class CustomerController extends AppController
             return $this->redirect(['action' => 'myAccount']);
         }
         $fb = new \Facebook\Facebook([
-            'app_id' => FACEBOOK_APP_ID,
-            'app_secret' => FACEBOOK_APP_SECRET_ID,
+            'app_id' => "234768901599615",
+            'app_secret' => "8de47f7a2228ff41e915e08039d32744",
             'default_graph_version' => 'v3.2',
         ]);
         try {
             $helper = $fb->getRedirectLoginHelper();
-            $loginUrl = $helper->getLoginUrl(FACEBOOK_REDIRECT_URL, ['email']);
+            $loginUrl = $helper->getLoginUrl(\Cake\Routing\Router::url(['action' => 'facebookCallback'], true), ['email']);
             return $this->redirect($loginUrl);
-        } catch (Facebook\Exceptions\FacebookResponseException $e) {
+        } catch (\Facebook\Exceptions\FacebookResponseException $e) {
             $this->Flash->error('Oops something went wrong please try again');
-        } catch (Facebook\Exceptions\FacebookSDKException $e) {
+        } catch (\Facebook\Exceptions\FacebookSDKException $e) {
             $this->Flash->error('Oops something went wrong please try again');
         }
 
@@ -625,14 +622,12 @@ class CustomerController extends AppController
     public function facebookCallback()
     {
         $facebook = new \Facebook\Facebook([
-            'app_id'      => FACEBOOK_APP_ID,
-            'app_secret'  => FACEBOOK_APP_SECRET_ID,
-            'default_graph_version'  => 'v2.10'
+            'app_id'      => "234768901599615",
+            'app_secret'  => "8de47f7a2228ff41e915e08039d32744",
+            'default_graph_version'  => 'v3.2'
         ]);
 
         $facebook_output = '';
-
-
         try {
             $facebook_helper = $facebook->getRedirectLoginHelper();
             $accessToken = $facebook_helper->getAccessToken();
@@ -688,9 +683,9 @@ class CustomerController extends AppController
             $this->Users->save($user);
             $this->Flash->success("Login Successfully.");
             return $this->redirect($this->Auth->redirectUrl());
-        } catch (Facebook\Exceptions\FacebookResponseException $e) {
+        } catch (\Facebook\Exceptions\FacebookResponseException $e) {
             $this->Flash->error('Oops something went wrong please try again');
-        } catch (Facebook\Exceptions\FacebookSDKException $e) {
+        } catch (\Facebook\Exceptions\FacebookSDKException $e) {
             $this->Flash->error('Oops something went wrong please try again');
         }
 
