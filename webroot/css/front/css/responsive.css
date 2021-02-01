@@ -2618,8 +2618,21 @@
     .product-enquiry .engroup a:last-child{
         display: table-caption;
     }
-    #myModal_on_load .modal-content .close {font-size: 35px !important;}
-    
-    
-    
+    #myModal_on_load .modal-content .close {
+        font-size: 35px !important;
+    }    
+}
+.mobileVisible{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.mobileVisible i{
+    width: 60%;
+    margin-bottom: 4% !important;
+}
+.mobileVisible .p_card{
+    display: block !important;
+    width: 40% !important;
+    padding: 6px !important;
 }
