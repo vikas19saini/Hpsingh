@@ -6925,3 +6925,13 @@ button.deliver_change_button {
         font-size: 16px;
     }
 }
+.gLogin{
+    background: #ea4335 !important;
+    color: #fff !important;
+    border-color: #ea4335 !important;
+}
+.fLogin{
+    background: #1877f2 !important;
+    color: #fff !important;
+    border-color: #1877f2 !important;
+}

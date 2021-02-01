@@ -24,8 +24,8 @@ $this->assign('title', 'Hpsingh - Login');
                     <div class="form-group">
                         <button type="submit">LOGIN</button>
                         <div class="sub_login_bttn">
-                            <?= $this->Media->renderImage('img/google_icon.svg', ['alt' => ""]) ?><a class="login-btn" href="<?= $this->Url->build(['action' => 'googleLogin']) ?>">Google Login</a>
-                            <?= $this->Media->renderImage('img/facebook_icon.svg', ['alt' => ""]) ?><a class="login-btn" href="<?= $this->Url->build(['action' => 'facebookLogin']) ?>">Facebook Login</a>
+                            <a class="login-btn gLogin" href="<?= $this->Url->build(['action' => 'googleLogin']) ?>">Login With Google</a>
+                            <a class="login-btn fLogin" href="<?= $this->Url->build(['action' => 'facebookLogin']) ?>">Login With Facebook</a>
                         </div>
                     </div>
                     <?= $this->Form->end() ?>

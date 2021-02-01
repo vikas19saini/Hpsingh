@@ -15,14 +15,14 @@ if (isset($page)) {
     <section class="banner_section">
         <div class="carousel-inner">
             <div class="home_banner owl-carousel owl-theme">
-                <?php foreach ($sliders as $slider): ?>
+                <?php foreach ($sliders as $slider) : ?>
                     <div class="item">
-						<a href="<?= $slider->uri ?>">
-							<?= $this->Media->the_image('full', $slider->media->url, ['alt' => $slider->media->alt,]) ?>
-							<?= $this->Media->the_image('full', $slider->mobile_media->url, ['alt' => $slider->mobile_media->alt, 'class' => 'mobile_banner']) ?>
-						</a>
+                        <a href="<?= $slider->uri ?>">
+                            <?= $this->Media->the_image('full', $slider->media->url, ['alt' => $slider->media->alt,]) ?>
+                            <?= $this->Media->the_image('full', $slider->mobile_media->url, ['alt' => $slider->mobile_media->alt, 'class' => 'mobile_banner']) ?>
+                        </a>
                     </div>
-                <?php endforeach;?>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -33,7 +33,7 @@ if (isset($page)) {
                 <ul class="nav nav-pills">
                     <li class="fabric1 active"><a href="javascript:void(0);">FABRIC CATEGORIES</a></li>
                     <li class="fabric2"><a href="javascript:void(0);">WHAT DO YOU WANNA MAKE</a></li>
-                    <hr/>
+                    <hr />
                 </ul>
             </div>
         </div>
@@ -44,7 +44,7 @@ if (isset($page)) {
                     <div class="tab-content">
                         <div class="fabric_icon active">
                             <div class="owl-carousel owl-theme fabric_carousel wow fadeInRight">
-                                <?php foreach ($categories as $category): ?>
+                                <?php foreach ($categories as $category) : ?>
                                     <div class="item">
                                         <a href="<?= (!empty($category->url)) ? $category->url : $this->Url->build(['_name' => 'category', $category->slug]) ?>">
                                             <?= $this->Media->the_image('full', $category->media->url, ['alt' => $category->media->alt, 'class' => 'img-responsive,']) ?>
@@ -56,7 +56,7 @@ if (isset($page)) {
                         </div>
                         <div class="fabric_icon2">
                             <div class="owl-carousel fabric_tab2 fabric_carousel">
-                                <?php foreach ($wearing as $wearingItem): ?>
+                                <?php foreach ($wearing as $wearingItem) : ?>
                                     <div class="item">
                                         <a href="<?= (!empty($wearingItem->url)) ? $wearingItem->url : $this->Url->build(['_name' => 'category', $wearingItem->slug]) ?>">
                                             <?= $this->Media->the_image('full', $wearingItem->media->url, ['alt' => $wearingItem->media->alt, 'class' => 'img-responsive']) ?>
@@ -83,20 +83,20 @@ if (isset($page)) {
                         <div id="sync1" class="owl-carousel owl-theme top_head_sec view_best_categories">
                             <div class="item">
                                 <div class="best_categories_img ">
-                                    <?= $this->Html->image('categorie4.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('cotton-flex.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
 
                             <div class="item">
                                 <div class="best_categories_img">
-                                    <?= $this->Html->image('categorie1.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('ikats.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
 
                             </div>
 
                             <div class="item">
                                 <div class="best_categories_img">
-                                    <?= $this->Html->image('cotton_silk.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('satins.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
                         </div>
@@ -106,35 +106,27 @@ if (isset($page)) {
                         <div id="sync2" class="owl-carousel owl-theme bttm_inner">
                             <div class="item">
                                 <div class="best_categories_content">
-                                    <h2>Cotton Dobby</h2>
-                                    <p>Unique collection of highest quality cotton Dobby fabrics can be used all year
-                                        round. Absolutely comfortable, durable, cotton dobby prints can be used to
-                                        create men shirts, women tops, kurtas, dresses, palazzo pants, blouses. Choose
-                                        and pick brushed, stripes, subtle solids, printed, geometric patterns - from our
-                                        exclusive range of cotton dobby fabrics.</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+dobby']) ?>">
+                                    <h2>Cotton Flex</h2>
+                                    <p>Flex cotton fabric is woven with pale and durable cotton and flex yarns. It can be used all over year round. Absolutely comfortable and durable fabrics can be used to designs ethnics, blouses, mens kurta, dresses, and more.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+flex']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="best_categories_content">
-                                    <h2>Summer Checks</h2>
-                                    <p>A range of soft and pastel checks perfect for this upcoming summer, curated
-                                        together just for you</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'Yarn+dyed+checks']) ?>">
+                                    <h2>Ikats</h2>
+                                    <p>Ikats are created as patterns using resist dyeing techniques on yarns. This innovative technique, with its south east asian origins is defined regionally by geography and design language. Ikats are just one more of India's vast heritage of textiles.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'ikats']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="best_categories_content">
-                                    <h2>Chanderi</h2>
-                                    <p>Chanderis are produced by weaving silk and zari over simple cotton yarn that adds
-                                        on to a shimmering texture to the loom.Also the exquisite detailing that the
-                                        fabric features makes it look absolutely stunning Entwine your festive look with
-                                        these fine luxurious traditional ethnic chanderis today!</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'chanderi']) ?>">
+                                    <h2>Satins</h2>
+                                    <p>Satin is actually a weave and not a natural fiber like silk. Fiber is the actual thread from which the material is made and weave is how you make it. Traditionally, satin will have both a glossy side and a dull side.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'satin']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
@@ -147,23 +139,18 @@ if (isset($page)) {
                         <div id="sync4" class="owl-carousel owl-theme bttm_inner">
                             <div class="item">
                                 <div class="best_categories_content">
-                                    <h2>Ikats</h2>
-                                    <p>Get the bohemian vibe right at your door step with these traditional textiles
-                                        ikats! These patterns are everywhere and super trending these days. Also these
-                                        treasured luxury, Ikats use the most ancient fabric weaving technique. Grab hold
-                                        on our favorite collection today and be a trendsetter!</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/ikats']) ?>">
+                                    <h2>Soft Linens</h2>
+                                    <p>Linen is a natural fiber, like cotton, but it takes longer to harvest and make into fabric, as flax fibers can be difficult to weave. It can be used for making mens kurta, mens shirt and more.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'linen']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="best_categories_content">
-                                    <h2>Georgette</h2>
-                                    <p>The georgettes displays an overall bouncy look. Known to be sheer, crinkled and
-                                        light weight! The georgette fabrics is like words woven into a beautiful poetry.
-                                        Grab these Pulchritudinous & attractive collection today.</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'georgette']) ?>">
+                                    <h2>Thread Embroidery</h2>
+                                    <p>Thread embroideries which are created to bring so much beauty to the fabric. These will be perfect for your wardrobe with their trendy patterns and latest designs.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/embroideries']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
@@ -171,11 +158,9 @@ if (isset($page)) {
 
                             <div class="item">
                                 <div class="best_categories_content">
-                                    <h2>Cotton satin</h2>
-                                    <p>The classic Satins are always 100% cotton. The shiny fabric can never go out of
-                                        style. Also the buttery soft luxurious satins brings a relaxed elegance to your
-                                        wardrobe. Level up your dress up game with these bewitching satins today!</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+satin']) ?>">
+                                    <h2>Tussar</h2>
+                                    <p>Tussar is a fabric made only in India, its rich and textured look, makes it distinctive! Printed tussar is perfect for kurtas and sarees and even better to gift.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'tussar']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
@@ -187,18 +172,18 @@ if (isset($page)) {
                         <div id="sync3" class="owl-carousel owl-theme bttm_inner">
                             <div class="item">
                                 <div class="best_categories_img">
-                                    <?= $this->Html->image('categorie3.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('soft-linens.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="best_categories_img">
-                                    <?= $this->Html->image('georgette.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('thread-Embroidery.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
 
                             <div class="item">
                                 <div class="best_categories_img">
-                                    <?= $this->Html->image('cottonsatin.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('tussar.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
                         </div>
@@ -211,11 +196,11 @@ if (isset($page)) {
                         <div class="item">
                             <div class="dis_flx">
                                 <div class="best_categories_img">
-                                    <?= $this->Html->image('categorie4.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('cotton-flex.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                                 <div class="best_categories_content">
-                                    <h2>Cotton Dobby</h2>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+dobby']) ?>">
+                                    <h2>Cotton Flex</h2>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+flex']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
@@ -224,37 +209,11 @@ if (isset($page)) {
                         <div class="item">
                             <div class="dis_flx">
                                 <div class="best_categories_img">
-                                    <?= $this->Html->image('cotton_silk.jpg', ['class' => 'img-responsive']) ?>
-                                </div>
-                                <div class="best_categories_content">
-                                    <h2>Chanderi</h2>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'chanderi']) ?>">
-                                        <button>SHOP NOW</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="dis_flx">
-                                <div class="best_categories_img">
-                                    <?= $this->Html->image('categorie1.jpg', ['class' => 'img-responsive']) ?>
-                                </div>
-                                <div class="best_categories_content">
-                                    <h2>Summer Checks</h2>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'Yarn+dyed+checks']) ?>">
-                                        <button>SHOP NOW</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="dis_flx">
-                                <div class="best_categories_img">
-                                    <?= $this->Html->image('categorie3.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('ikats.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                                 <div class="best_categories_content">
                                     <h2>Ikats</h2>
-                                    <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/ikats']) ?>">
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'ikats']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
@@ -263,11 +222,11 @@ if (isset($page)) {
                         <div class="item">
                             <div class="dis_flx">
                                 <div class="best_categories_img">
-                                    <?= $this->Html->image('georgette.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('satins.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                                 <div class="best_categories_content">
-                                    <h2>Georgette</h2>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'georgette']) ?>">
+                                    <h2>Satins</h2>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'satin']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
@@ -276,11 +235,37 @@ if (isset($page)) {
                         <div class="item">
                             <div class="dis_flx">
                                 <div class="best_categories_img">
-                                    <?= $this->Html->image('cottonsatin.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('soft-linens.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                                 <div class="best_categories_content">
-                                    <h2>Cotton satin</h2>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+satin']) ?>">
+                                    <h2>Soft Linens</h2>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'linen']) ?>">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dis_flx">
+                                <div class="best_categories_img">
+                                    <?= $this->Html->image('thread-Embroidery.jpg', ['class' => 'img-responsive']) ?>
+                                </div>
+                                <div class="best_categories_content">
+                                    <h2>Thread Embroidery</h2>
+                                    <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/embroideries']) ?>">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dis_flx">
+                                <div class="best_categories_img">
+                                    <?= $this->Html->image('tussar.jpg', ['class' => 'img-responsive']) ?>
+                                </div>
+                                <div class="best_categories_content">
+                                    <h2>Tussar</h2>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'tussar']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
@@ -321,14 +306,14 @@ if (isset($page)) {
                         </a>
                     </div>
                     <div class="home_about_right">
-                        <?= $this->Html->image('about_home.jpg', ['class' => 'img-responsive']) ?>
+                        <?= $this->Html->image('homef.jpg', ['class' => 'img-responsive']) ?>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <?php if ($deals): ?>
+    <?php if ($deals) : ?>
         <section class="deals">
             <div class="container">
                 <div class="row">
@@ -593,7 +578,7 @@ if (isset($page)) {
                         <li class="root_list5"><a href="javascript:void(0);">Hand Block</a></li>
                         <li class="root_list6"><a href="javascript:void(0);">Handspun</a></li>
                         <li class="root_list7"><a href="javascript:void(0);">Cotton Indigo</a></li>
-                        <hr/>
+                        <hr />
                     </ul>
                 </div>
                 <div class="mobile_tab-content">
@@ -911,7 +896,7 @@ if (isset($page)) {
     </section>
 
 
-    <?php if ($deals): ?>
+    <?php if ($deals) : ?>
         <section class="deals special_mob">
             <div class="container">
                 <div class="row">
@@ -935,8 +920,7 @@ if (isset($page)) {
                         <div class="summer_hv">
                             <div class="summer_img">
                                 <?= $this->Html->image('summer.jpg', ['class' => 'img-responsive']) ?>
-                                <div class="summer_btn"><a
-                                        href="<?= $this->Url->build(['_name' => 'category', 'spring-summer']) ?>">
+                                <div class="summer_btn"><a href="<?= $this->Url->build(['_name' => 'category', 'spring-summer']) ?>">
                                         <button>SHOP NOW</button>
                                     </a></div>
                             </div>
@@ -949,8 +933,7 @@ if (isset($page)) {
                                     season.
                                     Style your dresses and tops, kurtas and kameezes, shorts, beachwear and trousers
                                     with these trendy fabrics.</p>
-                                <div class="summer_btn summer_btn2"><a
-                                        href="<?= $this->Url->build(['_name' => 'category', 'spring-summer']) ?>">
+                                <div class="summer_btn summer_btn2"><a href="<?= $this->Url->build(['_name' => 'category', 'spring-summer']) ?>">
                                         <button>SHOP NOW</button>
                                     </a></div>
                             </div>
@@ -961,8 +944,7 @@ if (isset($page)) {
                         <div class="summer_hv">
                             <div class="summer_img">
                                 <?= $this->Html->image('winter.jpg', ['class' => 'img-responsive']) ?>
-                                <div class="summer_btn"><a
-                                        href="<?= $this->Url->build(['_name' => 'category', 'autumn-winter']) ?>">
+                                <div class="summer_btn"><a href="<?= $this->Url->build(['_name' => 'category', 'autumn-winter']) ?>">
                                         <button>SHOP NOW</button>
                                     </a></div>
                             </div>
@@ -971,8 +953,7 @@ if (isset($page)) {
                                 <p>Explore the wide range of wintry wonderful fabrics at HP Singh. Perfect for that
                                     jacket for the fall or those trousers for that bonfire party, you can find exactly
                                     what you are looking for in our Fall Winter Collection.</p>
-                                <div class="summer_btn summer_btn2"><a
-                                        href="<?= $this->Url->build(['_name' => 'category', 'autumn-winter']) ?>">
+                                <div class="summer_btn summer_btn2"><a href="<?= $this->Url->build(['_name' => 'category', 'autumn-winter']) ?>">
                                         <button>SHOP NOW</button>
                                     </a></div>
                             </div>
@@ -1016,7 +997,7 @@ if (isset($page)) {
         </div>
     </section>
 
-    <?php if ($wholeSales): ?>
+    <?php if ($wholeSales) : ?>
         <section class="bulk desk_s">
             <div class="container">
                 <div class="row">
@@ -1050,13 +1031,13 @@ if (isset($page)) {
     </section>
 
 
-    <?php if (!$mygrams->isEmpty()): ?>
+    <?php if (!$mygrams->isEmpty()) : ?>
         <section class="bulk">
             <div class="container">
                 <div class="row">
                     <h2>Instagram <span></span></h2>
                     <div class="owl-carousel owl-theme story_carousel wow fadeInUp">
-                        <?php foreach ($mygrams as $mygram): ?>
+                        <?php foreach ($mygrams as $mygram) : ?>
                             <div class="item">
                                 <a href="<?= !empty($mygram->uri) ? $mygram->uri : 'javascript:void()' ?>">
                                     <?= $this->Media->the_image('full', $mygram->media->url, ['class' => "img-responsive", 'alt' => $mygram->media->alt]) ?>
@@ -1076,7 +1057,7 @@ if (isset($page)) {
 
 </div>
 
-<?php if($popup):?>
+<?php if ($popup) : ?>
     <div id="myModal_on_load" class="modal fade hide" role="dialog" data-backdrop="static">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1094,12 +1075,13 @@ if (isset($page)) {
             </div>
         </div>
     </div>
-<?php endif;?>
+<?php endif; ?>
 
 <script src="https://www.google.com/recaptcha/api.js">
-    grecaptcha.ready(function () {
-        grecaptcha.execute('6Le54KMUAAAAAKO5rtx7uNicw_zlKvoCbuAWjNgZ', {action: 'homepage'}).then(function (token) {
-        });
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Le54KMUAAAAAKO5rtx7uNicw_zlKvoCbuAWjNgZ', {
+            action: 'homepage'
+        }).then(function(token) {});
     });
 </script>
 
@@ -1235,46 +1217,46 @@ items: 1
 
 
 $('.fabric_tab2').owlCarousel({
-	loop: true,
-	margin: 15,
-	nav: true,
-	autoplay: false,
-	navText: ['<img src="/img/arrow1.png" alt=""/>', '<img src="/img/arrow2.png" alt=""/>'],
-	responsive: {
-		0: {
-			items: 4,
-			stagePadding: 20
-		},
-		768: {
-			items: 4
-		},
-		992: {
-			items: 6
-		}
-	}
+loop: true,
+margin: 15,
+nav: true,
+autoplay: false,
+navText: ['<img src="/img/arrow1.png" alt="" />', '<img src="/img/arrow2.png" alt="" />'],
+responsive: {
+0: {
+items: 4,
+stagePadding: 20
+},
+768: {
+items: 4
+},
+992: {
+items: 6
+}
+}
 });
 
 $('.fabric_carousel').owlCarousel({
-	loop: true,
-	autoHeight: true,
-	margin: 15,
-	autoplay: false,
-	nav: true,
-	items: 4,
-	navText: ['<img src="/img/arrow1.png" alt=""/>', '<img src="/img/arrow2.png" alt=""/>'],
-	responsive: {
-		0: {
-			items: 4.3,
-			nav: false,
-			stagePadding: 11,
-		},
-		768: {
-			items: 4,
-		},
-		992: {
-			items: 6
-		}
-	}
+loop: true,
+autoHeight: true,
+margin: 15,
+autoplay: false,
+nav: true,
+items: 4,
+navText: ['<img src="/img/arrow1.png" alt="" />', '<img src="/img/arrow2.png" alt="" />'],
+responsive: {
+0: {
+items: 4.3,
+nav: false,
+stagePadding: 11,
+},
+768: {
+items: 4,
+},
+992: {
+items: 6
+}
+}
 });
 
 $('.arrived_store_carousel').owlCarousel({
@@ -1413,7 +1395,7 @@ $(".fabric_icon2").addClass('active');
 $(".fabric_icon").removeClass('active');
 $(".fabric_icon2").removeClass('active');
 $(".fabric_icon3").addClass('active');
-});  */
+}); */
 });
 
 

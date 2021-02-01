@@ -548,7 +548,6 @@ class CustomerController extends AppController
                     'Countries'
                 ])->first();
                 if (!$getUserDetails) {
-                    $user = $this->Users->newEntity();
                     $otp_key = $this->__generate_otp_and_key();
                     $postData['name'] = $name;
                     $postData['email'] = $email;
@@ -557,7 +556,8 @@ class CustomerController extends AppController
                     $postData['country_id'] = 99;
                     $postData['user_group'] = 'customer';
                     $postData['activation_key'] = "activated";
-                    $user = $this->Users->patchEntity($user, $postData);
+                    $user = $this->Users->newEntity($postData);
+                    //$user = $this->Users->patchEntity($user, $postData);
                     if ($this->Users->save($user)) {
                         //$this->getMailer('Users')->send('sendOtp', [$user]);
                     } else {
@@ -617,8 +617,6 @@ class CustomerController extends AppController
         return $this->redirect(['_name' => 'home']);
     }
 
-
-
     public function facebookCallback()
     {
         $facebook = new \Facebook\Facebook([
@@ -643,18 +641,15 @@ class CustomerController extends AppController
             ])
                 ->first();
             if (!$getUserDetails) {
-                $user = $this->Users->newEntity();
                 $otp_key = $this->__generate_otp_and_key();
                 $postData['name'] = $name;
                 $postData['email'] = $email;
-                //$postData['password'] = "123456";
                 $postData['password'] = $otp_key['otp'];
                 $postData['reset'] =    $otp_key['otp'];
-                //$postData['phone']="";
                 $postData['country_id'] = 99;
                 $postData['user_group'] = 'customer';
                 $postData['activation_key'] = "activated";
-                $user = $this->Users->patchEntity($user, $postData);
+                $user = $this->Users->newEntity($postData);
                 if ($this->Users->save($user)) {
                     //$this->getMailer('Users')->send('sendOtp', [$user]);
                 } else {
