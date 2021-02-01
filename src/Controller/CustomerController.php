@@ -534,7 +534,6 @@ class CustomerController extends AppController
         $client->setClientSecret("FAc1BGDNfx3ceFXML4UE8SO4");
         $client->setRedirectUri(\Cake\Routing\Router::url(['action' => 'googleCallback'], true));
         try {
-
             $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
             if (!isset($token["error"])) {
                 $client->setAccessToken($token['access_token']);
@@ -575,14 +574,6 @@ class CustomerController extends AppController
                 $this->loadComponent('Cart');
                 $this->Cart->mergeCart();
 
-                $currentTime = Time::now();
-                $currentTime = $currentTime->i18nFormat(\IntlDateFormatter::FULL);
-
-                $user = $this->Users->patchEntity($getUserDetails1, [
-                    'login_device' => $this->request->getEnv('HTTP_USER_AGENT'),
-                    'last_login' => $currentTime,
-                ]);
-                $this->Users->save($user);
                 $this->Flash->success("Login Successfully.");
                 return $this->redirect($this->Auth->redirectUrl());
             } else {
@@ -667,15 +658,7 @@ class CustomerController extends AppController
             // Merging Cart Items After login
             $this->loadComponent('Cart');
             $this->Cart->mergeCart();
-
-            $currentTime = Time::now();
-            $currentTime = $currentTime->i18nFormat(\IntlDateFormatter::FULL);
-
-            $user = $this->Users->patchEntity($getUserDetails1, [
-                'login_device' => $this->request->getEnv('HTTP_USER_AGENT'),
-                'last_login' => $currentTime,
-            ]);
-            $this->Users->save($user);
+            
             $this->Flash->success("Login Successfully.");
             return $this->redirect($this->Auth->redirectUrl());
         } catch (\Facebook\Exceptions\FacebookResponseException $e) {
