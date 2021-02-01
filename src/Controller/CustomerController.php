@@ -556,7 +556,7 @@ class CustomerController extends AppController
                     $postData['activation_key'] = "activated";
                     $user = $this->Users->newEntity();
                     $user = $this->Users->patchEntity($user, $postData);
-                    echo "<pre>", print_r($user);exit;
+
                     if ($this->Users->save($user)) {
                         $getUserDetails1 = $this->Users->find('all', [
                             'conditions' => ['email' => $email]
@@ -635,7 +635,6 @@ class CustomerController extends AppController
                 $postData['name'] = $name;
                 $postData['email'] = $email;
                 $postData['password'] = $otp_key['otp'];
-                $postData['reset'] =    $otp_key['otp'];
                 $postData['country_id'] = 99;
                 $postData['user_group'] = 'customer';
                 $postData['activation_key'] = "activated";

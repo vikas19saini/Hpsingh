@@ -93,8 +93,6 @@ class UsersTable extends Table
         $validator
             ->scalar('phone')
             ->maxLength('phone', 15)
-            ->requirePresence('phone', 'create')
-            ->notEmpty('phone')
             ->add('phone', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'Phone number is already registered']);
 
         $validator
