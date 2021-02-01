@@ -555,7 +555,8 @@ class CustomerController extends AppController
                     $postData['country_id'] = 99;
                     $postData['user_group'] = 'customer';
                     $postData['activation_key'] = "activated";
-                    $user = $this->Users->newEntity($postData);
+                    $user = $this->Users->newEntity();
+                    $user = $this->Users->patchEntity($user, $postData);
 
                     if ($this->Users->save($user)) {
                         $getUserDetails1 = $this->Users->find('all', [
