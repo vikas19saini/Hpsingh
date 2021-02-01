@@ -103,11 +103,11 @@ $this->assign('script', '<script src="https://www.paypal.com/sdk/js?currency=' .
                                             </div>
                                             <h2 class="biling_add">Select your billing address <span>Select a address from the saved addresses or add a new one.</span>
                                             </h2>
-                                            <label class="custom-check">Same as shipping sddress
+                                            <label class="custom-check">Same as shipping address
                                                 <input id="set-billing-as-shipping" type="checkbox" <?= $shipping_address === $billing_address ? 'checked' : '' ?>>
                                                 <span class="checkmark-checkbox"></span>
                                             </label>
-                                            <?php if (isset($selected_billing_address) && ($shipping_address !== $billing_address)) : ?>
+                                            <?php if (isset($selected_billing_address) /* && ($shipping_address !== $billing_address) */) : ?>
                                                 <div class="selected_shipping_address checkout_address1 active">
                                                     <p><?= $selected_billing_address->name ?> <em class="addres_label"><?= strtoupper($selected_billing_address->label) ?></em>
                                                     </p>
@@ -211,18 +211,19 @@ $this->assign('script', '<script src="https://www.paypal.com/sdk/js?currency=' .
 
                                                 <!-- Enable COD if shipping country is india-->
 
-                                                <?php if(isset($shippingZone) && !empty($shippingZone)){
-													if (strtolower($shippingZone->cod) === 'yes'): if ((strtolower($this->request->getSession()->read('Cart.CartDetails.shippingDetails.Country')) === 'india') && ($Auth->cod_enable === 'yes')): ?>
-														<div class="payment_method" data-value="cod">
-															<label class="radio_container">
-																<i class="fa fa-money"></i> Pay on delivery
-																<input type="radio" name="payment_method">
-																<span class="checkmark"></span>
-															</label>
-														</div>
-                                                <?php endif; endif; 
-													}
-												?>
+                                                <?php if (isset($shippingZone) && !empty($shippingZone)) {
+                                                    if (strtolower($shippingZone->cod) === 'yes') : if ((strtolower($this->request->getSession()->read('Cart.CartDetails.shippingDetails.Country')) === 'india') && ($Auth->cod_enable === 'yes')) : ?>
+                                                            <div class="payment_method" data-value="cod">
+                                                                <label class="radio_container">
+                                                                    <i class="fa fa-money"></i> Pay on delivery
+                                                                    <input type="radio" name="payment_method">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                <?php endif;
+                                                    endif;
+                                                }
+                                                ?>
 
                                             </div>
                                         </section>

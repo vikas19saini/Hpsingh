@@ -128,6 +128,7 @@ class CartController extends AppController
 
             if ($postData['request_type'] === 'shipping_address') {
                 $shipping_address = $selected_address;
+                $billing_address = $selected_address;
             }
 
             if ($postData['request_type'] === 'billing_address') {
