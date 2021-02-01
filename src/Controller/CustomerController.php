@@ -556,25 +556,24 @@ class CustomerController extends AppController
                     $postData['user_group'] = 'customer';
                     $postData['activation_key'] = "activated";
                     $user = $this->Users->newEntity($postData);
-                    //$user = $this->Users->patchEntity($user, $postData);
+
                     if ($this->Users->save($user)) {
-                        //$this->getMailer('Users')->send('sendOtp', [$user]);
+                        $getUserDetails1 = $this->Users->find('all', [
+                            'conditions' => ['email' => $email]
+                        ])->contain([
+                            'Countries'
+                        ])->first();
+                        $this->Auth->setUser($getUserDetails1);
+
+                        // Merging Cart Items After login
+                        $this->loadComponent('Cart');
+                        $this->Cart->mergeCart();
+
+                        $this->Flash->success("Login Successfully.");
                     } else {
                         $this->Flash->error("Couldn't register please try again!");
                     }
                 }
-                $getUserDetails1 = $this->Users->find('all', [
-                    'conditions' => ['email' => $email]
-                ])->contain([
-                    'Countries'
-                ])->first();
-                $this->Auth->setUser($getUserDetails1);
-
-                // Merging Cart Items After login
-                $this->loadComponent('Cart');
-                $this->Cart->mergeCart();
-
-                $this->Flash->success("Login Successfully.");
                 return $this->redirect($this->Auth->redirectUrl());
             } else {
                 $this->Flash->error(_('Something went wrong, Please try again!'));
@@ -642,24 +641,24 @@ class CustomerController extends AppController
                 $postData['activation_key'] = "activated";
                 $user = $this->Users->newEntity($postData);
                 if ($this->Users->save($user)) {
-                    //$this->getMailer('Users')->send('sendOtp', [$user]);
+                    $getUserDetails1 = $this->Users->find('all', [
+                        'conditions' => ['email' => $email]
+                    ])->contain([
+                        'Countries'
+                    ])
+                        ->first();
+                    $this->Auth->setUser($getUserDetails1);
+
+                    // Merging Cart Items After login
+                    $this->loadComponent('Cart');
+                    $this->Cart->mergeCart();
+
+                    $this->Flash->success("Login Successfully.");
                 } else {
                     $this->Flash->error("Couldn't register please try again!");
                 }
             }
-            $getUserDetails1 = $this->Users->find('all', [
-                'conditions' => ['email' => $email]
-            ])->contain([
-                'Countries'
-            ])
-                ->first();
-            $this->Auth->setUser($getUserDetails1);
 
-            // Merging Cart Items After login
-            $this->loadComponent('Cart');
-            $this->Cart->mergeCart();
-            
-            $this->Flash->success("Login Successfully.");
             return $this->redirect($this->Auth->redirectUrl());
         } catch (\Facebook\Exceptions\FacebookResponseException $e) {
             $this->Flash->error('Oops something went wrong please try again');
