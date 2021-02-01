@@ -2253,7 +2253,7 @@ section.myaccount ul li:first-child:after {
     color: #777777;
 }
 
-.sub_login_bttn{margin:37px 0}
+.sub_login_bttn{margin:37px 0;display: flex;align-items: center; justify-content: center; width: 100% !important;}
 .sub_login_bttn a{padding:7px 14px 7px;
     margin-top: 30px;
     border: 1px solid #777777;
@@ -2263,8 +2263,8 @@ section.myaccount ul li:first-child:after {
     font-size: 12px;
     font-weight: 400;
     border-radius: 4px;
-	background: transparent;
-	margin: 0 1rem}
+    background: transparent;
+	margin: 0 3px}
 
 .sub_login_bttn a:hover{background: #ff9d3a;
     color: #fff;
