@@ -571,7 +571,7 @@ class ProductsTable extends Table
             ->distinct('Products.id')->limit(20);
 
         if ($excludeOutOfStock === "yes") {
-            $query = $query->where(['Products.manage_stock' => 'no', 'stock' => 'in_stock']);
+            $query = $query->where(['Products.manage_stock' => 'no', 'stock' => 'in_stock', 'deleted IS' => null]);
         }
         return $query;
     }
