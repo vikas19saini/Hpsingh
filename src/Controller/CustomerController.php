@@ -546,6 +546,7 @@ class CustomerController extends AppController
                 ])->contain([
                     'Countries'
                 ])->first();
+
                 if (!$getUserDetails) {
                     $otp_key = $this->__generate_otp_and_key();
                     $postData['name'] = $name;
@@ -558,22 +559,23 @@ class CustomerController extends AppController
                     $user = $this->Users->patchEntity($user, $postData);
 
                     if ($this->Users->save($user)) {
-                        $getUserDetails1 = $this->Users->find('all', [
+                        $getUserDetails = $this->Users->find('all', [
                             'conditions' => ['email' => $email]
                         ])->contain([
                             'Countries'
                         ])->first();
-                        $this->Auth->setUser($getUserDetails1);
-
-                        // Merging Cart Items After login
-                        $this->loadComponent('Cart');
-                        $this->Cart->mergeCart();
 
                         $this->Flash->success("Login Successfully.");
                     } else {
                         $this->Flash->error("Couldn't register please try again!");
                     }
                 }
+
+                $this->Auth->setUser($getUserDetails);
+
+                // Merging Cart Items After login
+                $this->loadComponent('Cart');
+                $this->Cart->mergeCart();
                 return $this->redirect($this->Auth->redirectUrl());
             } else {
                 $this->Flash->error(_('Something went wrong, Please try again!'));
@@ -640,17 +642,12 @@ class CustomerController extends AppController
                 $postData['activation_key'] = "activated";
                 $user = $this->Users->newEntity($postData);
                 if ($this->Users->save($user)) {
-                    $getUserDetails1 = $this->Users->find('all', [
+                    $getUserDetails = $this->Users->find('all', [
                         'conditions' => ['email' => $email]
                     ])->contain([
                         'Countries'
                     ])
                         ->first();
-                    $this->Auth->setUser($getUserDetails1);
-
-                    // Merging Cart Items After login
-                    $this->loadComponent('Cart');
-                    $this->Cart->mergeCart();
 
                     $this->Flash->success("Login Successfully.");
                 } else {
@@ -658,6 +655,11 @@ class CustomerController extends AppController
                 }
             }
 
+            $this->Auth->setUser($getUserDetails);
+
+            // Merging Cart Items After login
+            $this->loadComponent('Cart');
+            $this->Cart->mergeCart();
             return $this->redirect($this->Auth->redirectUrl());
         } catch (\Facebook\Exceptions\FacebookResponseException $e) {
             $this->Flash->error('Oops something went wrong please try again');
