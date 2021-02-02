@@ -155,13 +155,13 @@ Class MediaHelper extends Helper {
         return '<i class="fa fa-picture-o" aria-hidden="true"></i>';
     }
     
-    public function placeholderImage($type){
+    public function placeholderImage($type = null){
         
         if($type === 'url'){
             return BASE . 'img/image_placeholder.png';
         }
         
-        return $this->Html->image(BASE . 'img/image_placeholder.png');
+        return $this->Html->image(BASE . 'img/image_placeholder.png', ['class' => 'img-responsive']);
     }
 
     private function resize($url){

@@ -49,6 +49,7 @@
                 </label>
                 <?= $this->Form->select('bulkActionType', ['none' => 'Bulk Actions', 'delete' => 'Delete Permanently'])?>
                 <?= $this->Form->button('Apply', ['type' => 'submit', 'onclick' => 'return hpAdmin.isMediaSelected()'])?>
+                <button type="button" onclick="cleanAbonded()">Remove Abandoned</button>
             </div>
             <div class="media_pagination">                
                 <span><?= $this->Paginator->params()['count']?> Items</span>
@@ -167,4 +168,9 @@
             $(".media_modal").addClass("active");
         });
     });
+    function cleanAbonded(){
+        if(confirm("Are you sure?")){
+            window.location.href = "<?= $this->Url->build(['controller' => 'Media', 'action' => 'clean', "prefix" => "hpadmin"]) ?>";
+        }
+    }
 <?= $this->Html->scriptEnd()?>
