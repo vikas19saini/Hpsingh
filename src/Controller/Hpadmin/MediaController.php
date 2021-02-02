@@ -219,6 +219,7 @@ class MediaController extends AppController
             $allMedia = $product->media;
             foreach ($allMedia as $singleMedia) {
                 $removeFiles++;
+                $this->Media->deleteAll(['id' => $singleMedia->id]);
                 @unlink(WWW_ROOT . str_replace('/', DS, $singleMedia->url));
                 @unlink(WWW_ROOT . str_replace('/', DS . 'Th_', $singleMedia->url));
             }
