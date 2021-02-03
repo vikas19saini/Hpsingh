@@ -5,31 +5,35 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Event\Event;
 
-class OrdersController extends AppController {
+class OrdersController extends AppController
+{
 
-    public function initialize() {
+    public function initialize()
+    {
         parent::initialize();
 
         $this->loadComponent('Order');
         $this->Auth->deny(['customerAction']);
     }
 
-    public function confirm($order_id) {
+    public function confirm($order_id)
+    {
         $order = $this->Orders->get($order_id);
         $this->request->getSession()->delete('Cart');
-        
+
         // Clear cart items from database
         $event = new Event('Controller.Cart.afterOrder', $this, ['user_id' => $order->user_id]);
         $this->getEventManager()->dispatch($event);
         // End
-        
-        $this->set(compact('order'));
+        $showAnalytics = true;
+        $this->set(compact('order', 'showAnalytics'));
     }
 
-    public function customerAction($order_id, $action) {
+    public function customerAction($order_id, $action)
+    {
         $order = $this->Orders->find('all', [
-                    'conditions' => ['user_id' => $this->Auth->user('id'), 'id' => $order_id],
-                ])->first();
+            'conditions' => ['user_id' => $this->Auth->user('id'), 'id' => $order_id],
+        ])->first();
 
         if (!$order) {
             return $this->response->withType('json')->withStringBody(json_encode(['status' => 'error', 'message' => 'Oops something went wrong, Please contact us.']));
