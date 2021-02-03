@@ -39,7 +39,7 @@
             href="https://www.hpsingh.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <?php if (\Cake\Core\Configure::read('debug')) : ?>
+    <?php if (!\Cake\Core\Configure::read('debug')) : ?>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105800906-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
