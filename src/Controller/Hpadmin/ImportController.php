@@ -6,7 +6,8 @@ use App\Controller\AppController;
 use \Box\Spout\Reader\ReaderFactory;
 use \Box\Spout\Common\Type;
 
-class ImportController extends AppController {
+class ImportController extends AppController
+{
 
     private $summary = [];
     private $totalRecords = 0;
@@ -14,7 +15,8 @@ class ImportController extends AppController {
     private $error = 0;
     private $updated = 0;
 
-    public function initialize() {
+    public function initialize()
+    {
         parent::initialize();
 
         $this->loadModel('Products');
@@ -23,7 +25,8 @@ class ImportController extends AppController {
         ini_set('max_execution_time', 0); // Set execution time to infinite
     }
 
-    public function add() {
+    public function add()
+    {
 
         if ($this->request->is('post')) {
             $response = $this->uploadAndSaveFile($_FILES['importFile']);
@@ -51,7 +54,8 @@ class ImportController extends AppController {
     }
 
     // Upload file and save in database
-    private function uploadAndSaveFile($file_details) {
+    private function uploadAndSaveFile($file_details)
+    {
 
         $file_extension = explode('.', $file_details['name']);
         $file_extension = end($file_extension);
@@ -94,7 +98,8 @@ class ImportController extends AppController {
         }
     }
 
-    public function run($import_id, $total, $processed) {
+    public function run($import_id, $total, $processed)
+    {
 
         $save_items_per_iteration = 10; // No of items save per iterations
         $start = $processed + 1;
@@ -125,7 +130,8 @@ class ImportController extends AppController {
         }
     }
 
-    private function import_products($entity, $start, $end) {
+    private function import_products($entity, $start, $end)
+    {
         error_reporting(0);
 
         $reader = $this->createReader($entity);
@@ -161,7 +167,8 @@ class ImportController extends AppController {
         return;
     }
 
-    private function createReader($entity) {
+    private function createReader($entity)
+    {
         $file_ext = explode('.', $entity->name);
         $file_ext = end($file_ext);
 
@@ -176,13 +183,14 @@ class ImportController extends AppController {
         return $reader;
     }
 
-    private function saveProduct($productDetails) {
+    private function saveProduct($productDetails)
+    {
 
         $created_or_updated = 'create';
 
         $products_check = $this->Products->find('all', [
-                    'conditions' => ['name' => $productDetails['name']],
-                ])->first();
+            'conditions' => ['name' => $productDetails['name']],
+        ])->first();
 
         if ($products_check) {
             $entity = $products_check;
@@ -220,6 +228,10 @@ class ImportController extends AppController {
 
         $entity = $this->Products->patchEntity($entity, $productDetails);
 
+        if ($created_or_updated === 'update') {
+            $productDetails['delete'] = null;
+        }
+
         if ($this->Products->save($entity)) {
             $this->addSummary($productDetails['name'] . ' has been saved');
             if ($created_or_updated === 'create') {
@@ -236,7 +248,8 @@ class ImportController extends AppController {
     }
 
     // Map product categories
-    private function mapCategories($categories) {
+    private function mapCategories($categories)
+    {
         $this->loadModel('Categories');
         $category_ids = $this->Categories->getCategoryIds($categories);
 
@@ -244,11 +257,12 @@ class ImportController extends AppController {
     }
 
     // Map product tags
-    private function mapTags($tags) {
+    private function mapTags($tags)
+    {
         $tags = explode(',', $tags);
         $this->loadComponent('Taxonomy');
 
-        $tags = array_map(function($tag) {
+        $tags = array_map(function ($tag) {
             return trim($tag);
         }, $tags);
 
@@ -260,11 +274,11 @@ class ImportController extends AppController {
         $this->loadModel('Tags');
 
         $tags = $this->Tags->find('all', [
-                    'conditions' => ['name IN' => $tags],
-                    'fields' => ['id', 'name'],
-                ])->toArray();
+            'conditions' => ['name IN' => $tags],
+            'fields' => ['id', 'name'],
+        ])->toArray();
 
-        $tag_ids = array_map(function($tag) {
+        $tag_ids = array_map(function ($tag) {
             return $tag->id;
         }, $tags);
 
@@ -272,10 +286,11 @@ class ImportController extends AppController {
     }
 
     // Map product medias
-    private function mapMedias($medias, $design_no) {
+    private function mapMedias($medias, $design_no)
+    {
         $medias = explode(',', $medias);
 
-        $medias_array = array_map(function($media) {
+        $medias_array = array_map(function ($media) {
             return trim($media);
         }, $medias);
 
@@ -322,7 +337,8 @@ class ImportController extends AppController {
         return $mediaRelationships;
     }
 
-    private function addSummary($message) {
+    private function addSummary($message)
+    {
         $summary = $this->summary;
 
         array_push($summary, date('r') . ' => ' . $message);
@@ -330,12 +346,14 @@ class ImportController extends AppController {
         return true;
     }
 
-    public function view($id) {
+    public function view($id)
+    {
         $import = $this->ImportProducts->get($id);
         $this->set(compact('import'));
     }
 
-    public function index() {
+    public function index()
+    {
         $allImports = $this->ImportProducts->find('all', [
             'order' => ['created' => 'DESC']
         ]);
@@ -343,7 +361,8 @@ class ImportController extends AppController {
         $this->set(compact('allImports'));
     }
 
-    public function rollback($id = null) {
+    public function rollback($id = null)
+    {
         error_reporting(0);
         $this->request->allowMethod(['post', 'delete']);
         $entity = $this->ImportProducts->get($id);
@@ -366,8 +385,8 @@ class ImportController extends AppController {
 
                     if (array_key_exists('name', $productDetails)) {
                         $product = $this->Products->find('all', [
-                                    'conditions' => ['name' => $productDetails['name']]
-                                ])->first();
+                            'conditions' => ['name' => $productDetails['name']]
+                        ])->first();
 
                         if ($product) {
                             if ($this->Products->delete($product)) {
@@ -392,7 +411,8 @@ class ImportController extends AppController {
         return $this->redirect(['action' => 'index']);
     }
 
-    public function delete($id = null) {
+    public function delete($id = null)
+    {
         $this->request->allowMethod(['post', 'delete']);
         $import = $this->ImportProducts->get($id);
 
@@ -405,15 +425,16 @@ class ImportController extends AppController {
         return $this->redirect(['action' => 'index']);
     }
 
-    public function bulkAction() {
+    public function bulkAction()
+    {
         $this->request->allowMethod(['post']);
 
         $Ids = explode(',', $this->request->getData('actionIds'));
         $action = $this->request->getData('action');
         if ($action === 'delete' && !empty($action)) {
             $allDeleted = $this->ImportProducts->find('all', [
-                        'conditions' => ['id IN' => $Ids],
-                    ])->all();
+                'conditions' => ['id IN' => $Ids],
+            ])->all();
 
             if ($this->ImportProducts->deleteAll(['id IN' => $Ids])) {
                 $this->ImportProducts->deleteAllFiles($allDeleted);
@@ -424,5 +445,4 @@ class ImportController extends AppController {
         }
         $this->redirect(['action' => 'index']);
     }
-
 }

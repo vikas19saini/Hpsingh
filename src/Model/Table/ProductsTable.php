@@ -470,7 +470,7 @@ class ProductsTable extends Table
                 return $q->where(['Media.id IS NOT NULL']);
             })->distinct('Products.id');
 
-        $products = $this->find('all')->where(['Products.id NOT IN' => $subQuery])
+        $products = $this->find('all')->where(['Products.id NOT IN' => $subQuery, 'deleted IS' => null])
             ->distinct();
 
         return $products;
