@@ -77,12 +77,11 @@ class CartController extends AppController
                 $productIds = array_column($products, 'id');
                 $diffIds = array_diff($itemsInCart, $productIds);
 
-                if(!empty($diffIds)){
+                if (!empty($diffIds)) {
                     foreach ($diffIds as $pId) {
                         $this->Cart->remove($pId);
                     }
                 }
-
             } else {
                 $products = [];
             }
@@ -103,7 +102,7 @@ class CartController extends AppController
 
         $cartItems = $this->__getItemsInCart();
 
-        if(!empty($cartItems)){
+        if (!empty($cartItems)) {
             foreach ($cartItems as $item) {
                 if (!$item->in_stock) {
                     $this->Flash->error('Some products in your cart are currently out of stock');
@@ -197,7 +196,7 @@ class CartController extends AppController
         extract($this->request->getData());
 
         // Validating captcha
-        if ($payment_method === 'cod') {
+        /* if ($payment_method === 'cod') {
             $http = new Client();
             $response = $http->get("https://www.google.com/recaptcha/api/siteverify?secret= " . env('GOOGLE_CAPTCHA_SECRET') . "&response=$g_recaptcha_response&remoteip=" . $this->request->clientIp());
 
@@ -209,10 +208,10 @@ class CartController extends AppController
             } else {
                 return $this->response->withType('json')->withStringBody(json_encode(['status' => 'error', 'message' => 'Captcha couldn\'t be verified.']));
             }
-        }
+        } */
         // Validating captcha end
 
-        if(!isset($gst)){
+        if (!isset($gst)) {
             $gst = "Not provided";
         }
 
@@ -337,7 +336,7 @@ class CartController extends AppController
 
         $order_entity = $this->Orders->newEntity();
         $order = $this->Orders->patchEntity($order_entity, $order);
-        
+
         if ($this->Orders->save($order)) {
             return ['status' => 'success', 'order_id' => $order->id, 'order_details' => $order];
         }
@@ -387,5 +386,4 @@ class CartController extends AppController
         $this->Cart->removeCouponCode();
         return $this->response->withType('json')->withStringBody(json_encode(['status' => 'success']));
     }
-
 }
