@@ -1649,6 +1649,9 @@
         width: 100%;
         margin: 0 auto;
         padding: 0 5px;
+		position: relative;
+		top: 0;
+		height: auto
     }
     .product_details_right {
         width: 90%;
@@ -1750,6 +1753,7 @@
         display: none;
         text-align: center;
         font-size: 12px;
+		display: inline-block
     }
     p.product_details_right_p3>span.p_like {
         display: none;
