@@ -7,7 +7,7 @@
     function payu_checkout() {
 
         checkout.gst = $('input[name=gst]').val();
-        
+
         if (checkout.gst !== "") {
             if (checkout.gst.length > 15 || checkout.gst.length < 15) {
                 flashMessage({
@@ -35,12 +35,17 @@
                     payu_form.method = 'post';
                     payu_form.action = response.action;
                     payu_form.id = 'payu-payment-form';
+                    console.log(response);
 
                     $.each(response, function(key, val) {
                         var _ele = document.createElement('input');
                         _ele.type = 'hidden';
                         _ele.name = key;
-                        _ele.value = val;
+                        if (key == "furl" || key == "curl" || key == "surl") {
+                            _ele.value = val.replace("http:", "https:");
+                        } else {
+                            _ele.value = val;
+                        }
                         payu_form.appendChild(_ele);
                     });
                     $('body').append(payu_form);
