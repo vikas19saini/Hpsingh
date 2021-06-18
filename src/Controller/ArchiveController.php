@@ -71,7 +71,7 @@ class ArchiveController extends AppController
             'filters' => $this->filters,
         ]);
 
-        $products = $this->paginate($products, ['limit' => 50]);
+        $products = $this->paginate($products, ['limit' => 30]);
 
         $this->set(compact('category', 'categoryPath', 'subCategories', 'products', 'slug'));
 
@@ -107,7 +107,7 @@ class ArchiveController extends AppController
             'find' => 'fair',
         ]);
 
-        $products = $this->paginate($products, ['limit' => 50]);
+        $products = $this->paginate($products, ['limit' => 30]);
         $category = $tag;
         $this->set(compact('category', 'products'));
 
@@ -131,7 +131,7 @@ class ArchiveController extends AppController
             'find' => 'fair',
         ]);
 
-        $products = $this->paginate($products, ['limit' => 50]);
+        $products = $this->paginate($products, ['limit' => 30]);
         $text = 'Search results for - ' . $search_term;
         $category = (object) ['meta_title' => $text, 'meta_description' => $text, 'meta_keywords' => $text, 'name' => $search_term];
         $this->set(compact('category', 'products', 'search_term'));
@@ -153,7 +153,7 @@ class ArchiveController extends AppController
             'archiveType' => 'sale',
             'find' => 'fair',
         ]);
-        $products = $this->paginate($products, ['limit' => 50]);
+        $products = $this->paginate($products, ['limit' => 30]);
         $text = 'Products ' . $search_term . ' - ' . \Cake\Core\Configure::read('Store.name');
         $category = (object) ['meta_title' => $text, 'meta_description' => $text, 'meta_keywords' => $text, 'name' => $search_term];
         $this->set(compact('category', 'products', 'search_term'));
@@ -213,7 +213,7 @@ class ArchiveController extends AppController
             'colors' => @explode(",", $this->filters['colors']),
             'find' => 'fair',
         ]);
-        $products = $this->paginate($products, ['limit' => 50]);
+        $products = $this->paginate($products, ['limit' => 30]);
         $text = 'Products By Image' . \Cake\Core\Configure::read('Store.name');
         $category = (object) ['meta_title' => $text, 'meta_description' => $text, 'meta_keywords' => $text, 'name' => "Products By Image"];
         $this->set(compact('category', 'products', 'search_term'));

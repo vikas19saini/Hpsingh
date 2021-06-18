@@ -5,15 +5,18 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Http\Exception\GoneException;
 
-class ProductController extends AppController {
+class ProductController extends AppController
+{
 
-    public function initialize() {
+    public function initialize()
+    {
         parent::initialize();
 
         $this->loadModel('Products');
     }
 
-    public function display($slug) {
+    public function display($slug)
+    {
 
         $product = $this->Products->find('BySlug', [
             'slug' => $slug,
@@ -33,8 +36,8 @@ class ProductController extends AppController {
             }
 
             $maxCategoryDepth = $this->Products->Categories->find('all', [
-                        'conditions' => ['id IN' => $categoryIds]
-                    ])->orderDesc('level')->first();
+                'conditions' => ['id IN' => $categoryIds]
+            ])->orderDesc('level')->first();
 
             $categoryPath = $this->Products->Categories->find('path', [
                 'for' => $maxCategoryDepth->id
@@ -42,11 +45,11 @@ class ProductController extends AppController {
         } else {
             $categoryPath = null;
         }
-        
+
         $recommendedProducts = $this->Products->find('Recommended', [
-                    'find' => 'fair',
-                    'hierarchy' => $categoryIds,
-                ])->limit(50)->shuffle();
+            'find' => 'fair',
+            'hierarchy' => $categoryIds,
+        ])->limit(20);
 
         $this->loadModel('Countries');
         $countries = $this->Countries->find('list', [
@@ -57,7 +60,8 @@ class ProductController extends AppController {
         $this->set(compact('product', 'recommendedProducts', 'categoryPath', 'countries'));
     }
 
-    public function checkDelivery($postcode, $counry_code, $product_id) {
+    public function checkDelivery($postcode, $counry_code, $product_id)
+    {
         $this->request->allowMethod(['ajax']);
 
         if (strtolower($counry_code) === 'in') {
@@ -69,8 +73,8 @@ class ProductController extends AppController {
             $this->loadModel('ShippingZones');
 
             $postcodes = $this->ShippingZones->find('all', [
-                        'conditions' => ['postcode' => $postcode],
-                    ])->first();
+                'conditions' => ['postcode' => $postcode],
+            ])->first();
 
             if ($postcodes) {
                 if (strtolower($postcodes->availability) === 'no') {
@@ -96,13 +100,12 @@ class ProductController extends AppController {
             'conditions' => ['id' => $product_id]
         ]);
         $address = (object) [
-                    'postcode' => $postcode,
-                    'country' => (object) [
-                        'iso_code_2' => $counry_code
-                    ]
+            'postcode' => $postcode,
+            'country' => (object) [
+                'iso_code_2' => $counry_code
+            ]
         ];
 
         return $this->response->withType('json')->withStringBody(json_encode($this->Fedex->getEstimatedRate($address, $products)));
     }
-
 }
