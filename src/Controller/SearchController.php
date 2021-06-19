@@ -36,7 +36,7 @@ class SearchController extends AppController
                     $url = \Cake\Routing\Router::url(['_name' => 'tag', $suggesion->slug], true);
                 }
 
-                $html .= "<a href = '$url'>" . ucwords($suggesion->name . " (<em>" . $suggesion->totalProducts . "</em>)") . '</a>';
+                $html .= "<a href = '$url'>" . ucwords($suggesion->name /* . " (<em>" . $suggesion->totalProducts . "</em>)" */) . '</a>';
             }
         }
 

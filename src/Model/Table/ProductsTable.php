@@ -391,20 +391,23 @@ class ProductsTable extends Table
     {
         $products = $this->find('all', [
             'conditions' => [
-                "MATCH(Products.name, Products.design_name_color ,Products.slug, Products.short_description, Products.long_description, Products.fabric_name, Products.weave, Products.content) AGAINST (:query IN NATURAL LANGUAGE MODE)",
+                "OR" => [
+                    "Products.name LIKE :query",
+                    "Products.design_name_color LIKE :query"
+                ]
             ],
             'find' => 'fair',
             'fields' => ['slug', 'name']
-        ])->bind(':query', '"' . $query . '"', 'string');
+        ])->bind(':query', '%' . $query . '%', 'string');
 
         $tags = $this->_associations->get('Tags')->find()
             ->select(['Tags.slug', 'Tags.name'])
-            ->select(function (\Cake\ORM\Query $query) {
+            /* ->select(function (\Cake\ORM\Query $query) {
                 return [
                     'totalProducts' => $query->func()->count('Products.id')
                 ];
-            })
-            ->leftJoinWith('Products')
+            }) */
+            /* ->leftJoinWith('Products') */
             ->where(["OR" => [
                 "Tags.name LIKE :query",
                 "Tags.description LIKE :query"
@@ -414,16 +417,13 @@ class ProductsTable extends Table
 
         $categories = $this->_associations->get('Categories')->find()
             ->select(['slug', 'name'])
-            ->select(function (\Cake\ORM\Query $query) {
+            /* ->select(function (\Cake\ORM\Query $query) {
                 return [
                     'totalProducts' => $query->func()->count('Products.id')
                 ];
-            })
-            ->leftJoinWith('Products')
-            ->where(["OR" => [
-                "Categories.name LIKE :query",
-                "Categories.description LIKE :query"
-            ]])
+            }) */
+            /* ->leftJoinWith('Products') */
+            ->where(["Categories.name LIKE :query"])
             ->bind(':query', "%" . $query . "%", 'string')
             ->group("Categories.id");
 
