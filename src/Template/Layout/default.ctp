@@ -15,6 +15,7 @@
     <meta property="og:type" content="website" />
     <meta name="google-site-verification" content="4ekAlP1b9pSf-zGkuRHvItVRose7Yk4DV_jkfmJiQco" />
     <meta property="og:site_name" content="<?= Cake\Core\Configure::read('Store.name') ?>" />
+    <meta name="facebook-domain-verification" content="p8g4k5ssx8qn0jkdtuy43n185xwsni" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <?php if (!\Cake\Core\Configure::read('debug')) : ?>
