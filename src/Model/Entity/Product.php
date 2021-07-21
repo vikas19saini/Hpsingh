@@ -77,6 +77,10 @@ class Product extends Entity {
             if(stripos($this->_properties['price_text'], 'piece')){
                 return 'Piece';
             }
+
+            if(stripos($this->_properties['price_text'], 'dupatta')){
+                return 'Dupatta';
+            }
         }
 
         return 'Mtr';
