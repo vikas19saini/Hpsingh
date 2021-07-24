@@ -213,13 +213,13 @@ $this->assign('script', '<script src="https://www.paypal.com/sdk/js?currency=' .
 
                                                 <?php if (isset($shippingZone) && !empty($shippingZone)) {
                                                     if (strtolower($shippingZone->cod) === 'yes') : if ((strtolower($this->request->getSession()->read('Cart.CartDetails.shippingDetails.Country')) === 'india') && ($Auth->cod_enable === 'yes')) : ?>
-                                                            <!--<div class="payment_method" data-value="cod">
+                                                            <div class="payment_method" data-value="cod">
                                                                 <label class="radio_container">
                                                                     <i class="fa fa-money"></i> Pay on delivery
                                                                     <input type="radio" name="payment_method">
                                                                     <span class="checkmark"></span>
                                                                 </label>
-                                                            </div> -->
+                                                            </div>
                                                 <?php endif;
                                                     endif;
                                                 }

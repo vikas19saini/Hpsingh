@@ -392,7 +392,7 @@ return [
         'address' => 'HP Singh Agencies Private Limited 111, 82-83 Vaikunth Building, Nehru Place, New Delhi -110019.',
         'contact' => '011-46614444 (Extn.424)',
         'email' => 'raghav@hpsingh.com',
-	'orderCcEmail' => 'orders@hpsingh.com',
+	    'orderCcEmail' => 'orders@hpsingh.com',
         'emailFrom' => 'noreply@hpsingh.com',
         'taxClass' => 'GST',
         'tax' => 5,
@@ -400,8 +400,8 @@ return [
         'supportContact' => '011-46614444',
         'supportWhatsapp' => '+919711073447',
         'url' => 'https://www.hpsingh.com', // Using this url in shell script
-	'minCodAmount' => 60,
-        'codChargesInPercent' => 2,
+	    'minCodAmount' => 150,
+        'codChargesInPercent' => 0,
     ],
     'Stock' => [
         'out_of_stock' => 'Out of stock',
