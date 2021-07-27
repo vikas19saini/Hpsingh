@@ -196,7 +196,7 @@ class CartController extends AppController
         extract($this->request->getData());
 
         // Validating captcha
-        if ($payment_method === 'cod') {
+        /* if ($payment_method === 'cod') {
             $http = new Client();
             $response = $http->get("https://www.google.com/recaptcha/api/siteverify?secret= " . env('GOOGLE_CAPTCHA_SECRET') . "&response=$g_recaptcha_response&remoteip=" . $this->request->clientIp());
 
@@ -208,7 +208,7 @@ class CartController extends AppController
             } else {
                 return $this->response->withType('json')->withStringBody(json_encode(['status' => 'error', 'message' => 'Captcha couldn\'t be verified.']));
             }
-        }
+        } */
         // Validating captcha end
 
         if (!isset($gst)) {
