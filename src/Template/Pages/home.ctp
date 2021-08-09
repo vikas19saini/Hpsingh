@@ -86,6 +86,11 @@ if (isset($page)) {
                                     <?= $this->Html->image('cotton-flex.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
+                            <div class="item">
+                                <div class="best_categories_img ">
+                                    <?= $this->Html->image('duppata.png', ['class' => 'img-responsive']) ?>
+                                </div>
+                            </div>
 
                             <div class="item">
                                 <div class="best_categories_img">
@@ -109,6 +114,15 @@ if (isset($page)) {
                                     <h2>Cotton Flex</h2>
                                     <p>Flex cotton fabric is woven with pale and durable cotton and flex yarns. It can be used all over year round. Absolutely comfortable and durable fabrics can be used to designs ethnics, blouses, mens kurta, dresses, and more.</p>
                                     <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+flex']) ?>">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="best_categories_content">
+                                    <h2>Dupatta</h2>
+                                    <p>Dupatta is a symbol of modesty, while that symbolism still continues, many today wear it as a decorative accessory. The dupatta is worn in many regional styles across the world.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'category', 'scarves-and-stoles']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
@@ -201,6 +215,19 @@ if (isset($page)) {
                                 <div class="best_categories_content">
                                     <h2>Cotton Flex</h2>
                                     <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+flex']) ?>">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dis_flx">
+                                <div class="best_categories_img">
+                                    <?= $this->Html->image('duppata.png', ['class' => 'img-responsive']) ?>
+                                </div>
+                                <div class="best_categories_content">
+                                    <h2>Dupatta</h2>
+                                    <a href="<?= $this->Url->build(['_name' => 'category', 'scarves-and-stoles']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
                                 </div>
