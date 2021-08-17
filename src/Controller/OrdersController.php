@@ -18,7 +18,9 @@ class OrdersController extends AppController
 
     public function confirm($order_id)
     {
-        $order = $this->Orders->get($order_id);
+        $order = $this->Orders->get($order_id, [
+            'contain' => ["products"]
+        ]);
         $this->request->getSession()->delete('Cart');
 
         // Clear cart items from database

@@ -1977,7 +1977,7 @@
     .mobile_edit_remove ul li:nth-child(1) {
         border-right: 1px solid #cccccc4a;
     }
-    .mobile_edit_remove ul li a {
+    .mobile_edit_remove ul li a, .mobile_edit_remove ul li button {
         color: #555;
         font-weight: 600;
         padding: 8px 0;

@@ -30,3 +30,10 @@ $this->assign('title', 'Order Confirmation - HpSingh');
         </div>
     </section>
 </div>
+
+<?php $this->Html->scriptStart(['block' => true]) ?>
+$(document).ready(function() {
+let order = <?= json_encode($order) ?>;
+dataLayerSale(order);
+});
+<?php $this->Html->scriptEnd() ?>

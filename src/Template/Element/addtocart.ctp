@@ -11,7 +11,7 @@
         </b>
     </i>
     <?php if ($product->in_stock) : ?>
-        <span class="p_card" onclick="addToCart('<?= $product->slug ?>', this)">ADD TO CART</span>
+        <span data-product='<?= json_encode($product) ?>' class="p_card" onclick="addToCart('<?= $product->slug ?>', this)">ADD TO CART</span>
     <?php else : ?>
         <span class="p_card">OUT OF STOCK</span>
     <?php endif; ?>
@@ -27,7 +27,7 @@
         <a class="add-to-wishlist" style="color:#fff" href="<?= $this->Url->build(['controller' => 'Wishlist', 'action' => 'add', $product->slug]) ?>">ADD TO WISHLIST</a>
     </button>
     <?php if ($product->in_stock) : ?>
-        <button style="font-weight: bold;" onclick="addToCart('<?= $product->slug ?>', this)">ADD TO CART</button>
+        <button style="font-weight: bold;" data-product='<?= json_encode($product) ?>' onclick="addToCart('<?= $product->slug ?>', this)">ADD TO CART</button>
     <?php else : ?>
         <button>OUT OF STOCK</button>
     <?php endif; ?>
