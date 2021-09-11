@@ -15,7 +15,7 @@
     <meta property="og:type" content="website" />
     <meta name="google-site-verification" content="4ekAlP1b9pSf-zGkuRHvItVRose7Yk4DV_jkfmJiQco" />
     <meta property="og:site_name" content="<?= Cake\Core\Configure::read('Store.name') ?>" />
-    <meta name="facebook-domain-verification" content="p8g4k5ssx8qn0jkdtuy43n185xwsni" />
+    <meta name="facebook-domain-verification" content="qgq7761nxprq69rwas26z1utqrpzgr" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <?php if (!\Cake\Core\Configure::read('debug')) : ?>
@@ -73,38 +73,6 @@
                 return false;
             }
         </script>
-        <!-- Facebook Pixel Code -->
-        <!-- <script>
-            ! function(f, b, e, v, n, t, s) {
-                if (f.fbq)
-                    return;
-                n = f.fbq = function() {
-                    n.callMethod ?
-                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-                };
-                if (!f._fbq)
-                    f._fbq = n;
-                n.push = n;
-                n.loaded = !0;
-                n.version = '2.0';
-                n.queue = [];
-                t = b.createElement(e);
-                t.async = !0;
-                t.src = v;
-                s = b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t, s)
-            }(window, document, 'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1954780331515974');
-            fbq('track', 'PageView');
-            fbq('track', 'ViewContent');
-        </script>
-        <noscript>
-            <img height="1" width="1" src="https://www.facebook.com/tr?id=1954780331515974&ev=PageView
-         &noscript=1" />
-        </noscript> -->
-
-        <!-- Google Tag Manager -->
         <script>
             (function(w, d, s, l, i) {
                 w[l] = w[l] || [];
