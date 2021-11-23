@@ -41,7 +41,7 @@ $productMetaData .= $this->Html->meta(['itemprop' => 'url', 'content' => $this->
 $productMetaData .= $this->Html->meta(['itemprop' => 'image', 'content' => $ogImage]);
 
 $productMetaData .= $this->Html->meta(['property' => 'product:brand', 'content' => "HpSingh"]);
-$productMetaData .= $this->Html->meta(['property' => 'product:availability', 'content' =>  "in stock"]);
+$productMetaData .= $this->Html->meta(['property' => 'product:availability', 'content' =>  $product->in_stock ? "in stock" : "out of stock"]);
 $productMetaData .= $this->Html->meta(['property' => 'product:condition', 'content' =>  "new"]);
 $productMetaData .= $this->Html->meta(['property' => 'product:price:amount', 'content' =>  $product->ragular_price]);
 $productMetaData .= $this->Html->meta(['property' => 'product:retailer_item_id', 'content' =>  $product->id]);
@@ -85,7 +85,7 @@ $jsonMetaData = [
     'offers' => [
         '@type' => 'Offer',
         'priceCurrency' => 'INR',
-        'availability' => 'InStock',
+        'availability' => $product->in_stock ? 'in stock' : 'out of stock',
         'price' => $product->ragular_price,
         'url' => $this->Url->build(null, true),
     ],
