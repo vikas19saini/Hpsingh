@@ -923,20 +923,20 @@ if (isset($page)) {
         </div>
     </section>
 
-    <!-- <section class="deals special_mob">
+    <section class="deals special_mob">
         <div class="container">
             <div class="row">
                 <h2>Weddings<span></span></h2>
-                <a class="wow fadeInUp" href="<?= $deals->uri ?>">
-                    <?= $this->Media->the_image('full', $deals->media->url, ['alt' => $deals->media->alt, 'class' => 'img-responsive add1_img']) ?>
+                <a class="wow fadeInUp" href="/product-category/big-fat-wedding">
+                    <img src="/img/weddings.jpg" alt="wedding" class='img-responsive add1_img'>
                 </a>
                 <div style="display: flex;margin-top: 8px;align-items: center;justify-content: space-between;">
                     <p style="display: inline-block;">The big fat Indian weddings</p>
-                    <a class="btn" style="border-color: #777777;color: #777777;font-size: 13px !important;padding: 2px 15px;" href="<?= $deals->uri ?>">Explore</a>
+                    <a class="btn" style="border-color: #777777;color: #777777;font-size: 13px !important;padding: 2px 15px;" href="/product-category/big-fat-wedding">Explore</a>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <?php if ($deals) : ?>
         <section class="deals special_mob">

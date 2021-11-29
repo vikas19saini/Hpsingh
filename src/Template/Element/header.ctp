@@ -274,6 +274,25 @@
                                                     <a href="<?= $this->Url->build(['_name' => 'search', 'home+furnishing']) ?>">Home
                                                         Furnishing</a></li>
                                             </ul>
+                                            <h4>Big Fat Weddings</h4>
+                                            <ul>
+                                                <li>
+                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'embroideries']) ?>">Embroideries</a></li>
+                                                <li>
+                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'embroidery+work']) ?>">Kurta</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'kurta']) ?>">Lehenga</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'lehenga']) ?>">Sherwani & Achkan</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'sherwani']) ?>">Suiting</a></li>
+                                                <li>
+                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'suiting']) ?>">Turban</a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
