@@ -17,16 +17,20 @@
 </section>
 
 
-<div class="social_icon_footer social_icon_footer_mob">
+<div class="social_icon_footer social_icon_footer_mob" style="padding-bottom: 0px">
     <h2>KEEP IN TOUCH WITH US</h2>
     <ul>
-        <li><a href="https://www.instagram.com/hpsinghfabrics/" target="_blank"><i class="fa fa-instagram"
-                                                                                   aria-hidden="true"></i></a></li>
-        <li><a target="_blank"
-               href="https://api.whatsapp.com/send?phone=<?= \Cake\Core\Configure::read('Store.supportWhatsapp') ?>"> <i
-                    class="fa fa-whatsapp"></i></a></li>
+        <li><a href="https://www.instagram.com/hpsinghfabrics/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=<?= \Cake\Core\Configure::read('Store.supportWhatsapp') ?>"> <i class="fa fa-whatsapp"></i></a></li>
         <li><a href="http://www.facebook.com/hpfabrics" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
 
+    </ul>
+</div>
+<div class="social_icon_footer social_icon_footer_mob">
+    <h2 style="margin-bottom: 5px">CERTIFICATIONS</h2>
+    <ul>
+        <li><img src="/img/c11.png" width="50px"></li>
+        <li><img src="/img/c22.png" width="70px"></li>
     </ul>
 </div>
 
@@ -42,8 +46,8 @@
                 <div class="subscribe">
                     <input type="text" placeholder="Name" name="name" required>
                     <span>
-                  <input type="email" name="email" placeholder="E-mail address" required>
-              </span>
+                        <input type="email" name="email" placeholder="E-mail address" required>
+                    </span>
                 </div>
                 <button type="submit">SUBSCRIBE</button>
                 <?= $this->Form->end() ?>
@@ -56,19 +60,21 @@
                     <ul>
                         <li>
                             <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'about-us']) ?>">About
-                                Us</a></li>
+                                Us</a>
+                        </li>
                         <li>
                             <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'contact-us']) ?>">Contact
-                                Us</a></li>
+                                Us</a>
+                        </li>
                         <li><a href="<?= $this->Url->build(['_name' => 'stories']) ?>">Stories</a></li>
                         <li>
                             <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'faq']) ?>">FAQ</a>
                         </li>
                         <li>
-                                    <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'live-browsing']) ?>">
-                                        Live Browsing
-                                    </a>
-                                </li>
+                            <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'live-browsing']) ?>">
+                                Live Browsing
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer_menu1">
@@ -76,37 +82,44 @@
                     <ul>
                         <li>
                             <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'terms-conditions']) ?>">Terms
-                                & Conditions</a></li>
+                                & Conditions</a>
+                        </li>
                         <li>
                             <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'privacy-policy']) ?>">Privacy
-                                Policy</a></li>
+                                Policy</a>
+                        </li>
                         <li>
                             <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'shipping']) ?>">Shipping
-                                & Returns</a></li>
+                                & Returns</a>
+                        </li>
                         <li>
                             <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'contact-us']) ?>">Help
-                                & Support</a></li>
+                                & Support</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer_menu1">
                     <h2>CONTACT INFO</h2>
                     <p><?= \Cake\Core\Configure::read('Store.address') ?></p>
                     <p>Phone: <em><?= \Cake\Core\Configure::read('Store.contact') ?></em></p>
-                    <p>Email: <a
-                            href="mailto:<?= \Cake\Core\Configure::read('Store.email') ?>"><?= \Cake\Core\Configure::read('Store.email') ?></a>
+                    <p>Email: <a href="mailto:<?= \Cake\Core\Configure::read('Store.email') ?>"><?= \Cake\Core\Configure::read('Store.email') ?></a>
                     </p>
                 </div>
                 <div class="footer_menu1">
                     <div class="social_icon_footer">
                         <ul>
-                            <li><a href="https://www.instagram.com/hpsinghfabrics/" target="_blank"><i
-                                        class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a target="_blank"
-                                   href="https://api.whatsapp.com/send?phone=<?= \Cake\Core\Configure::read('Store.supportWhatsapp') ?>"><i
-                                        class="fa fa-whatsapp"></i></a></li>
-                            <li><a href="http://www.facebook.com/hpfabrics" target="_blank"><i
-                                        class="fa fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/hpsinghfabrics/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://api.whatsapp.com/send?phone=<?= \Cake\Core\Configure::read('Store.supportWhatsapp') ?>"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="http://www.facebook.com/hpfabrics" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
 
+                        </ul>
+                        <br />
+                    </div>
+                    <div class="social_icon_footer">
+                        <h6 style="margin-bottom: 5px">CERTIFICATIONS</h6>
+                        <ul>
+                            <li><img src="/img/c11.png" width="50px"></li>
+                            <li><img src="/img/c22.png" width="70px"></li>
                         </ul>
                     </div>
                 </div>
@@ -150,13 +163,14 @@
     <div class="footer_newsletter">
         <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
         <p>Enjoy our newsletter to stay updated with the latest news and special sales.
-            <span>Enter your details here!</span></p>
+            <span>Enter your details here!</span>
+        </p>
         <?= $this->Form->create(null, ['url' => ['controller' => 'Pages', 'action' => 'subscribe'], 'onsubmit' => 'subscribe(this, event)']) ?>
         <div class="subscribe">
             <input type="text" placeholder="Name" name="name" required>
             <span>
-             <input type="email" name="email" placeholder="E-mail address" required>
-         </span>
+                <input type="email" name="email" placeholder="E-mail address" required>
+            </span>
         </div>
         <button type="submit">SUBSCRIBE</button>
         <?= $this->Form->end() ?>
@@ -180,16 +194,17 @@
                         Us</a></li>
                 <li>
                     <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'contact-us']) ?>">Contact
-                        Us</a></li>
+                        Us</a>
+                </li>
                 <li><a href="<?= $this->Url->build(['_name' => 'stories']) ?>">Stories</a></li>
                 <li>
                     <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'faq']) ?>">FAQ</a>
                 </li>
                 <li>
-            <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'live-browsing']) ?>">
-                Live Browsing
-            </a>
-        </li>
+                    <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'live-browsing']) ?>">
+                        Live Browsing
+                    </a>
+                </li>
             </ul>
         </div>
         <h4 class="accordion-toggle">OUR POLICY</h4>
@@ -197,25 +212,27 @@
             <ul>
                 <li>
                     <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'terms-conditions']) ?>">Terms
-                        & Conditions</a></li>
+                        & Conditions</a>
+                </li>
                 <li>
                     <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'privacy-policy']) ?>">Privacy
-                        Policy</a></li>
+                        Policy</a>
+                </li>
                 <li><a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'shipping']) ?>">Shipping
                         & Returns</a></li>
                 <li>
                     <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'contact-us']) ?>">Help
-                        & Support</a></li>
+                        & Support</a>
+                </li>
 
-                        
+
             </ul>
         </div>
         <h4 class="accordion-toggle">CONTACT INFO</h4>
         <div class="accordion-content footer_menu1">
             <p><?= \Cake\Core\Configure::read('Store.address') ?></p>
             <p>Phone: <em><?= \Cake\Core\Configure::read('Store.contact') ?></em></p>
-            <p>Email: <a
-                    href="mailto:<?= \Cake\Core\Configure::read('Store.email') ?>"><?= \Cake\Core\Configure::read('Store.email') ?></a>
+            <p>Email: <a href="mailto:<?= \Cake\Core\Configure::read('Store.email') ?>"><?= \Cake\Core\Configure::read('Store.email') ?></a>
             </p>
         </div>
     </div>
