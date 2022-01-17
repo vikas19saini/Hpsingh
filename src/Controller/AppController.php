@@ -27,7 +27,8 @@ use Cake\Event\Event;
  *
  * @link https://book.cakephp.org/3.0/en/controllers.html#the-app-controller
  */
-class AppController extends Controller {
+class AppController extends Controller
+{
 
     /**
      * Initialization hook method.
@@ -38,7 +39,8 @@ class AppController extends Controller {
      *
      * @return void
      */
-    public function initialize() {
+    public function initialize()
+    {
         parent::initialize();
         $this->loadComponent('RequestHandler', [
             'enableBeforeRedirect' => false,
@@ -64,12 +66,11 @@ class AppController extends Controller {
             ]);
             $this->loadModel('Reviews');
             $newReviews = $this->Reviews->find('all', [
-                        'contain' => [],
-                        'conditions' => ['status' => 'pending']
-                    ])->count();
+                'contain' => [],
+                'conditions' => ['status' => 'pending']
+            ])->count();
             $this->set(compact('newReviews'));
         } else {
-
             // Check for redirection
             $this->loadModel('Redirection');
 
@@ -79,8 +80,8 @@ class AppController extends Controller {
                 'conditions' => ['old_url' => $request_url],
             ])->first();
 
-            if($redirect_match){
-                if($redirect_match->old_url !== $redirect_match->new_url){
+            if ($redirect_match) {
+                if ($redirect_match->old_url !== $redirect_match->new_url) {
                     return $this->redirect($redirect_match->new_url, $redirect_match->type);
                 }
             }
@@ -93,17 +94,76 @@ class AppController extends Controller {
                             'username' => 'email',
                             'password' => 'password'
                         ]
+                    ],
+                    'ADmad/HybridAuth.HybridAuth' => [
+                        'fields' => [
+                            'provider' => 'provider',
+                            'openid_identifier' => 'openid_identifier',
+                            'email' => 'email'
+                        ],
+                        'profileModel' => 'ADmad/HybridAuth.SocialProfiles',
+                        'profileModelFkField' => 'user_id',
+                        'userModel' => 'Users',
+                        'hauth_return_to' => null
                     ]
                 ],
-                'loginAction' => ['controller' => 'Customer', 'action' => 'login'],
+                'loginAction' => ['controller' => 'Customer', 'action' => 'login', 'plugin' => false],
                 'authError' => false
             ]);
 
+            \Cake\Event\EventManager::instance()->on('HybridAuth.login', [$this, 'afterLogin']);
+            \Cake\Event\EventManager::instance()->on('HybridAuth.newUser', [$this, 'createUser']);
             $this->Auth->allow();
         }
     }
 
-    public function beforeRender(Event $event) {
+    public function createUser(\Cake\Event\Event $event)
+    {
+        // Entity representing record in social_profiles table
+        $profile = $event->getData()['profile'];
+        $this->loadModel("Users");
+
+        // Make sure here that all the required fields are actually present
+
+        $postData['name'] = $profile->display_name;
+        $postData['email'] = $profile->email;
+        $postData['password'] = "default";
+        $postData['country_id'] = 99;
+        $postData['user_group'] = 'customer';
+        $postData['activation_key'] = "activated";
+
+        $user = $this->Users->newEntity();
+        $user = $this->Users->patchEntity($user, $postData);
+        $user = $this->Users->save($user);
+
+        if (!$user) {
+            throw new \RuntimeException('Unable to save new user');
+        }
+
+        $user = $this->Users->get($user->id, [
+            'contain' => ['Countries']
+        ]);
+
+        $this->Auth->setUser($user);
+
+        return $user;
+    }
+
+    public function afterLogin(\Cake\Event\Event $event)
+    {
+        $this->loadModel("Users");
+
+        $user = $this->Users->get($this->Auth->user()['id'], [
+            'contain' => ['Countries']
+        ]);
+
+        $this->Auth->setUser($user);
+
+        return $user;
+    }
+
+    public function beforeRender(Event $event)
+    {
         parent::beforeRender($event);
         $this->loadComponent('Auth');
 
@@ -126,7 +186,8 @@ class AppController extends Controller {
         }
     }
 
-    public function isAuthorized($user) {
+    public function isAuthorized($user)
+    {
         // Admin can access every action
         if (isset($user['user_group']) && $user['user_group'] === 'administrator') {
             return true;

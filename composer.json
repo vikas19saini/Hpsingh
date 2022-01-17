@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": ">=5.6",
+        "admad/cakephp-hybridauth": "^4.2",
         "box/spout": "~2.7",
         "cakephp/cakephp": "3.6.*",
         "cakephp/migrations": "^2.0.0",
@@ -60,6 +61,9 @@
     },
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "cakephp/plugin-installer": true
+        }
     }
 }

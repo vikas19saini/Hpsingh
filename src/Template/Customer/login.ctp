@@ -23,12 +23,25 @@ $this->assign('title', 'Hpsingh - Login');
                     </div>
                     <div class="form-group">
                         <button type="submit">LOGIN</button>
-                        <div class="sub_login_bttn">
-                            <a class="login-btn gLogin" href="<?= $this->Url->build(['action' => 'googleLogin']) ?>">Login With Google</a>
-                            <a class="login-btn fLogin" href="<?= $this->Url->build(['action' => 'facebookLogin']) ?>">Login With Facebook</a>
-                        </div>
                     </div>
                     <?= $this->Form->end() ?>
+                    <div class="sub_login_bttn">
+                        <?=
+                        $this->Form->postLink(
+                            'Login with Google',
+                            ['controller' => 'Customer', 'action' => 'login', '?' => ['provider' => 'Google']],
+                            ['class' => 'gLogin']
+                        );
+                        ?>
+                        <?=
+                        $this->Form->postLink(
+                            'Login with Facebook',
+                            ['controller' => 'Customer', 'action' => 'login', '?' => ['provider' => 'Facebook']],
+                            ['class' => 'fLogin']
+                        );
+                        ?>
+                    </div>
+
                     <p class="forgot_psd_btn"><a href="javascript:void(0);">Forgot Password?</a></p>
                     <p class="text-sign">Doesn't have an account? <a href="<?= $this->Url->build(['action' => 'signup']) ?>">Signup</a></p>
                     <p class="text-sign">Account is not verify? <a href="<?= $this->Url->build(['action' => 'reverify']) ?>">Resend Verification Code</a></p>
