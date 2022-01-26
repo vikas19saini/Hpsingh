@@ -17,8 +17,8 @@ return [
             'Facebook' => [
                 'enabled' => true,
                 'keys' => [
-                    'id' => '1527959277351847',
-                    'secret' => '843bbe47725a447a5a5485515c9be779'
+                    'id' => '958520648416982',
+                    'secret' => '396ee00faf0af42b8fc89eb791be1f81'
                 ],
                 'scope' => 'email, public_profile'
             ]
