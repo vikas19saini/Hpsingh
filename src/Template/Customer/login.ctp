@@ -25,7 +25,7 @@ $this->assign('title', 'Hpsingh - Login');
                         <button type="submit">LOGIN</button>
                     </div>
                     <?= $this->Form->end() ?>
-                    <div class="sub_login_bttn">
+                    <!-- <div class="sub_login_bttn">
                         <?=
                         $this->Form->postLink(
                             'Login with Google',
@@ -40,7 +40,7 @@ $this->assign('title', 'Hpsingh - Login');
                             ['class' => 'fLogin']
                         );
                         ?>
-                    </div>
+                    </div> -->
 
                     <p class="forgot_psd_btn"><a href="javascript:void(0);">Forgot Password?</a></p>
                     <p class="text-sign">Doesn't have an account? <a href="<?= $this->Url->build(['action' => 'signup']) ?>">Signup</a></p>
