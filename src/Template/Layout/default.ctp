@@ -18,7 +18,6 @@
     <meta name="facebook-domain-verification" content="qgq7761nxprq69rwas26z1utqrpzgr" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <meta name="google-signin-client_id" content="320168265137-pot5ekhg07ejob9e70or1l71ab93o2o7.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <?php if (!\Cake\Core\Configure::read('debug')) : ?>
         <link rel="stylesheet" href="/css/front/css/style.php">
@@ -126,6 +125,7 @@
         }
     </script>
     <script src="//code.tidio.co/1zwdxhovgpntyaotemgeo7s4meb0ydvu.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <?= $this->fetch('script') ?>
     <script>
         var HOST = "<?= BASE ?>";
