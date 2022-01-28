@@ -52,13 +52,16 @@
                                             <ul>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/cotton-blends']) ?>">Cottons
-                                                        Blends</a></li>
+                                                        Blends</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/cotton-knits']) ?>">Cottons
-                                                        Knits</a></li>
+                                                        Knits</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/dobby-and-jacquard']) ?>">Dobby
-                                                        & Jacquard</a></li>
+                                                        & Jacquard</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/ikats']) ?>">Ikats</a>
                                                 </li>
@@ -67,16 +70,19 @@
                                                 </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/indigo-denims-and-non-denims']) ?>">Indigo
-                                                        / Denims & Non Denims</a></li>
+                                                        / Denims & Non Denims</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/khadi-raw-cotton']) ?>">Handspun
-                                                        / Raw Cottons</a></li>
+                                                        / Raw Cottons</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/laces']) ?>">laces</a>
                                                 </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/lawns-and-voiles']) ?>">Lawns
-                                                        & Voiles</a></li>
+                                                        & Voiles</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/solids']) ?>">Solids</a>
                                                 </li>
@@ -85,17 +91,21 @@
                                                 </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/weaves-textures']) ?>">Weaves
-                                                        & Textures</a></li>
+                                                        & Textures</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/yarn-dyeds-checks-and-stripes']) ?>">Yarn
-                                                        dyeds / checks and stripes</a></li>
+                                                        dyeds / checks and stripes</a>
+                                                </li>
                                             </ul>
                                             <h4>
                                                 <a href="<?= $this->Url->build(['_name' => 'category', 'polyester-fabrics']) ?>">Poly
-                                                    Blend Fabrics</a></h4>
+                                                    Blend Fabrics</a>
+                                            </h4>
                                             <h4>
                                                 <a href="<?= $this->Url->build(['_name' => 'category', 'scarves-and-stoles']) ?>">Scarves
-                                                    and Dupattas</a></h4>
+                                                    and Dupattas</a>
+                                            </h4>
                                         </div>
                                         <div class="menu-item-list">
                                             <h4><a href="<?= $this->Url->build(['_name' => 'category', 'linens']) ?>">Linens</a>
@@ -103,19 +113,23 @@
                                             <ul>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'linens/100-linen']) ?>">100%
-                                                        linen</a></li>
+                                                        linen</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'linens/jute']) ?>">Jute</a>
                                                 </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'linens/linen-blends']) ?>">Linen
-                                                        Blends</a></li>
+                                                        Blends</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'linens/linen-solids']) ?>">Linen
-                                                        Solids</a></li>
+                                                        Solids</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'linens/linen-prints']) ?>">Linen
-                                                        Prints</a></li>
+                                                        Prints</a>
+                                                </li>
                                             </ul>
                                             <h4>
                                                 <a href="<?= $this->Url->build(['_name' => 'category', 'rayons-modals']) ?>">Rayons/Modals</a>
@@ -123,23 +137,28 @@
                                             <ul>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'rayons-modals/rayons-blends']) ?>">Rayons
-                                                        Blends</a></li>
+                                                        Blends</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'rayons-modals/prints-rayon-modals']) ?>">Prints</a>
                                                 </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'rayons-modals/solids-and-dyeds']) ?>">Solids
-                                                        And Dyeds</a></li>
+                                                        And Dyeds</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'rayons-modals/textures-fabrics']) ?>">Textures
-                                                        Fabrics</a></li>
+                                                        Fabrics</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'rayons-modals/tie-dye-shiburi-and-batik']) ?>">Tie
-                                                        Dye Shiburi And Batik</a></li>
+                                                        Dye Shiburi And Batik</a>
+                                                </li>
                                             </ul>
                                             <h4>
                                                 <a href="<?= $this->Url->build(['_name' => 'category', 'cut-pieces']) ?>">Cut
-                                                    Pieces</a></h4>
+                                                    Pieces</a>
+                                            </h4>
                                         </div>
 
                                         <div class="menu-item-list">
@@ -157,214 +176,242 @@
                                                 </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'prints/hand-blocks']) ?>">Hand
-                                                        Blocks</a></li>
+                                                        Blocks</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'prints/knitted-prints']) ?>">Knitted
-                                                        Prints</a></li>
+                                                        Prints</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'prints/prints-linen']) ?>">Prints
-                                                        Linen</a></li>
+                                                        Linen</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'prints/poly-prints']) ?>">Poly
-                                                        Prints</a></li>
+                                                        Prints</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'prints/silk-prints']) ?>">Silk
-                                                        Prints</a></li>
+                                                        Prints</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'prints/traditional-ethnics']) ?>">Traditional
-                                                        Ethnics</a></li>
+                                                        Ethnics</a>
+                                                </li>
                                             </ul>
                                             <h4><a href="<?= $this->Url->build(['_name' => 'category', 'knits']) ?>">Knits</a>
                                             </h4>
                                             <ul>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'knits/cotton-knits-knits']) ?>">Cottons
-                                                        knits</a></li>
+                                                        knits</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'knits/knit-blends-wools']) ?>">Knit
-                                                        blends / Wools</a></li>
+                                                        blends / Wools</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'knits/poly-knits']) ?>">Poly
-                                                        knits</a></li>
+                                                        knits</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'knits/laces-and-nets']) ?>">Laces
-                                                        and Nets</a></li>
+                                                        and Nets</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'knits/printed-knits']) ?>">Printed
-                                                        knits</a></li>
+                                                        knits</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="menu-item-list">
                                             <h4>
                                                 <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools']) ?>">Silks/
-                                                    Wools</a></h4>
+                                                    Wools</a>
+                                            </h4>
                                             <ul>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/blended-silk']) ?>">Blended
-                                                        Silk</a></li>
+                                                        Silk</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/printed-silks']) ?>">Printed
-                                                        Silks</a></li>
+                                                        Silks</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/ombres-solid-dyeds']) ?>">Ombres/Solid
-                                                        Dyeds</a></li>
+                                                        Dyeds</a>
+                                                </li>
                                                 <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/silk-jacquards-and-brocades']) ?>">Silk
-                                                        Jacquards And Brocades</a></li>
+                                                        Jacquards And Brocades</a>
+                                                </li>
                                                 <!-- <li>
                                                     <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/textures-and-plain-weaves']) ?>">Textures
                                                         And Plain Weaves</a></li>
                                                 <li> -->
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/woollen-textures']) ?>">Woollen
-                                                        Textures</a></li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/woollen-tweed']) ?>">Woollen
-                                                        Tweed</a></li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/wool-felt']) ?>">Wool
-                                                        Felt</a></li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/wool-prints']) ?>">Wool
-                                                        Prints</a></li>
-                                            </ul>
-                                            <h4>
-                                                <a href="<?= $this->Url->build(['_name' => 'category', 'embroidery']) ?>">Embroideries</a>
-                                            </h4>
-                                            <ul>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'embroidery/embroidery-work']) ?>">Embroideries
-                                                        Work</a></li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'embroidery/chikan-work']) ?>">Chikan
-                                                        Work</a></li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'embroidery/embroidered-laces']) ?>">Embroidered
-                                                        laces</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="menu-item-list">
-                                            <h4>What do you wanna make</h4>
-                                            <ul>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'top-kurtis']) ?>">Tops
-                                                        & Kurtis</a></li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'lehengas']) ?>">Lehengas</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'shirts']) ?>">Shirts</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'skirts']) ?>">Skirts</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'suits-and-blazers']) ?>">Suits
-                                                        & Blazers</a></li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'category', 'trousers']) ?>">Trousers</a>
-                                                </li>
-                                                <li><a href="<?= $this->Url->build(['_name' => 'search', 'bags']) ?>">Bags</a>
-                                                </li>
-                                                <li><a href="<?= $this->Url->build(['_name' => 'search', 'kaftan']) ?>">Kaftan</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'Scarves', '?' => ['direction' => 'asc', 'sort' => 'ragular_price']]) ?>">Scarves</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'home+furnishing']) ?>">Home
-                                                        Furnishing</a></li>
-                                            </ul>
-                                            <h4>Big Fat Weddings</h4>
-                                            <ul>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'embroideries']) ?>">Embroideries</a></li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'embroidery+work']) ?>">Kurta</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'kurta']) ?>">Lehenga</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'lehenga']) ?>">Sherwani & Achkan</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'sherwani']) ?>">Suiting</a></li>
-                                                <li>
-                                                    <a href="<?= $this->Url->build(['_name' => 'search', 'suiting']) ?>">Turban</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                                <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/woollen-textures']) ?>">Woollen
+                                                    Textures</a>
                             </li>
-                            <li class="search-products">
-                                <input type="text" name="query" value="<?= isset($search_term) ? $search_term : '' ?>" placeholder="Search for product by name, code, design nos, fabric name" id="search-products" autocomplete="off">
-                                <button title="Search by image" class="searchByImage" onclick="$('#moodboard').click()">
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </button>
-                                <button>
-                                    <i class="fa fa-search"></i>
-                                    <?= $this->Html->image('loading.gif') ?>
-                                </button>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/woollen-tweed']) ?>">Woollen
+                                    Tweed</a>
                             </li>
-                            <li class="mobile_visible" onclick="$('.mobile_search_window').addClass('active')">
-                                <a href="javascript:void(0);"><i class="fa fa-search search-icon"></i>
-                                </a>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/wool-felt']) ?>">Wool
+                                    Felt</a>
                             </li>
-                            <li class="header-fixed_visible translator">
-                                <div id="google_translate_element"></div>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'silks-wools/wool-prints']) ?>">Wool
+                                    Prints</a>
                             </li>
-                            <li class="mobile_hidden">
-                                <?php if (isset($Auth)) : ?>
-                                    <div class="dropdown">
-                                        <button class="myaccount" type="button" data-toggle="dropdown">My Account<span class="caret"></span></button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                            <?php if ($Auth->user_group === 'administrator') : ?>
-                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Dashboard', 'action' => 'index', 'prefix' => 'hpadmin']) ?>">Dashboard</a>
-                                                </li>
-                                                <li role="presentation" class="divider"></li>
-                                            <?php endif; ?>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'myAccount']) ?>">Overview</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'profile']) ?>">Profile</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'addresses']) ?>">Addresses</a>
-                                            </li>
-                                            <li role="presentation" class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'orders']) ?>">Orders</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Wishlist', 'action' => 'display']) ?>">Wishlist</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'coupons']) ?>">Coupons</a>
-                                            </li>
-                                            <li role="presentation" class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'contact-us']) ?>">Contact
-                                                    Us</a></li>
-                                            <li role="presentation" class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'logout']) ?>"><b>Logout</b></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                <?php else : ?>
-                                    <a href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'login']) ?>">
-                                        <button class="myaccount" type="button">LOG IN</button>
-                                    </a>
-                                <?php endif; ?>
+                        </ul>
+                        <h4>
+                            <a href="<?= $this->Url->build(['_name' => 'category', 'embroidery']) ?>">Embroideries</a>
+                        </h4>
+                        <ul>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'embroidery/embroidery-work']) ?>">Embroideries
+                                    Work</a>
                             </li>
-                            <li><a href="/wishlist"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0ZGOUQzQTt9Cjwvc3R5bGU+CjxnIGlkPSJENjA1Z0gudGlmIj4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMzQsOTYuOWMtMC42LDE3LjYtNi40LDMzLjQtMTYuOCw0Ny41Yy0xMS4zLDE1LjMtMjQuOSwyOC4zLTM5LjQsNDAuNWMtMTYsMTMuNS0zMywyNS44LTUwLjYsMzcuMQoJCQljLTEuNCwwLjktMi40LDEuMS00LDAuMWMtMjcuMi0xNy42LTUzLjEtMzYuOS03NS41LTYwLjVjLTEwLjEtMTAuNy0xOS41LTIyLTI1LjMtMzUuOEM5LjMsOTQuOCwxNy42LDY0LjIsNDEuMyw0NS41CgkJCUM2NC43LDI3LjEsMTAwLDI3LjcsMTIyLjgsNDdjMS42LDEuNCwyLjYsMS42LDQuNCwwLjJjMzctMzAuMyw5NC45LTEzLjQsMTA1LjYsMzcuMkMyMzMuNiw4OC41LDIzNCw5Mi43LDIzNCw5Ni45eiBNODIuMiw0Ny45CgkJCWMtOS44LDAuMi0xNy44LDIuMi0yNS4xLDYuNGMtMjAuMywxMS41LTMxLjksMzYuOS0yMCw2NC44YzQuMSw5LjYsMTAuMiwxNy44LDE3LDI1LjZjMjAuMiwyMyw0NC4zLDQxLjQsNjkuNSw1OC42CgkJCWMxLjIsMC45LDIuMSwwLjcsMy4yLTAuMWMyNC43LTE2LjksNDguMy0zNC45LDY4LjQtNTcuM2MxMC4yLTExLjMsMTguNS0yMy42LDIxLjYtMzguOWM0LTE5LjYtNC4yLTQwLjEtMjEuMi01MS4xCgkJCWMtMTYuOS0xMC45LTQwLTEwLjEtNTUuOSwxLjljLTUuMSwzLjktOS4yLDguNy0xMy4yLDEzLjdjLTEuMSwxLjQtMS44LDEuNS0yLjksMGMtMS4yLTEuNy0yLjYtMy4yLTMuOS00LjgKCQkJQzEwOS43LDU0LjUsOTYuOCw0OC4yLDgyLjIsNDcuOXoiLz4KCTwvZz4KPC9nPgo8ZyBpZD0iRDYwNWdILnRpZl8xXyI+Cgk8Zz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTI1LDk2LjljLTAuNiwxNy42LTYuNCwzMy40LTE2LjgsNDcuNWMtMTEuMywxNS4zLTI0LjksMjguMy0zOS40LDQwLjVjLTE2LDEzLjUtMzMsMjUuOC01MC42LDM3LjEKCQkJYy0xLjQsMC45LTIuNCwxLjEtNCwwLjFjLTI3LjItMTcuNi01My4xLTM2LjktNzUuNS02MC41Yy0xMC4xLTEwLjctMTkuNS0yMi0yNS4zLTM1LjhjLTEzLjEtMzEuMS00LjgtNjEuNywxOC45LTgwLjQKCQkJYzIzLjQtMTguNSw1OC43LTE3LjgsODEuNSwxLjVjMS42LDEuNCwyLjYsMS42LDQuNCwwLjJjMzctMzAuMyw5NC45LTEzLjQsMTA1LjYsMzcuMkM1MjQuNiw4OC41LDUyNSw5Mi43LDUyNSw5Ni45eiBNMzczLjIsNDcuOQoJCQljLTkuOCwwLjItMTcuOCwyLjItMjUuMSw2LjRjLTIwLjMsMTEuNS0zMS45LDM2LjktMjAsNjQuOGM0LjEsOS42LDEwLjIsMTcuOCwxNywyNS42YzIwLjIsMjMsNDQuMyw0MS40LDY5LjUsNTguNgoJCQljMS4yLDAuOSwyLjEsMC43LDMuMi0wLjFjMjQuNy0xNi45LDQ4LjMtMzQuOSw2OC40LTU3LjNjMTAuMi0xMS4zLDE4LjUtMjMuNiwyMS42LTM4LjljNC0xOS42LTQuMi00MC4xLTIxLjItNTEuMQoJCQljLTE2LjktMTAuOS00MC0xMC4xLTU1LjksMS45Yy01LjEsMy45LTkuMiw4LjctMTMuMiwxMy43Yy0xLjEsMS40LTEuOCwxLjUtMi45LDBjLTEuMi0xLjctMi42LTMuMi0zLjktNC44CgkJCUM0MDAuNiw1NC41LDM4Ny43LDQ4LjIsMzczLjIsNDcuOXoiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTAwLjgsOTUuN2MtMC4xLDUuMi0wLjYsOS4xLTEuOCwxMi44Yy0wLjksMi44LTIuNiw0LTQuOSwzLjRjLTIuNC0wLjYtMy41LTIuNi0yLjctNS41CgkJCWMyLjMtOC42LDEuOS0xNi45LTIuNC0yNC43Yy01LjctMTAuNi0xNC43LTE2LjQtMjYuNy0xNy41Yy0wLjctMC4xLTEuNS0wLjEtMi4yLTAuMmMtMi42LTAuNC00LjEtMi0zLjktNC4yCgkJCWMwLjEtMi4zLDEuOC0zLjcsNC40LTMuN2M1LjIsMCwxMC4zLDAuOSwxNSwzLjFDNDkxLjcsNjYuNSw0OTkuOSw3OS4zLDUwMC44LDk1Ljd6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg=="></a>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'embroidery/chikan-work']) ?>">Chikan
+                                    Work</a>
                             </li>
-                            <li class="bag_pad_0">
-                                <a href="<?= $this->Url->build(['controller' => 'Cart', 'action' => 'display']) ?>" style="position:relative">
-                                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzA1NTg2NDt9Cgkuc3Qxe2ZpbGw6I0ZGOUQzQTt9Cjwvc3R5bGU+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MjcuMywxMy40bC05LjktMTQ2LjZIMjg1bC05LjksMTQ2LjZoLTcuNHYxOS40aDYuMmgxNTQuN2g0LjZWMTMuNEg0MjcuM3ogTTM4Ny4zLTExNy45YzMuOCwwLDYuOCwzLDYuOCw2LjgKCXMtMyw2LjgtNi44LDYuOGMtMy44LDAtNi44LTMtNi44LTYuOEMzODAuNS0xMTQuOCwzODMuNS0xMTcuOSwzODcuMy0xMTcuOXogTTMxNS4yLTExNy45YzMuOCwwLDYuOCwzLDYuOCw2LjhzLTMsNi44LTYuOCw2LjgKCWMtMy44LDAtNi44LTMtNi44LTYuOEMzMDguNC0xMTQuOCwzMTEuNC0xMTcuOSwzMTUuMi0xMTcuOXoiLz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTMyNC44LTE0MC4yYzUuOC0xOCwxNS42LTMwLjEsMjYuNC0zMC4xYzEwLjgsMCwyMC42LDEyLjEsMjYuNCwzMC4xaDguNGMtNi44LTIyLjktMTkuNy0zOC0zNC44LTM4CglzLTI4LDE1LjItMzQuOCwzOEgzMjQuOHoiLz4KPGcgaWQ9IkNzdlRZZC50aWYiPgoJPGc+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEyNS4xLDIyNi42Yy0yMy4yLDAtNDYuMy0wLjEtNjkuNSwwLjFjLTYuNywwLjEtOC45LTQuMi04LjMtOS42YzItMTguMywzLjYtMzYuNyw1LjMtNTUuMQoJCQljMS45LTIwLjMsMy45LTQwLjYsNS44LTYwLjljMC45LTguOSwxLjctMTcuOCwyLjUtMjYuN2MwLjUtNS43LDIuNy03LjgsOC41LTcuOWM1LjEtMC4xLDEwLjIsMCwxNS4yLTAuMmMxLjktMC4xLDIuNywwLjQsMi41LDIuNAoJCQljLTAuMiwyLjktMC4xLDUuNywwLDguNmMwLDEuNC0wLjQsMi40LTEuMiwzLjZjLTQuNSw2LjUtMy42LDE0LjgsMi4xLDE5LjhjNS44LDUuMSwxNC4yLDUuMSwyMCwwYzUuNy01LjEsNi42LTEzLjQsMi0xOS44CgkJCWMtMC44LTEuMS0xLjItMi4yLTEuMi0zLjZjMC4xLTMsMC4xLTYuMSwwLTkuMWMwLTEuNCwwLjQtMiwxLjktMmM4LjksMC4xLDE3LjksMC4xLDI2LjgsMGMxLjYsMCwxLjgsMC43LDEuOCwyCgkJCWMtMC4xLDMuMS0wLjEsNi4zLDAsOS40YzAsMS4yLTAuNSwyLjEtMS4yLDNjLTQuMiw1LjYtNC40LDEyLjMtMC42LDE3LjhjMy41LDUuMSw5LjksNy41LDE1LjgsNmM2LjMtMS42LDEwLjctNi43LDExLjMtMTMuNQoJCQljMC4zLTMtMC4zLTYtMi04LjRjLTEuNC0yLTEuNy00LTEuNi02LjJjMC4xLTIuNywwLjEtNS40LDAtOGMwLTEuMywwLjUtMS44LDEuOC0xLjhjNi41LDAsMTIuOS0wLjEsMTkuNCwwLjEKCQkJYzMuOSwwLjEsNi4yLDIuNiw2LjYsNi41YzMsMzEuMyw1LjksNjIuNiw4LjksOTMuOWMxLjYsMTYuMywzLjIsMzIuNyw0LjcsNDljMC4xLDEuMSwwLjIsMi4yLDAuMiwzLjNjMC4xLDQuNi0yLjUsNy4zLTcuMSw3LjMKCQkJYy0xNC44LDAtMjkuNSwwLTQ0LjMsMEMxNDIuNywyMjYuNiwxMzMuOSwyMjYuNiwxMjUuMSwyMjYuNnoiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTU0LjcsNjIuMWMwLDYuMywwLDEyLjUsMCwxOC44YzAsMS41LDAuMywyLjgsMS4zLDRjMi44LDMuNCwyLjMsOC4xLTAuOCwxMWMtMy4zLDMtOCwyLjktMTEuMi0wLjIKCQkJYy0zLTIuOS0zLjMtNy43LTAuNC0xMWMxLjEtMS4yLDEuNC0yLjQsMS40LTRjMC0xMS41LDAtMjMuMSwwLTM0LjZjMC0xMy4xLTkuMi0yMi42LTIxLjUtMjIuM2MtMTAuOSwwLjItMjAuMSw4LjktMjAuMywxOS44CgkJCWMtMC4zLDEyLjgtMC4xLDI1LjYtMC4yLDM4LjVjMCwxLjEsMC41LDEuOSwxLjEsMi43YzIuOSwzLjgsMi40LDguNi0wLjksMTEuNGMtMy4yLDIuNy04LjEsMi41LTExLjEtMC41Yy0zLTMuMS0zLjItNy45LTAuMi0xMS4zCgkJCWMxLTEuMSwxLjItMi4xLDEuMi0zLjRjMC0xMi4xLDAtMjQuMiwwLTM2LjJjMC4xLTE3LjEsMTMuOC0zMC44LDMwLjgtMzAuOGMxNywwLDMwLjgsMTMuNywzMC45LDMwLjgKCQkJQzE1NC43LDUwLjUsMTU0LjcsNTYuMywxNTQuNyw2Mi4xeiIvPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=" alt="">
-                                    <div class="badge" id="cartItems"></div>
-                                </a>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'embroidery/embroidered-laces']) ?>">Embroidered
+                                    laces</a>
                             </li>
-
+                        </ul>
+                    </div>
+                    <div class="menu-item-list">
+                        <h4>What do you wanna make</h4>
+                        <ul>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'top-kurtis']) ?>">Tops
+                                    & Kurtis</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'lehengas']) ?>">Lehengas</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'shirts']) ?>">Shirts</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'skirts']) ?>">Skirts</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'suits-and-blazers']) ?>">Suits
+                                    & Blazers</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'trousers']) ?>">Trousers</a>
+                            </li>
+                            <li><a href="<?= $this->Url->build(['_name' => 'search', 'bags']) ?>">Bags</a>
+                            </li>
+                            <li><a href="<?= $this->Url->build(['_name' => 'search', 'kaftan']) ?>">Kaftan</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'search', 'Scarves', '?' => ['direction' => 'asc', 'sort' => 'ragular_price']]) ?>">Scarves</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'search', 'home+furnishing']) ?>">Home
+                                    Furnishing</a>
+                            </li>
+                        </ul>
+                        <h4>Big Fat Weddings</h4>
+                        <ul>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'search', 'embroideries']) ?>">Embroideries</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'search', 'embroidery+work']) ?>">Kurta</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'search', 'kurta']) ?>">Lehenga</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'search', 'lehenga']) ?>">Sherwani & Achkan</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'search', 'sherwani']) ?>">Suiting</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->Url->build(['_name' => 'search', 'suiting']) ?>">Turban</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
+            </li>
+            <li class="search-products">
+                <input type="text" name="query" value="<?= isset($search_term) ? $search_term : '' ?>" placeholder="Search for product by name, code, design nos, fabric name" id="search-products" autocomplete="off">
+                <button title="Search by image" class="searchByImage" onclick="$('#moodboard').click()">
+                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                </button>
+                <button>
+                    <i class="fa fa-search"></i>
+                    <?= $this->Html->image('loading.gif') ?>
+                </button>
+            </li>
+            <li class="mobile_visible" onclick="$('.mobile_search_window').addClass('active')">
+                <a href="javascript:void(0);"><i class="fa fa-search search-icon"></i>
+                </a>
+            </li>
+            <li class="header-fixed_visible translator">
+                <div id="google_translate_element"></div>
+            </li>
+            <li class="mobile_hidden">
+                <?php if (isset($Auth)) : ?>
+                    <div class="dropdown">
+                        <button class="myaccount" type="button" data-toggle="dropdown">My Account<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <?php if ($Auth->user_group === 'administrator') : ?>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Dashboard', 'action' => 'index', 'prefix' => 'hpadmin']) ?>">Dashboard</a>
+                                </li>
+                                <li role="presentation" class="divider"></li>
+                            <?php endif; ?>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'myAccount']) ?>">Overview</a>
+                            </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'profile']) ?>">Profile</a>
+                            </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'addresses']) ?>">Addresses</a>
+                            </li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'orders']) ?>">Orders</a>
+                            </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Wishlist', 'action' => 'display']) ?>">Wishlist</a>
+                            </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'coupons']) ?>">Coupons</a>
+                            </li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'staticPage', 'contact-us']) ?>">Contact
+                                    Us</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:logout()"><b>Logout</b></a>
+                            </li>
+                        </ul>
+                    </div>
+                <?php else : ?>
+                    <a href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'login']) ?>">
+                        <button class="myaccount" type="button">LOG IN</button>
+                    </a>
+                <?php endif; ?>
+            </li>
+            <li><a href="/wishlist"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0ZGOUQzQTt9Cjwvc3R5bGU+CjxnIGlkPSJENjA1Z0gudGlmIj4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMzQsOTYuOWMtMC42LDE3LjYtNi40LDMzLjQtMTYuOCw0Ny41Yy0xMS4zLDE1LjMtMjQuOSwyOC4zLTM5LjQsNDAuNWMtMTYsMTMuNS0zMywyNS44LTUwLjYsMzcuMQoJCQljLTEuNCwwLjktMi40LDEuMS00LDAuMWMtMjcuMi0xNy42LTUzLjEtMzYuOS03NS41LTYwLjVjLTEwLjEtMTAuNy0xOS41LTIyLTI1LjMtMzUuOEM5LjMsOTQuOCwxNy42LDY0LjIsNDEuMyw0NS41CgkJCUM2NC43LDI3LjEsMTAwLDI3LjcsMTIyLjgsNDdjMS42LDEuNCwyLjYsMS42LDQuNCwwLjJjMzctMzAuMyw5NC45LTEzLjQsMTA1LjYsMzcuMkMyMzMuNiw4OC41LDIzNCw5Mi43LDIzNCw5Ni45eiBNODIuMiw0Ny45CgkJCWMtOS44LDAuMi0xNy44LDIuMi0yNS4xLDYuNGMtMjAuMywxMS41LTMxLjksMzYuOS0yMCw2NC44YzQuMSw5LjYsMTAuMiwxNy44LDE3LDI1LjZjMjAuMiwyMyw0NC4zLDQxLjQsNjkuNSw1OC42CgkJCWMxLjIsMC45LDIuMSwwLjcsMy4yLTAuMWMyNC43LTE2LjksNDguMy0zNC45LDY4LjQtNTcuM2MxMC4yLTExLjMsMTguNS0yMy42LDIxLjYtMzguOWM0LTE5LjYtNC4yLTQwLjEtMjEuMi01MS4xCgkJCWMtMTYuOS0xMC45LTQwLTEwLjEtNTUuOSwxLjljLTUuMSwzLjktOS4yLDguNy0xMy4yLDEzLjdjLTEuMSwxLjQtMS44LDEuNS0yLjksMGMtMS4yLTEuNy0yLjYtMy4yLTMuOS00LjgKCQkJQzEwOS43LDU0LjUsOTYuOCw0OC4yLDgyLjIsNDcuOXoiLz4KCTwvZz4KPC9nPgo8ZyBpZD0iRDYwNWdILnRpZl8xXyI+Cgk8Zz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTI1LDk2LjljLTAuNiwxNy42LTYuNCwzMy40LTE2LjgsNDcuNWMtMTEuMywxNS4zLTI0LjksMjguMy0zOS40LDQwLjVjLTE2LDEzLjUtMzMsMjUuOC01MC42LDM3LjEKCQkJYy0xLjQsMC45LTIuNCwxLjEtNCwwLjFjLTI3LjItMTcuNi01My4xLTM2LjktNzUuNS02MC41Yy0xMC4xLTEwLjctMTkuNS0yMi0yNS4zLTM1LjhjLTEzLjEtMzEuMS00LjgtNjEuNywxOC45LTgwLjQKCQkJYzIzLjQtMTguNSw1OC43LTE3LjgsODEuNSwxLjVjMS42LDEuNCwyLjYsMS42LDQuNCwwLjJjMzctMzAuMyw5NC45LTEzLjQsMTA1LjYsMzcuMkM1MjQuNiw4OC41LDUyNSw5Mi43LDUyNSw5Ni45eiBNMzczLjIsNDcuOQoJCQljLTkuOCwwLjItMTcuOCwyLjItMjUuMSw2LjRjLTIwLjMsMTEuNS0zMS45LDM2LjktMjAsNjQuOGM0LjEsOS42LDEwLjIsMTcuOCwxNywyNS42YzIwLjIsMjMsNDQuMyw0MS40LDY5LjUsNTguNgoJCQljMS4yLDAuOSwyLjEsMC43LDMuMi0wLjFjMjQuNy0xNi45LDQ4LjMtMzQuOSw2OC40LTU3LjNjMTAuMi0xMS4zLDE4LjUtMjMuNiwyMS42LTM4LjljNC0xOS42LTQuMi00MC4xLTIxLjItNTEuMQoJCQljLTE2LjktMTAuOS00MC0xMC4xLTU1LjksMS45Yy01LjEsMy45LTkuMiw4LjctMTMuMiwxMy43Yy0xLjEsMS40LTEuOCwxLjUtMi45LDBjLTEuMi0xLjctMi42LTMuMi0zLjktNC44CgkJCUM0MDAuNiw1NC41LDM4Ny43LDQ4LjIsMzczLjIsNDcuOXoiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTAwLjgsOTUuN2MtMC4xLDUuMi0wLjYsOS4xLTEuOCwxMi44Yy0wLjksMi44LTIuNiw0LTQuOSwzLjRjLTIuNC0wLjYtMy41LTIuNi0yLjctNS41CgkJCWMyLjMtOC42LDEuOS0xNi45LTIuNC0yNC43Yy01LjctMTAuNi0xNC43LTE2LjQtMjYuNy0xNy41Yy0wLjctMC4xLTEuNS0wLjEtMi4yLTAuMmMtMi42LTAuNC00LjEtMi0zLjktNC4yCgkJCWMwLjEtMi4zLDEuOC0zLjcsNC40LTMuN2M1LjIsMCwxMC4zLDAuOSwxNSwzLjFDNDkxLjcsNjYuNSw0OTkuOSw3OS4zLDUwMC44LDk1Ljd6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg=="></a>
+            </li>
+            <li class="bag_pad_0">
+                <a href="<?= $this->Url->build(['controller' => 'Cart', 'action' => 'display']) ?>" style="position:relative">
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzA1NTg2NDt9Cgkuc3Qxe2ZpbGw6I0ZGOUQzQTt9Cjwvc3R5bGU+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MjcuMywxMy40bC05LjktMTQ2LjZIMjg1bC05LjksMTQ2LjZoLTcuNHYxOS40aDYuMmgxNTQuN2g0LjZWMTMuNEg0MjcuM3ogTTM4Ny4zLTExNy45YzMuOCwwLDYuOCwzLDYuOCw2LjgKCXMtMyw2LjgtNi44LDYuOGMtMy44LDAtNi44LTMtNi44LTYuOEMzODAuNS0xMTQuOCwzODMuNS0xMTcuOSwzODcuMy0xMTcuOXogTTMxNS4yLTExNy45YzMuOCwwLDYuOCwzLDYuOCw2LjhzLTMsNi44LTYuOCw2LjgKCWMtMy44LDAtNi44LTMtNi44LTYuOEMzMDguNC0xMTQuOCwzMTEuNC0xMTcuOSwzMTUuMi0xMTcuOXoiLz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTMyNC44LTE0MC4yYzUuOC0xOCwxNS42LTMwLjEsMjYuNC0zMC4xYzEwLjgsMCwyMC42LDEyLjEsMjYuNCwzMC4xaDguNGMtNi44LTIyLjktMTkuNy0zOC0zNC44LTM4CglzLTI4LDE1LjItMzQuOCwzOEgzMjQuOHoiLz4KPGcgaWQ9IkNzdlRZZC50aWYiPgoJPGc+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEyNS4xLDIyNi42Yy0yMy4yLDAtNDYuMy0wLjEtNjkuNSwwLjFjLTYuNywwLjEtOC45LTQuMi04LjMtOS42YzItMTguMywzLjYtMzYuNyw1LjMtNTUuMQoJCQljMS45LTIwLjMsMy45LTQwLjYsNS44LTYwLjljMC45LTguOSwxLjctMTcuOCwyLjUtMjYuN2MwLjUtNS43LDIuNy03LjgsOC41LTcuOWM1LjEtMC4xLDEwLjIsMCwxNS4yLTAuMmMxLjktMC4xLDIuNywwLjQsMi41LDIuNAoJCQljLTAuMiwyLjktMC4xLDUuNywwLDguNmMwLDEuNC0wLjQsMi40LTEuMiwzLjZjLTQuNSw2LjUtMy42LDE0LjgsMi4xLDE5LjhjNS44LDUuMSwxNC4yLDUuMSwyMCwwYzUuNy01LjEsNi42LTEzLjQsMi0xOS44CgkJCWMtMC44LTEuMS0xLjItMi4yLTEuMi0zLjZjMC4xLTMsMC4xLTYuMSwwLTkuMWMwLTEuNCwwLjQtMiwxLjktMmM4LjksMC4xLDE3LjksMC4xLDI2LjgsMGMxLjYsMCwxLjgsMC43LDEuOCwyCgkJCWMtMC4xLDMuMS0wLjEsNi4zLDAsOS40YzAsMS4yLTAuNSwyLjEtMS4yLDNjLTQuMiw1LjYtNC40LDEyLjMtMC42LDE3LjhjMy41LDUuMSw5LjksNy41LDE1LjgsNmM2LjMtMS42LDEwLjctNi43LDExLjMtMTMuNQoJCQljMC4zLTMtMC4zLTYtMi04LjRjLTEuNC0yLTEuNy00LTEuNi02LjJjMC4xLTIuNywwLjEtNS40LDAtOGMwLTEuMywwLjUtMS44LDEuOC0xLjhjNi41LDAsMTIuOS0wLjEsMTkuNCwwLjEKCQkJYzMuOSwwLjEsNi4yLDIuNiw2LjYsNi41YzMsMzEuMyw1LjksNjIuNiw4LjksOTMuOWMxLjYsMTYuMywzLjIsMzIuNyw0LjcsNDljMC4xLDEuMSwwLjIsMi4yLDAuMiwzLjNjMC4xLDQuNi0yLjUsNy4zLTcuMSw3LjMKCQkJYy0xNC44LDAtMjkuNSwwLTQ0LjMsMEMxNDIuNywyMjYuNiwxMzMuOSwyMjYuNiwxMjUuMSwyMjYuNnoiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTU0LjcsNjIuMWMwLDYuMywwLDEyLjUsMCwxOC44YzAsMS41LDAuMywyLjgsMS4zLDRjMi44LDMuNCwyLjMsOC4xLTAuOCwxMWMtMy4zLDMtOCwyLjktMTEuMi0wLjIKCQkJYy0zLTIuOS0zLjMtNy43LTAuNC0xMWMxLjEtMS4yLDEuNC0yLjQsMS40LTRjMC0xMS41LDAtMjMuMSwwLTM0LjZjMC0xMy4xLTkuMi0yMi42LTIxLjUtMjIuM2MtMTAuOSwwLjItMjAuMSw4LjktMjAuMywxOS44CgkJCWMtMC4zLDEyLjgtMC4xLDI1LjYtMC4yLDM4LjVjMCwxLjEsMC41LDEuOSwxLjEsMi43YzIuOSwzLjgsMi40LDguNi0wLjksMTEuNGMtMy4yLDIuNy04LjEsMi41LTExLjEtMC41Yy0zLTMuMS0zLjItNy45LTAuMi0xMS4zCgkJCWMxLTEuMSwxLjItMi4xLDEuMi0zLjRjMC0xMi4xLDAtMjQuMiwwLTM2LjJjMC4xLTE3LjEsMTMuOC0zMC44LDMwLjgtMzAuOGMxNywwLDMwLjgsMTMuNywzMC45LDMwLjgKCQkJQzE1NC43LDUwLjUsMTU0LjcsNTYuMywxNTQuNyw2Mi4xeiIvPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=" alt="">
+                    <div class="badge" id="cartItems"></div>
+                </a>
+            </li>
+
+            </ul>
         </div>
+    </div>
+    </div>
+    </div>
     </div>
 </header>
 
