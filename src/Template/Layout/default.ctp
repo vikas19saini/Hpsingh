@@ -93,7 +93,6 @@
         <!-- End Google Tag Manager -->
     <?php endif; ?>
     <!-- End Facebook Pixel Code -->
-    <script src="https://apis.google.com/js/platform.js?onload=onLoadGapi"></script>
 </head>
 
 <body class="<?= $this->fetch('bodyClass') ?>">
@@ -127,6 +126,7 @@
     </script>
     <script src="//code.tidio.co/1zwdxhovgpntyaotemgeo7s4meb0ydvu.js"></script>
     <?= $this->fetch('script') ?>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoadGapi"></script>
     <script>
         var HOST = "<?= BASE ?>";
         var _csrfToken = "<?= $this->request->getParam('_csrfToken') ?>";
