@@ -1232,6 +1232,9 @@ function onLoadGapi() {
         'height': 50,
         'longtitle': true,
         'theme': 'dark',
-        'onsuccess': onSignIn
+        'onsuccess': onSignIn,
+        'onfailure': function () {
+            console.log('Google login fail')
+        }
     });
 }
