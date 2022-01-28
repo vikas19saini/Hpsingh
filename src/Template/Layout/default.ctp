@@ -93,7 +93,7 @@
         <!-- End Google Tag Manager -->
     <?php endif; ?>
     <!-- End Facebook Pixel Code -->
-    <script src="https://apis.google.com/js/platform.js?onload=onLoadGapi" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoadGapi"></script>
 </head>
 
 <body class="<?= $this->fetch('bodyClass') ?>">
