@@ -70,6 +70,28 @@ class CustomerController extends AppController
         $this->set(compact('countries', 'user'));
     }
 
+    public function socialLogin()
+    {
+        $this->request->allowMethod(['ajax']);
+
+        if ($this->request->getQuery('email')) {
+            $emailAddress = $this->request->getQuery('email');
+            $user = $this->Users->find('all', [
+                'contain' => ['Countries'],
+                'conditions' => ['email' => $emailAddress]
+            ])->first();
+
+            if ($user->activated === 'verified') {
+                $this->Auth->setUser($user);
+                return $this->response->withType('json')->withStringBody(json_encode(['status' => 'success']));
+            } else {
+                return $this->response->withType('json')->withStringBody(json_encode(['status' => 'error', 'message' => 'Your account is not verified, Please verify your account to login.']));
+            }
+        } else {
+            return $this->response->withType('json')->withStringBody(json_encode(['status' => 'error', 'message' => 'Email address is mandatory!']));
+        }
+    }
+
     public function login()
     {
         if (!is_null($this->Auth->user())) {

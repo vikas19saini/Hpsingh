@@ -29,13 +29,6 @@ $this->assign('title', 'Hpsingh - Login');
                         <div class="g-signin2" data-onsuccess="onSignIn"></div>
                         <?=
                         $this->Form->postLink(
-                            'Login with Google',
-                            ['controller' => 'Customer', 'action' => 'login', '?' => ['provider' => 'Google']],
-                            ['class' => 'gLogin']
-                        );
-                        ?>
-                        <?=
-                        $this->Form->postLink(
                             'Login with Facebook',
                             ['controller' => 'Customer', 'action' => 'login', '?' => ['provider' => 'Facebook']],
                             ['class' => 'fLogin']
