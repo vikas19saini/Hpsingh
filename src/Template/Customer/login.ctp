@@ -54,7 +54,7 @@ $this->assign('title', 'Hpsingh - Login');
     <?= $this->Element('footer') ?>
     <!-- footer area end -->
 </div>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 <?php $this->Html->scriptStart(['block' => true]) ?>
 $(document).ready(function(){
 $(".forgot_psd_btn a").click(function(){
