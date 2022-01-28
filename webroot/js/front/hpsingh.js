@@ -1202,17 +1202,16 @@ function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
     var emailAddress = profile.getEmail()
 
-    $.ajax({
-        url: HOST + "customer/social-login",
-        type: 'GET',
-        data: {
-            email: emailAddress
-        },
-        cache: false,
-        contentType: 'json',
-        processData: false,
-        success: function (response) {
-            console.log(response)
-        }
-    });
+    if (emailAddress) {
+        $.ajax({
+            url: HOST + "customer/social-login?email=" + emailAddress,
+            type: 'GET',
+            cache: false,
+            contentType: 'json',
+            processData: false,
+            success: function (response) {
+                console.log(response)
+            }
+        });
+    }
 }
