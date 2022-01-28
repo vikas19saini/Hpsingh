@@ -25,7 +25,8 @@ $this->assign('title', 'Hpsingh - Login');
                         <button type="submit">LOGIN</button>
                     </div>
                     <?= $this->Form->end() ?>
-                    <!-- <div class="sub_login_bttn">
+                    <div class="sub_login_bttn">
+                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
                         <?=
                         $this->Form->postLink(
                             'Login with Google',
@@ -40,7 +41,7 @@ $this->assign('title', 'Hpsingh - Login');
                             ['class' => 'fLogin']
                         );
                         ?>
-                    </div> -->
+                    </div>
 
                     <p class="forgot_psd_btn"><a href="javascript:void(0);">Forgot Password?</a></p>
                     <p class="text-sign">Doesn't have an account? <a href="<?= $this->Url->build(['action' => 'signup']) ?>">Signup</a></p>
@@ -67,7 +68,7 @@ $this->assign('title', 'Hpsingh - Login');
     <?= $this->Element('footer') ?>
     <!-- footer area end -->
 </div>
-
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <?php $this->Html->scriptStart(['block' => true]) ?>
 $(document).ready(function(){
 $(".forgot_psd_btn a").click(function(){
