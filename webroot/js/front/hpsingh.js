@@ -1200,17 +1200,17 @@ function dataLayerSale(order) {
 
 function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
-    var emailAddress = profile.getEmail()
+    var emailAddress = profile.getEmail();
+    var name = profile.getName();
 
-    if (emailAddress) {
+    if (name !== "" && emailAddress !== "") {
         $.ajax({
-            url: HOST + "customer/social-login?email=" + emailAddress,
+            url: `${HOST}customer/social-login?email=${emailAddress}&name=${name}`,
             type: 'GET',
-            cache: false,
-            contentType: 'json',
-            processData: false,
             success: function (response) {
-                console.log(response)
+                if (response.status === "success") {
+                    window.location.href = "/"
+                }
             }
         });
     }

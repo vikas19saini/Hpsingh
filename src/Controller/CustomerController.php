@@ -76,12 +76,31 @@ class CustomerController extends AppController
 
         if ($this->request->getQuery('email')) {
             $emailAddress = $this->request->getQuery('email');
+            $name = $this->request->getQuery('name');
             $user = $this->Users->find('all', [
                 'contain' => ['Countries'],
                 'conditions' => ['email' => $emailAddress]
             ])->first();
 
-            if ($user->activated === 'verified') {
+            if (!$user) {
+                $user = $this->Users->newEntity();
+                $user = $this->Users->patchEntity($user, [
+                    'email' => $emailAddress,
+                    'password' => $emailAddress,
+                    'country_id' => 99,
+                    'activation_key' => "activated",
+                    'user_group' => 'customer',
+                    'name' => $name
+                ]);
+                $this->Users->save($user);
+            }
+
+            $user = $this->Users->find('all', [
+                'contain' => ['Countries'],
+                'conditions' => ['email' => $emailAddress]
+            ])->first();
+
+            if ($user->activation_key === 'activated') {
                 $this->Auth->setUser($user);
                 return $this->response->withType('json')->withStringBody(json_encode(['status' => 'success']));
             } else {
