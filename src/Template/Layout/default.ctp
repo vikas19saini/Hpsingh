@@ -125,7 +125,7 @@
         }
     </script>
     <script src="//code.tidio.co/1zwdxhovgpntyaotemgeo7s4meb0ydvu.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoadGapi" async defer></script>
     <?= $this->fetch('script') ?>
     <script>
         var HOST = "<?= BASE ?>";
