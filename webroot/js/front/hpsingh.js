@@ -1203,15 +1203,13 @@ function onSignIn(googleUser) {
     var emailAddress = profile.getEmail();
     var name = profile.getName();
 
-    if (name !== "" && emailAddress !== "") {
-        $.ajax({
-            url: `${HOST}customer/social-login?email=${emailAddress}&name=${name}`,
-            type: 'GET',
-            success: function (response) {
-                if (response.status === "success") {
-                    window.location.href = "/"
-                }
+    $.ajax({
+        url: `${HOST}customer/social-login?email=${emailAddress}&name=${name}`,
+        type: 'GET',
+        success: function (response) {
+            if (response.status === "success") {
+                window.location.href = "/"
             }
-        });
-    }
+        }
+    });
 }
