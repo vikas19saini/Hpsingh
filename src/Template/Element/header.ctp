@@ -447,7 +447,7 @@
                                     Us</a>
                             </li>
                             <li class="menu_item">
-                                <a href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'logout']) ?>"><b>LOGOUT</b></a>
+                                <a href="javascript:logout()"><b>LOGOUT</b></a>
                             </li>
                         <?php else : ?>
                             <li class="mobile_item">
