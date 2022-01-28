@@ -26,7 +26,7 @@ $this->assign('title', 'Hpsingh - Login');
                     </div>
                     <?= $this->Form->end() ?>
                     <div class="sub_login_bttn">
-                        <div id="g-signin2" data-onsuccess="onSignIn"></div>
+                        <div id="g-signin2"></div>
                     </div>
 
                     <p class="forgot_psd_btn"><a href="javascript:void(0);">Forgot Password?</a></p>
