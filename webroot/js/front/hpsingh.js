@@ -1226,15 +1226,17 @@ function onLoadGapi() {
     gapi.load('auth2', function () {
         gapi.auth2.init();
     });
-    gapi.signin2.render('my-signin2', {
+    gapi.signin2.render('g-signin2', {
         'scope': 'profile email',
         'width': 240,
         'height': 50,
         'longtitle': true,
         'theme': 'dark',
         'onsuccess': onSignIn,
-        'onfailure': function () {
-            console.log('Google login fail')
-        }
+        'onfailure': onFail
     });
+}
+
+function onFail(err) {
+    console.log(err)
 }

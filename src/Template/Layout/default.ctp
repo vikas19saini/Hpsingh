@@ -126,7 +126,7 @@
     </script>
     <script src="//code.tidio.co/1zwdxhovgpntyaotemgeo7s4meb0ydvu.js"></script>
     <?= $this->fetch('script') ?>
-    <script src="https://apis.google.com/js/platform.js?onload=onLoadGapi"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoadGapi" async defer></script>
     <script>
         var HOST = "<?= BASE ?>";
         var _csrfToken = "<?= $this->request->getParam('_csrfToken') ?>";
