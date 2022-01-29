@@ -37,11 +37,10 @@ $this->assign('script', $this->Html->script('select2.min'));
                <div class="form-group register_btn">
                   <button type="submit">REGISTER</button>
                </div>
-               <div class="sub_login_bttn">
-                  <a class="login-btn gLogin" href="<?= $this->Url->build(['action' => 'googleLogin']) ?>">Login With Google</a>
-                  <a class="login-btn fLogin" href="<?= $this->Url->build(['action' => 'facebookLogin']) ?>">Login With Facebook</a>
-               </div>
                <?= $this->Form->end() ?>
+               <div class="sub_login_bttn">
+                  <div id="g-signin2"></div>
+               </div>
                <p class="text-sign">Already have an account? <a href="<?= $this->Url->build(['controller' => 'Customer', 'action' => 'login']) ?>">Login Now</a></p>
                <p class="text-sign">Account is not verify? <a href="<?= $this->Url->build(['action' => 'reverify']) ?>">Resend Verification Code</a></p>
             </div>
