@@ -2495,7 +2495,7 @@
     .custom_add h2 {font-size: 14px;}
     .enquiry_form .form-group input, .enquiry_form .form-group textarea, .enquiry_form .form-group select{font-size: 13px}
     #currentPage li.next.disabled {display: none;}
-    .product_right_img .view_product img {height: 166px;object-fit: cover;
+    .product_right_img .view_product img {height:auto /* 166px */;object-fit: cover;
     object-position: left;}
     .product_right_img .view_product img.scarve-dupattas{height:auto !important;}
     .category{width: 25%;float: left;text-align: center}
