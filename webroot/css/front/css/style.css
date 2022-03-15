@@ -6940,3 +6940,66 @@ button.deliver_change_button {
     color: #fff !important;
     border-color: #1877f2 !important;
 }
+
+.couponsdisplay{
+    margin-top: 25px;
+}
+
+.couponsdisplay .hed{
+    text-transform: uppercase;
+    padding: 0px !important;
+}
+
+.couponsdisplay h3{
+    text-transform: uppercase;
+    font-size: 14px !important;
+    font-weight: 600;
+    font-family: 'helvetica' !important;
+    letter-spacing: .5px !important;
+    position: relative;
+    border: 0px solid transparent;
+    border-radius: 5px;
+    background: #fff;
+    background-clip: padding-box;
+    padding: 7px;    
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 0px;
+}
+
+.couponsdisplay h3 input{
+    height: 15px;
+    width: 15px;
+    margin-top: -2px;
+}
+
+.couponsdisplay h3::after {
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(45deg, #87beeb, #42a989, #fe4df8);
+    content: '';
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.coupon-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.coupon-one{
+    width: 48% !important;
+    max-width: 48% !important;
+    cursor: pointer;
+}
+.coupon-one p{
+line-height: unset;
+    padding: 0px;
+    margin-top: 7px;
+}

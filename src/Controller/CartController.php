@@ -50,7 +50,18 @@ class CartController extends AppController
         $this->request->allowMethod(['ajax']);
         $products = $this->__getItemsInCart();
         $cart = $this->request->getSession()->read('Cart.Products');
-        $this->set(compact('products', 'cart'));
+
+        $this->loadModel("Coupons");
+        $coupons = $this->Coupons->find('all', [
+            'conditions' => [
+                'deleted IS' => NULL,
+                'status' => 'published',
+                'expiry_date >=' => date('Y-m-d'),
+                'value >' => 0,
+            ],
+        ])->orderDesc('id')->limit(2);
+
+        $this->set(compact('products', 'cart', 'coupons'));
         $this->render('cartdata');
     }
 
@@ -168,7 +179,17 @@ class CartController extends AppController
         $countries = $this->Addresses->Countries->find('list');
         $zones = $this->Addresses->Zones->find('list');
 
-        $this->set(compact('address', 'countries', 'zones', 'savedaddresses', 'shipping_address', 'billing_address', 'payment_method'));
+        $this->loadModel("Coupons");
+        $coupons = $this->Coupons->find('all', [
+            'conditions' => [
+                'deleted IS' => NULL,
+                'status' => 'published',
+                'expiry_date >=' => date('Y-m-d'),
+                'value >' => 0,
+            ],
+        ])->orderDesc('id')->limit(2);
+
+        $this->set(compact('address', 'countries', 'zones', 'savedaddresses', 'shipping_address', 'billing_address', 'payment_method', 'coupons'));
     }
 
     private function __calculateShippingRate($address)
