@@ -25,8 +25,8 @@
                         <div class="coupon-group">
                             <?php foreach ($coupons as $coupon) : ?>
                                 <div class="coupon-one" onClick="$('#coupon_code').val('<?= $coupon->code ?>');$('#apply-coupon-form').submit();">
-                                    <h3><input type="radio" name="coupon" /> holi200</h3>
-                                    <p>Get Rs. 500 discount</p>
+                                    <h3><input type="radio" name="coupon" /> <?= $coupon->code ?></h3>
+                                    <p><?= $coupon->description ?></p>
                                 </div>
                             <?php endforeach; ?>
                         </div>
