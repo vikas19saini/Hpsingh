@@ -7004,5 +7004,5 @@ button.deliver_change_button {
     margin-top: 7px;
 }
 .coupon-one p b{
-    display: block !important;
+    display: inline-block !important;
 }
