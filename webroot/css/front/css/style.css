@@ -6999,7 +6999,10 @@ button.deliver_change_button {
     cursor: pointer;
 }
 .coupon-one p{
-line-height: unset;
+    line-height: unset !important;
     padding: 0px;
     margin-top: 7px;
+}
+.coupon-one p b{
+    display: block !important;
 }
