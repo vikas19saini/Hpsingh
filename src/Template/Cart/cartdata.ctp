@@ -20,27 +20,26 @@
                                     <?php if (!empty($product->design_no)) : ?>
                                         <p class="design-no">Design No: <em><?= $product->design_no ?></em></p>
                                     <?php endif; ?>
-
-                                    <p class="qty"> Qty
-                                        <select onchange="$('input[data-slug=<?= $product->slug ?>]').attr('value', this.value);updateQuantity(<?= $product->id ?>, this.value)">
-                                            <?php for ($i = $product->min_order_qty; $i <= $product->max_order_qty; $i = number_format((float)$i + $product->step, 1)) : ?>
-                                                <option value="<?= $i ?>" <?= (strval($i) === $qty) ? 'selected' : '' ?>><?= $i ?></option>
-                                            <?php endfor; ?>
-                                        </select>
-                                    </p>
                                     <?php if (!$product->in_stock) : ?>
                                         <p class="shopping_price">OUT OF STOCK</p>
                                     <?php else : ?>
                                         <p class="shopping_price">Price: <?= $this->Product->price($product, 'no', $qty) ?></p>
                                     <?php endif; ?>
 
+                                    <div class="shopping_count quantity-sec" style="margin-top: 5px;">
+                                        <button class="qty-minus" onclick="decQuantity(this);updateQuantity(<?= $product->id ?>, $(this).next().val())"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                        <input id="cart-qty-input" type="number" onchange="updateQuantity(<?= $product->id ?>, $(this).val())" data-slug="<?= $product->slug ?>" class="qty" step="<?= $product->step ?>" max="<?= $product->max_order_qty ?>" min="<?= $product->min_order_qty ?>" value="<?= $cart[$product->id]['qty'] ?>">
+                                        <button class="qty-plus" onclick="incQuantity(this);updateQuantity(<?= $product->id ?>, $(this).prev().val())"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                    </div>
+
+
                                     <a class="move-to-wishlist" href="<?= $this->Url->build(['controller' => 'Wishlist', 'action' => 'addFromCart', $product->slug]) ?>"><button>MOVE TO WHISHLIST</button></a>
                                 </div>
-                                <div class="shopping_count quantity-sec">
+                                <!-- <div class="shopping_count quantity-sec">
                                     <button class="qty-minus" onclick="decQuantity(this);updateQuantity(<?= $product->id ?>, $(this).next().val())"><i class="fa fa-minus" aria-hidden="true"></i></button>
                                     <input id="cart-qty-input" type="number" onchange="updateQuantity(<?= $product->id ?>, $(this).val())" data-slug="<?= $product->slug ?>" class="qty" step="<?= $product->step ?>" max="<?= $product->max_order_qty ?>" min="<?= $product->min_order_qty ?>" value="<?= $cart[$product->id]['qty'] ?>">
                                     <button class="qty-plus" onclick="incQuantity(this);updateQuantity(<?= $product->id ?>, $(this).prev().val())"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                                </div>
+                                </div> -->
                                 <?php if (!$product->in_stock) : ?>
                                     <div class="shopping_price">OUT OF STOCK</div>
                                 <?php else : ?>
