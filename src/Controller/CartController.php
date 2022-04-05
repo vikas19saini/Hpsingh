@@ -58,7 +58,7 @@ class CartController extends AppController
                 'status' => 'published',
                 'expiry_date >=' => date('Y-m-d'),
                 'value >' => 0,
-                'user_id' => ''
+                'users' => ''
             ],
         ])->orderDesc('id')->limit(2);
 
