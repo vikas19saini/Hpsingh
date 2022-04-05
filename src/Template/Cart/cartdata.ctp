@@ -33,7 +33,7 @@
                                     </div>
 
 
-                                    <a class="move-to-wishlist" href="<?= $this->Url->build(['controller' => 'Wishlist', 'action' => 'addFromCart', $product->slug]) ?>"><button>MOVE TO WHISHLIST</button></a>
+                                    <a class="move-to-wishlist" style="margin-left: 10px;" href="<?= $this->Url->build(['controller' => 'Wishlist', 'action' => 'addFromCart', $product->slug]) ?>"><button style="padding:6px"><i class="fa fa-heart"></i> MOVE TO WHISHLIST</button></a>
                                 </div>
                                 <!-- <div class="shopping_count quantity-sec">
                                     <button class="qty-minus" onclick="decQuantity(this);updateQuantity(<?= $product->id ?>, $(this).next().val())"><i class="fa fa-minus" aria-hidden="true"></i></button>
@@ -54,10 +54,10 @@
                                     </div>
                                 <?php endif; ?>
                                 <div class="shopping_close" data-product='<?= json_encode(['product' => $product, 'qty' => $cart[$product->id]['qty']]) ?>' onclick="removeFromCart(<?= $product->id ?>, this)"><i class="icon icon-hpsinghdelete icon_main"></i></div>
-                                <div class="mobile_edit_remove">
+                                <div class="mobile_edit_remove" style="margin-top: 12px;border-top:1px solid #cccccc4a">
                                     <ul>
-                                        <li><button style="width: 96%;border: 0px;font-size: 13px !important;font-weight: 600;" data-product='<?= json_encode(['product' => $product, 'qty' => $cart[$product->id]['qty']]) ?>' onclick="removeFromCart(<?= $product->id ?>, this)">REMOVE</button></li>
-                                        <li><a style="width: 96%;border: 0px;font-size: 13px !important;font-weight: 600;" class="move-to-wishlist" href="<?= $this->Url->build(['controller' => 'Wishlist', 'action' => 'addFromCart', $product->slug]) ?>">MOVE TO WISHLIST</a></li>
+                                        <li><button style="width: 96%;border: 0px;font-size: 13px !important;font-weight: bold;color: #bb3737" data-product='<?= json_encode(['product' => $product, 'qty' => $cart[$product->id]['qty']]) ?>' onclick="removeFromCart(<?= $product->id ?>, this)"><i class="fa fa-trash" style="font-size: 14px"></i> REMOVE</button></li>
+                                        <li><a style="width: 96%;border: 0px;font-size: 13px !important;font-weight: bold" class="move-to-wishlist" href="<?= $this->Url->build(['controller' => 'Wishlist', 'action' => 'addFromCart', $product->slug]) ?>"><i class="fa fa-heart" style="font-size: 14px"></i> MOVE TO WISHLIST</a></li>
                                     </ul>
                                 </div>
                             </div>
