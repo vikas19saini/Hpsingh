@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 use Cake\Http\Client;
 
 class CartController extends AppController
@@ -28,6 +29,9 @@ class CartController extends AppController
         if (!$product) {
             return $this->response->withType('json')->withStringBody(json_encode(['status' => 'error', 'message' => 'Product not found!']));
         }
+
+        $event = new Event('Facebook.Conversion.addToCart', $this, ['product' => $product, 'request' => $this->request]);
+        $this->getEventManager()->dispatch($event);
 
         return $this->response->withType('json')->withStringBody(json_encode($this->Cart->add($product, $this->request->getData('qty'))));
     }

@@ -204,7 +204,10 @@ Plugin::load('AbandonedCart', ['bootstrap' => false, 'routes' => true]);
 
 
 use App\Events\CartEvent;
+use App\Events\FacebookEvent;
 use Cake\Event\EventManager;
 
 $cartEvent = new CartEvent();
 EventManager::instance()->on($cartEvent);
+$facebook = new FacebookEvent();
+EventManager::instance()->on($facebook);
