@@ -40,7 +40,8 @@ class CategoryCell extends Cell {
 
         $products_count = $this->Products->find('all')
                         ->matching('Categories', function($q) use ($category_id) {
-                            return $q->where(['Categories.id' => $category_id]);
+                            return $q->where(['Categories.id' => $category_id,'Products.status' => 'published', 'Products.deleted IS NULL','Products.ragular_price !=' => '0'
+]);
                         })->distinct('Products.id');
 
         $products_count = $products_count->count();

@@ -476,4 +476,12 @@ class OrdersTable extends Table
 
         return compact('labels', 'sale_amount', 'orders_placed', 'shipping_charges', 'coupon_discounts', 'other_discounts');
     }
+	
+	public function updateTrackingNumber($order_id, $tracking_no) {
+        if($this->query()->update()->set(['tracking_no' => $tracking_no])->where(['id' => $order_id])->execute()){
+			return true;
+		} else {
+			return false;
+		}
+    }
 }
