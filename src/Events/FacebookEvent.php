@@ -40,7 +40,7 @@ class FacebookEvent implements EventListenerInterface
             Log::error($response->getBody());
         }
 
-        Log::debug($request->getCookie("_fbp"));
+        //Log::debug($request->getCookie("_fbp"));
     }
 
     public function addToCart($event)
@@ -62,7 +62,7 @@ class FacebookEvent implements EventListenerInterface
             Log::error($response->getBody());
         }
 
-        Log::debug($request->getCookie("_fbp"));
+        //Log::debug($request->getCookie("_fbp"));
     }
 
     private function getData($request, $event)
