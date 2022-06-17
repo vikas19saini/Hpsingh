@@ -68,5 +68,13 @@ class OrderComponent extends Component {
         $this->OrderHistory->save($order_history);
         return;
     }
+	
+	public function updateTrackingNumber($order_id, $tracking_no) {
+        if($this->Orders->query()->update()->set(['tracking_no' => $tracking_no])->where(['id' => $order_id])->execute()){
+			return true;
+		} else {
+			return false;
+		}
+    }
 
 }
