@@ -201,6 +201,7 @@ $this->assign('script', '<script src="https://www.paypal.com/sdk/js?currency=' .
                                                         </label>
                                                     </div>
                                                 <?php endif; ?>
+												<?php if (strtoupper($defaultCurrency->code) != 'INR') : ?>
                                                 <div class="payment_method" data-value="paypal">
                                                     <label class="radio_container">
                                                         <i class="fa fa-paypal"></i> Paypal
@@ -208,7 +209,7 @@ $this->assign('script', '<script src="https://www.paypal.com/sdk/js?currency=' .
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
-
+												<?php endif; ?>
                                                 <!-- Enable COD if shipping country is india-->
 
                                                 <?php if (isset($shippingZone) && !empty($shippingZone)) {
