@@ -4,7 +4,7 @@ $this->assign('script', $this->Html->script('admin/moment.min') . $this->Html->s
 ?>
 <div class="main_user">
     <div class="user_section">
-        <h2>All Orders (<?= $this->Paginator->params()['count'] ?>)</h2>
+        <h2>All Orders (<?= $this->Paginator->params()['count'] ?>)| <a href="<?= 'https://'.$_SERVER['HTTP_HOST'].'/hpadmin/exports';?>" title = "Download Analytic Report"><strong>Export <i class="fa fa-download" aria-hidden="true"></i></strong></a></h2>
     </div>
     <div class="user_bulk product-controls">
         <div class="media_pagination full-width">

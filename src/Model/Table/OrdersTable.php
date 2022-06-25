@@ -69,6 +69,9 @@ class OrdersTable extends Table
             'targetForeignKey' => 'product_id',
             'joinTable' => 'orders_products',
         ]);
+		$this->hasMany('OrdersProducts', [
+            'foreignKey' => 'order_id'
+        ]);
     }
 
     /**
