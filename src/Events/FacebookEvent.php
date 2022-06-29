@@ -16,6 +16,7 @@ class FacebookEvent implements EventListenerInterface
         return [
             'Facebook.Conversion.addToCart' => 'addToCart',
             'Facebook.Conversion.AddToWishList' => 'addToWishlist',
+			'Facebook.Conversion.facebookPurchase' => 'facebookPurchase',
         ];
     }
 
@@ -64,6 +65,31 @@ class FacebookEvent implements EventListenerInterface
 
         //Log::debug($request->getCookie("_fbp"));
     }
+	
+	public function facebookPurchase($event)
+    {
+        $request = $event->getData("request");
+        $product = $event->getData("product");
+		$order = $event->getData("order");
+
+        $http = new Client();
+        $data = $this->getData($request, "Purchase");
+		$custom_data = array(
+			'currency' => $order->currency_code,
+			'value' => $order->grand_total
+		);
+		$data['data'][0]['contents'] = $product;
+		$data['data'][0]['custom_data'] = $custom_data;
+		
+		$response = $http->post($this->endPoint, $data, [
+            'headers' => [
+                'Authorization' => "Bearer " . $this->accessToken
+            ]
+        ]);
+		if (!$response->isOk()) {
+            Log::error($response->getBody());
+        }
+	}
 
     private function getData($request, $event)
     {
