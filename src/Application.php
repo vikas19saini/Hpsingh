@@ -39,7 +39,7 @@ class Application extends BaseApplication
      */
     public function bootstrap()
     {
-        $this->addPlugin('ADmad/HybridAuth', ['bootstrap' => true, 'routes' => true]);
+        //$this->addPlugin('ADmad/HybridAuth', ['bootstrap' => true, 'routes' => true]);
 
         // Call parent to load bootstrap from files.
         parent::bootstrap();
