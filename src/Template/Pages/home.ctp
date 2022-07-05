@@ -153,8 +153,8 @@ if (isset($page)) {
                         <div id="sync4" class="owl-carousel owl-theme bttm_inner">
                             <div class="item">
                                 <div class="best_categories_content">
-                                    <h2>Soft Linens</h2>
-                                    <p>Linen is a natural fiber, like cotton, but it takes longer to harvest and make into fabric, as flax fibers can be difficult to weave. It can be used for making mens kurta, mens shirt and more.</p>
+                                    <h2>Linen Fabrics</h2>
+                                    <p>A natural fiber just like cotton, linen is derived from the flax plant. It is very strong, lightweight and breathable making it a popular choice in summers.</p>
                                     <a href="<?= $this->Url->build(['_name' => 'search', 'linen']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
@@ -186,7 +186,7 @@ if (isset($page)) {
                         <div id="sync3" class="owl-carousel owl-theme bttm_inner">
                             <div class="item">
                                 <div class="best_categories_img">
-                                    <?= $this->Html->image('soft-linens.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('linen.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
                             <div class="item">
@@ -376,7 +376,7 @@ if (isset($page)) {
                         <div class="root1 active">
                             <div class="root_area">
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/floral.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/floral1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Florals</h2>
@@ -396,7 +396,7 @@ if (isset($page)) {
                         <div class="root2">
                             <div class="root_area">
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/abstract.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/abstract1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Abstracts</h2>
@@ -420,7 +420,7 @@ if (isset($page)) {
                         <div class="root4">
                             <div class="root_area">
                                 <div class="prints_contant root_img">
-                                    <?= $this->Html->image('static/watercolor.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/watercolor_effects1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Watercolour Effects</h2>
@@ -444,7 +444,7 @@ if (isset($page)) {
                         <div class="root5">
                             <div class="prints_contant root_area">
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/Conversationals.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/Conversationals1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Conversationals</h2>
@@ -467,7 +467,7 @@ if (isset($page)) {
                         <div class="root3">
                             <div class="prints_contant root_area">
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/stripe.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/stripe1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Stripes</h2>
@@ -489,7 +489,7 @@ if (isset($page)) {
                         <div class="root6">
                             <div class="prints_contant root_area">
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/animal_print.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/animal1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Animal Prints</h2>
@@ -520,7 +520,7 @@ if (isset($page)) {
                     <div class="item">
                         <div class="mobile_root_visible1">
                             <a href="<?= $this->Url->build(['_name' => 'search', 'abstracts']) ?>">
-                                <?= $this->Html->image('static/Abstract-mob.jpg', ['class' => 'img-responsive']) ?>
+                                <?= $this->Html->image('static/abstract2.jpg', ['class' => 'img-responsive']) ?>
                                 <div>
                                     <h2>Abstract</h2>
                                 </div>
@@ -530,7 +530,7 @@ if (isset($page)) {
                     <div class="item">
                         <div class="mobile_root_visible1">
                             <a href="<?= $this->Url->build(['_name' => 'search', 'florals']) ?>">
-                                <?= $this->Html->image('static/floral-mob.jpg', ['class' => 'img-responsive']) ?>
+                                <?= $this->Html->image('static/floral2.jpg', ['class' => 'img-responsive']) ?>
                                 <div>
                                     <h2>Floral</h2>
                                 </div>
@@ -541,7 +541,7 @@ if (isset($page)) {
                     <div class="item">
                         <div class="mobile_root_visible1">
                             <a href="<?= $this->Url->build(['_name' => 'search', 'stripe']) ?>">
-                                <?= $this->Html->image('static/strips-mob.jpg', ['class' => 'img-responsive']) ?>
+                                <?= $this->Html->image('static/stripe2.jpg', ['class' => 'img-responsive']) ?>
                                 <div>
                                     <h2>Stripes</h2>
                                 </div>
@@ -552,7 +552,7 @@ if (isset($page)) {
                     <div class="item">
                         <div class="mobile_root_visible1">
                             <a href="<?= $this->Url->build(['_name' => 'search', 'animal']) ?>">
-                                <?= $this->Html->image('static/animal_print_mob.jpg', ['class' => 'img-responsive']) ?>
+                                <?= $this->Html->image('static/animal2.jpg', ['class' => 'img-responsive']) ?>
                                 <div>
                                     <h2>Animal Prints</h2>
                                 </div>
@@ -562,7 +562,7 @@ if (isset($page)) {
                 </div>
                 <div class="mobile_root_visible1 mobile_root_visible2 wow fadeInUp">
                     <a href="<?= $this->Url->build(['_name' => 'search', 'conversationals']) ?>">
-                        <?= $this->Html->image('static/Conversationals-mob.jpg', ['class' => 'img-responsive']) ?>
+                        <?= $this->Html->image('static/Conversationals2.jpg', ['class' => 'img-responsive']) ?>
                         <div>
                             <h2>Conversationals</h2>
                         </div>
@@ -570,7 +570,7 @@ if (isset($page)) {
                 </div>
                 <div class="mobile_root_visible1 mobile_root_visible2 wow fadeInUp">
                     <a href="<?= $this->Url->build(['_name' => 'search', 'watercolour']) ?>">
-                        <?= $this->Html->image('static/watercolor_mob.jpg', ['class' => 'img-responsive']) ?>
+                        <?= $this->Html->image('static/watercolor_effects2.jpg', ['class' => 'img-responsive']) ?>
                         <div>
                             <h2>Watercolour effects</h2>
                         </div>
@@ -638,7 +638,7 @@ if (isset($page)) {
                                     </a>
                                 </div>
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/kalamkari.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/kalamkari1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
                         </div>
@@ -666,7 +666,7 @@ if (isset($page)) {
                                     </a>
                                 </div>
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/ikat.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/ikat1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
                         </div>
@@ -696,7 +696,7 @@ if (isset($page)) {
                                     </a>
                                 </div>
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/ajrak.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/ajrak1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
                         </div>
@@ -726,7 +726,7 @@ if (isset($page)) {
                                     </a>
                                 </div>
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/Shibori.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/shibori1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
                         </div>
@@ -762,7 +762,7 @@ if (isset($page)) {
                                     </a>
                                 </div>
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/Blocks.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/handblock1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
                         </div>
@@ -801,7 +801,7 @@ if (isset($page)) {
                                     </a>
                                 </div>
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/Khadi.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/handspun1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
                         </div>
@@ -840,7 +840,7 @@ if (isset($page)) {
                                     </a>
                                 </div>
                                 <div class="root_img">
-                                    <?= $this->Html->image('static/cotton_indigo.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/indigo1.jpg', ['class' => 'img-responsive']) ?>
                                 </div>
                             </div>
                         </div>
@@ -852,7 +852,7 @@ if (isset($page)) {
                         <div class="item">
                             <div class="mobile_root_visible1">
                                 <a href="<?= $this->Url->build(['_name' => 'search', 'kalamkari']) ?>">
-                                    <?= $this->Html->image('static/kalamkari_mob.png', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/kalamkari2.jpg', ['class' => 'img-responsive']) ?>
                                     <div>
                                         <h2>Kalamkari</h2>
                                     </div>
@@ -862,7 +862,7 @@ if (isset($page)) {
                         <div class="item">
                             <div class="mobile_root_visible1">
                                 <a href="<?= $this->Url->build(['_name' => 'search', 'ikats']) ?>">
-                                    <?= $this->Html->image('static/Ikat_mob.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/ikat2.jpg', ['class' => 'img-responsive']) ?>
                                     <div>
                                         <h2>Ikats</h2>
                                     </div>
@@ -872,7 +872,7 @@ if (isset($page)) {
                         <div class="item">
                             <div class="mobile_root_visible1">
                                 <a href="<?= $this->Url->build(['_name' => 'search', 'ajrak']) ?>">
-                                    <?= $this->Html->image('static/ajrak_mob.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/ajrak2.jpg', ['class' => 'img-responsive']) ?>
                                     <div>
                                         <h2>Ajrak</h2>
                                     </div>
@@ -882,7 +882,7 @@ if (isset($page)) {
                         <div class="item">
                             <div class="mobile_root_visible1">
                                 <a href="<?= $this->Url->build(['_name' => 'search', 'shibori']) ?>">
-                                    <?= $this->Html->image('static/shiboori.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/shibori2.jpg', ['class' => 'img-responsive']) ?>
                                     <div>
                                         <h2>Shibori</h2>
                                     </div>
@@ -892,7 +892,7 @@ if (isset($page)) {
                         <div class="item">
                             <div class="mobile_root_visible1">
                                 <a href="<?= $this->Url->build(['_name' => 'search', 'hand+blocks']) ?>">
-                                    <?= $this->Html->image('static/hand-blocks-mob.jpg', ['class' => 'img-responsive']) ?>
+                                    <?= $this->Html->image('static/handblock2.jpg', ['class' => 'img-responsive']) ?>
                                     <div>
                                         <h2>Hand Block</h2>
                                     </div>
@@ -902,7 +902,7 @@ if (isset($page)) {
                     </div>
                     <div class="mobile_root_visible1 mobile_root_visible2 mrg_bttm wow fadeInUp">
                         <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+indigo']) ?>">
-                            <?= $this->Html->image('static/cotton_indigo_mob.png', ['class' => 'img-responsive']) ?>
+                            <?= $this->Html->image('static/indigo2.jpg', ['class' => 'img-responsive']) ?>
                             <div>
                                 <h2>Cotton Indigo</h2>
                             </div>
@@ -910,7 +910,7 @@ if (isset($page)) {
                     </div>
                     <div class="mobile_root_visible1 mobile_root_visible2 mrg_bttm wow fadeInUp">
                         <a href="<?= $this->Url->build(['_name' => 'search', 'khadi']) ?>">
-                            <?= $this->Html->image('static/Khadi-mob.jpg', ['class' => 'img-responsive']) ?>
+                            <?= $this->Html->image('static/handspun2.jpg', ['class' => 'img-responsive']) ?>
                             <div>
                                 <h2>Handspun</h2>
                             </div>
