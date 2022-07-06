@@ -111,8 +111,9 @@ class AppController extends Controller
                 'authError' => false
             ]);
 
-            \Cake\Event\EventManager::instance()->on('HybridAuth.login', [$this, 'afterLogin']);
-            \Cake\Event\EventManager::instance()->on('HybridAuth.newUser', [$this, 'createUser']);
+            /*\Cake\Event\EventManager::instance()->on('HybridAuth.login', [$this, 'afterLogin']);
+            \Cake\Event\EventManager::instance()->on('HybridAuth.newUser', [$this, 'createUser']);*/
+			
             $this->Auth->allow();
         }
     }
