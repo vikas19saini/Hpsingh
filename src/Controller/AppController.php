@@ -95,7 +95,7 @@ class AppController extends Controller
                             'password' => 'password'
                         ]
                     ],
-                    'ADmad/HybridAuth.HybridAuth' => [
+                    /*'ADmad/HybridAuth.HybridAuth' => [
                         'fields' => [
                             'provider' => 'provider',
                             'openid_identifier' => 'openid_identifier',
@@ -105,14 +105,15 @@ class AppController extends Controller
                         'profileModelFkField' => 'user_id',
                         'userModel' => 'Users',
                         'hauth_return_to' => null
-                    ]
+                    ]*/
                 ],
                 'loginAction' => ['controller' => 'Customer', 'action' => 'login', 'plugin' => false],
                 'authError' => false
             ]);
 
-            \Cake\Event\EventManager::instance()->on('HybridAuth.login', [$this, 'afterLogin']);
-            \Cake\Event\EventManager::instance()->on('HybridAuth.newUser', [$this, 'createUser']);
+            /*\Cake\Event\EventManager::instance()->on('HybridAuth.login', [$this, 'afterLogin']);
+            \Cake\Event\EventManager::instance()->on('HybridAuth.newUser', [$this, 'createUser']);*/
+			
             $this->Auth->allow();
         }
     }

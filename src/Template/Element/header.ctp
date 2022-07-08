@@ -504,6 +504,11 @@
                 <h4>Stories</h4>
             </a>
         </li>
+		<li>
+			<a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'trackOrder']) ?>">
+				<h4>Track Order</h4>
+			</a>
+		</li>
         <li>
             <div id="google_translate_element_mobile"></div>
         </li>
