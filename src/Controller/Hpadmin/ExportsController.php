@@ -36,13 +36,15 @@ class ExportsController extends AppController {
         ]);
 		
 		foreach ($datas as $data) {
-            fputcsv($fp, [
-                ($data['orders_products']['0']) ? $data['orders_products']['0']->order_id : '',
-				($data['orders_products']['0']) ? $data['orders_products']['0']->product_id : '',
-                ($data['orders_products']['0']) ? $data['orders_products']['0']->name : '',
-				($data['orders_products']['0']) ? $data['orders_products']['0']->price : '',
-                ($data['orders_products']['0']) ? $data['orders_products']['0']->quantity : '',
+            foreach($data['orders_products'] as $dproduct){
+				fputcsv($fp, [
+                $dproduct->order_id,
+				$dproduct->product_id,
+                $dproduct->name,
+				$dproduct->price,
+                $dproduct->quantity,
 			]);
+			}
         }
 
         fclose($fp);
