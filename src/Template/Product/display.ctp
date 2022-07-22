@@ -146,6 +146,11 @@ $jsonMetaData = [
                                 <li>Width</li>
                                 <li><?= $product->width ?></li>
                             <?php endif; ?>
+							
+							<?php if (!empty($product->length)) : ?>
+                                <li>Length</li>
+                                <li><?= $product->length ?></li>
+                            <?php endif; ?>				   
 
                             <?php if (!empty($product->count)) : ?>
                                 <li>Count</li>
@@ -170,11 +175,6 @@ $jsonMetaData = [
                             <?php if (!empty($product->design_name_color)) : ?>
                                 <li>Design Name/Color</li>
                                 <li><?= $product->design_name_color ?></li>
-                            <?php endif; ?>
-
-                            <?php if (!empty($product->length)) : ?>
-                                <li>Length</li>
-                                <li><?= $product->length ?></li>
                             <?php endif; ?>
 
                             <?php if (!empty($product->price_text)) : ?>
