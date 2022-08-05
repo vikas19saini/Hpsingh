@@ -1,7 +1,7 @@
 <?php ?>
 
 <?php foreach ($products as $product) : ?>
-    <div class="view_product">
+	<div class="view_product <?= (($category->slug == 'combination-sets') ? 'joda_product' : '')?>">
         <?php if (!$product->in_stock) : ?>
             <label class="stock-msg">Out of stock</label>
         <?php endif; ?>

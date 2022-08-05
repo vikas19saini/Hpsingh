@@ -317,6 +317,33 @@ if (isset($page)) {
     </section>
 
 
+	<section class="arrived_store best_categories jodas_c desk_view">
+               <div class="container">
+                  <div class="row">
+                     <h2>Joda's By HPSingh<span></span></h2>
+                  </div>
+               <div class="jodas_b">
+            <div class="mob_pad_0">
+               <div class="top_head_sec view_best_categories">
+                     <div class="best_categories_img ">
+                       <?= $this->Html->image('cotton-flex.jpg', ['class' => 'img-responsive']) ?>
+                   </div>
+               </div>
+            </div>
+            <div class="mob_pad_0">
+               <div class="bttm_inner">
+                     <div class="best_categories_content">
+                        <h2>Joda's By HPSingh</h2>
+                        <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
+                        <a href="<?= $this->Url->build(['_name' => 'category','combination-sets']) ?>"><button>View Collection</button></a>
+                     </div>
+                  </div>
+                  </div>
+                  </div>  
+         
+         </div>
+    </section>
+									  
     <section class="home_about_section">
         <div class="container-fluid">
             <div class="row">
@@ -339,6 +366,37 @@ if (isset($page)) {
             </div>
         </div>
     </section>
+	
+	<section class="best_categories jodas_c mob_view">
+            <div class="container">
+               <div class="row">
+                  <h2>Joda's By HPSingh<span></span></h2>
+               </div>
+            <div class="jodas_b">
+         <div class="mob_pad_0">
+            <div class="top_head_sec view_best_categories">
+                  <div class="best_categories_img ">
+                    <?= $this->Html->image('cotton-flex.jpg', ['class' => 'img-responsive']) ?>
+                </div>
+            </div>
+         </div>
+         <div class="mob_pad_0">
+            <div class="bttm_inner">
+                  <div class="best_categories_content">
+                     <h2>FOR JODAS</h2>
+                     <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
+                     <a href="<?= $this->Url->build(['_name' => 'category','combination-sets']) ?>"><button>VIEW COLLECTION</button></a>
+                  </div>
+               </div>
+               </div>
+               </div>  
+      
+         <div class="jodas_p">
+            <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
+         
+      </div>
+      </div>
+    </section>											   
 
     <?php if ($deals) : ?>
         <section class="deals">

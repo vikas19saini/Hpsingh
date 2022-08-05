@@ -1,4 +1,12 @@
 <?php ?>
+<style>
+.new_bttn{background-image: linear-gradient(to right, #EA981D, #055864a1);
+    border: none;
+    color: #fff;
+    font: 400 0.8rem/1rem 'Raleway', sans-serif;
+    padding: 0.2rem 0.7rem;
+    border-radius: 3px;}
+</style>	   
 <!-- header area start -->
 <div class="header_heading container-fluid">
     <div class="container">
@@ -158,6 +166,10 @@
                                             <h4>
                                                 <a href="<?= $this->Url->build(['_name' => 'category', 'cut-pieces']) ?>">Cut
                                                     Pieces</a>
+                                            </h4>
+											<h4>
+                                                <a href="<?= $this->Url->build(['_name' => 'category', 'combination-sets']) ?>">Joda's By HPSingh</a>
+												<button type="button" class="new_bttn">New</button>
                                             </h4>
                                         </div>
 
@@ -478,6 +490,13 @@
                     </ul>
                 </div>
             </div>
+        </li>
+		<li>
+			<a href="<?= $this->Url->build(['_name' => 'category','combination-sets']) ?>">
+                <h4>Joda's By HPSingh</h4>
+			</a>
+			An extensive collection of ready-to-stitch indian ethnic co-ord fabrics, especially curated to look your best.
+			<button type="button" class="new_bttn">New</button>
         </li>
         <li>
             <a href="<?= $this->Url->build(['_name' => 'sale']) ?>">
