@@ -326,7 +326,7 @@ if (isset($page)) {
             <div class="mob_pad_0">
                <div class="top_head_sec view_best_categories">
                      <div class="best_categories_img ">
-                       <?= $this->Html->image('cotton-flex.jpg', ['class' => 'img-responsive']) ?>
+                       <?= $this->Html->image('joda_duppata.jpg', ['class' => 'img-responsive']) ?>
                    </div>
                </div>
             </div>
@@ -376,7 +376,7 @@ if (isset($page)) {
          <div class="mob_pad_0">
             <div class="top_head_sec view_best_categories">
                   <div class="best_categories_img ">
-                    <?= $this->Html->image('cotton-flex.jpg', ['class' => 'img-responsive']) ?>
+                    <?= $this->Html->image('joda_duppata.jpg', ['class' => 'img-responsive']) ?>
                 </div>
             </div>
          </div>
