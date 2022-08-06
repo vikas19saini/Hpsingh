@@ -1,12 +1,4 @@
 <?php ?>
-<style>
-.new_bttn{background-image: linear-gradient(to right, #EA981D, #055864a1);
-    border: none;
-    color: #fff;
-    font: 400 0.8rem/1rem 'Raleway', sans-serif;
-    padding: 0.2rem 0.7rem;
-    border-radius: 3px;}
-</style>	   
 <!-- header area start -->
 <div class="header_heading container-fluid">
     <div class="container">
@@ -167,10 +159,10 @@
                                                 <a href="<?= $this->Url->build(['_name' => 'category', 'cut-pieces']) ?>">Cut
                                                     Pieces</a>
                                             </h4>
-											<h4>
-                                                <a href="<?= $this->Url->build(['_name' => 'category', 'combination-sets']) ?>">Joda's By HPSingh</a>
-												<button type="button" class="new_bttn">New</button>
-                                            </h4>
+											<h4 style="display: flex;">
+												<a href="<?= $this->Url->build(['_name' => 'category', 'combination-sets']) ?>">Joda's By HPSingh</a>
+												<div class="new_bttn">New</div>
+											</h4>
                                         </div>
 
                                         <div class="menu-item-list">
@@ -493,11 +485,11 @@
         </li>
 		<li>
 			<a href="<?= $this->Url->build(['_name' => 'category','combination-sets']) ?>">
-                <h4>Joda's By HPSingh</h4>
+				<h4>Joda's By HPSingh <button type="button" class="new_bttn">New</button>
+					<p>An extensive collection of ready-to-stitch indian ethnic co-ord fabrics, especially curated to look your best.</p>
+				</h4>
 			</a>
-			An extensive collection of ready-to-stitch indian ethnic co-ord fabrics, especially curated to look your best.
-			<button type="button" class="new_bttn">New</button>
-        </li>
+		</li>
         <li>
             <a href="<?= $this->Url->build(['_name' => 'sale']) ?>">
                 <h4>Deals</h4>
