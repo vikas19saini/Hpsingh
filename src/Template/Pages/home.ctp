@@ -333,7 +333,6 @@ if (isset($page)) {
             <div class="mob_pad_0">
                <div class="bttm_inner">
                      <div class="best_categories_content">
-                        <h2>Joda's By HPSingh</h2>
                         <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
                         <a href="<?= $this->Url->build(['_name' => 'category','combination-sets']) ?>"><button>View Collection</button></a>
                      </div>
@@ -383,7 +382,6 @@ if (isset($page)) {
          <div class="mob_pad_0">
             <div class="bttm_inner">
                   <div class="best_categories_content">
-                     <h2>FOR JODAS</h2>
                      <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
                      <a href="<?= $this->Url->build(['_name' => 'category','combination-sets']) ?>"><button>VIEW COLLECTION</button></a>
                   </div>

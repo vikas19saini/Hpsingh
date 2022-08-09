@@ -12420,7 +12420,7 @@ button.deliver_change_button {
 
 @media screen and (max-width: 767px) {
     .mobile_header_menu ul li a h4:nth-child(3){color: #EA981D;font:500 0.813rem/1rem 'Raleway', sans-serif;}
-    .mobile_header_menu ul li a h4>p{font:500 0.688rem/1rem 'Raleway', sans-serif;color: #555555;}
+    .mobile_header_menu ul li a h4>p{font: 500 0.9rem/1.3rem 'Raleway', sans-serif;color: #555555;margin: .6rem 5rem 0 0;}
 
     .new_bttn {
 		background-image: linear-gradient(to right, #EA981D, #055864a1);
@@ -12440,9 +12440,8 @@ button.deliver_change_button {
     background-image: linear-gradient(to right, #EA981D, #055864a1);
     border: none;
     color: #fff;
-    font: 400 0.9rem/1rem 'Raleway', sans-serif;
+    font: 400 1.2rem/1rem 'Raleway', sans-serif;
     padding: 0.6rem 1rem;
     border-radius: 3px;
-    margin: 0px 9px 2px;
     letter-spacing: 1px;
 }									  
