@@ -57,24 +57,10 @@
             <?php if (isset($showAnalytics)) : ?>
                 gtag('event', 'conversion', {
                     'send_to': 'AW-835074064/sUMuCIvM7PMBEJDwmI4D',
-                    'transaction_id': ''
+                    'value': '<?= $order->grand_total ?>',
+                    'currency': 'INR'
                 });
             <?php endif; ?>
-        </script>
-        <!-- Global site tag (gtag.js) - Google Ads: 835074064 -->
-        <script>
-            function gtag_report_conversion(url) {
-                var callback = function() {
-                    if (typeof(url) != 'undefined') {
-                        window.location = url;
-                    }
-                };
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-835074064/W1e_CI6z2vMBEJDwmI4D',
-                    'event_callback': callback
-                });
-                return false;
-            }
         </script>
         <script>
             (function(w, d, s, l, i) {

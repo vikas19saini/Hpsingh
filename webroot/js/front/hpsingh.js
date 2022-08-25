@@ -87,7 +87,6 @@ function addToCart(slug, ref) {
             $(ref).append('<i class="y9uHb"></i>');
         },
         success: function (response) {
-            //gtag_report_conversion();
             flashMessage(response);
             getCartItems();
             $(ref).children('i').remove();
@@ -1176,13 +1175,13 @@ function dataLayerRemoveFromCart(__ele) {
 }
 
 function dataLayerSale(order) {
-    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+    dataLayer.push({ ecommerce: null });
     dataLayer.push({
         'ecommerce': {
             'purchase': {
                 'actionField': {
-                    'id': order.id,                         // Transaction ID. Required for purchases and refunds.
-                    'revenue': order.grand_total,                     // Total transaction value (incl. tax and shipping)
+                    'id': order.id,
+                    'revenue': order.grand_total,
                     'tax': 0
                 },
                 'products': order.products.map((pro) => {
