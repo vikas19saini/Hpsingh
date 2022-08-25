@@ -28,7 +28,9 @@
         <?= $this->Html->css('front/css/header') ?>
         <?= $this->Html->css('front/css/footer') ?>
         <?= $this->Html->css('front/css/font') ?>
-        <?= $this->Html->css('front/css/owl.carousel') ?>
+        <!--<?= $this->Html->css('front/css/owl.carousel') ?>-->
+		<?= $this->Html->css('front/css/slick') ?>
+        <?= $this->Html->css('front/css/thems') ?>									
         <?= $this->Html->css('front/css/style') ?>
         <?= $this->Html->css('front/css/responsive') ?>
     <?php endif; ?>
@@ -102,13 +104,14 @@
     <?= $this->fetch('content') ?>
 
     <?= $this->Html->script('front/jquery-1.12.0.min') ?>
+	<?= $this->Html->script('front/slick') ?>									  
     <?= $this->Html->script('front/bootstrap.min') ?>
     <?= $this->Html->script('front/wow') ?>
     <?= $this->Html->script('front/jarallax') ?>
     <?= $this->Html->script('front/aos') ?>
     <?= $this->Html->script('front/smoothScroll.min') ?>
-    <?= $this->Html->script('front/owl.carousel') ?>
-    <?= $this->Html->script('front/hpsingh') ?>
+    <!--<?= $this->Html->script('front/owl.carousel') ?>-->
+    <!--<?= $this->Html->script('front/hpsingh') ?>-->
     <?= $this->Html->script('front/zoom.min') ?>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="text/javascript">

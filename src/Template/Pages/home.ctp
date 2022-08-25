@@ -14,7 +14,7 @@ if (isset($page)) {
     <!--- home page banner -->
     <section class="banner_section">
         <div class="carousel-inner">
-            <div class="home_banner owl-carousel owl-theme">
+            <div class="home_banner">
                 <?php foreach ($sliders as $slider) : ?>
                     <div class="item">
                         <a href="<?= $slider->uri ?>">
@@ -23,6 +23,8 @@ if (isset($page)) {
                         </a>
                     </div>
                 <?php endforeach; ?>
+				
+				
             </div>
         </div>
     </section>
@@ -43,7 +45,7 @@ if (isset($page)) {
                 <div class="col-lg-10 offset-lg-1 col-md-12">
                     <div class="tab-content">
                         <div class="fabric_icon active">
-                            <div class="owl-carousel owl-theme fabric_carousel wow fadeInRight">
+                            <div class="fabric_carousel wow fadeInRight">
                                 <?php foreach ($categories as $category) : ?>
                                     <div class="item">
                                         <a href="<?= (!empty($category->url)) ? $category->url : $this->Url->build(['_name' => 'category', $category->slug]) ?>">
@@ -55,7 +57,7 @@ if (isset($page)) {
                             </div>
                         </div>
                         <div class="fabric_icon2">
-                            <div class="owl-carousel fabric_tab2 fabric_carousel">
+                            <div class="fabric_tab2 fabric_carousel">
                                 <?php foreach ($wearing as $wearingItem) : ?>
                                     <div class="item">
                                         <a href="<?= (!empty($wearingItem->url)) ? $wearingItem->url : $this->Url->build(['_name' => 'category', $wearingItem->slug]) ?>">
@@ -80,133 +82,102 @@ if (isset($page)) {
             <div class="mob_hd">
                 <div class="row">
                     <div class="col-md-7 col-xs-7 mob_pad_0">
-                        <div id="sync1" class="owl-carousel owl-theme top_head_sec view_best_categories">
-                            <div class="item">
-                                <div class="best_categories_img ">
-                                    <?= $this->Html->image('cotton-flex.jpg', ['class' => 'img-responsive']) ?>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="best_categories_img ">
-                                    <?= $this->Html->image('duppata.png', ['class' => 'img-responsive']) ?>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="best_categories_img">
-                                    <?= $this->Html->image('ikats.jpg', ['class' => 'img-responsive']) ?>
-                                </div>
-
-                            </div>
-
-                            <div class="item">
-                                <div class="best_categories_img">
-                                    <?= $this->Html->image('satins.jpg', ['class' => 'img-responsive']) ?>
-                                </div>
-                            </div>
+                        <div class="slider slider-for top_head_sec view_best_categories">
+                            <div class="best_categories_img ">
+								<?= $this->Html->image('cotton-flex.jpg', ['class' => 'img-responsive']) ?>
+							</div>
+                            <div class="best_categories_img ">
+								<?= $this->Html->image('duppata.png', ['class' => 'img-responsive']) ?>
+							</div>
+                            <div class="best_categories_img">
+								<?= $this->Html->image('ikats.jpg', ['class' => 'img-responsive']) ?>
+							</div>
+							<div class="best_categories_img">
+								<?= $this->Html->image('satins.jpg', ['class' => 'img-responsive']) ?>
+							</div>
                         </div>
                     </div>
 
                     <div class="col-md-5 col-xs-5 mob_pad_0">
-                        <div id="sync2" class="owl-carousel owl-theme bttm_inner">
-                            <div class="item">
-                                <div class="best_categories_content">
-                                    <h2>Cotton Flex</h2>
-                                    <p>Flex cotton fabric is woven with pale and durable cotton and flex yarns. It can be used all over year round. Absolutely comfortable and durable fabrics can be used to designs ethnics, blouses, mens kurta, dresses, and more.</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+flex']) ?>">
-                                        <button>SHOP NOW</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="best_categories_content">
-                                    <h2>Dupatta</h2>
-                                    <p>Dupatta is a symbol of modesty, while that symbolism still continues, many today wear it as a decorative accessory. The dupatta is worn in many regional styles across the world.</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'category', 'scarves-and-stoles']) ?>">
-                                        <button>SHOP NOW</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="best_categories_content">
-                                    <h2>Ikats</h2>
-                                    <p>Ikats are created as patterns using resist dyeing techniques on yarns. This innovative technique, with its south east asian origins is defined regionally by geography and design language. Ikats are just one more of India's vast heritage of textiles.</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'ikats']) ?>">
-                                        <button>SHOP NOW</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="best_categories_content">
-                                    <h2>Satins</h2>
-                                    <p>Satin is actually a weave and not a natural fiber like silk. Fiber is the actual thread from which the material is made and weave is how you make it. Traditionally, satin will have both a glossy side and a dull side.</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'satin']) ?>">
-                                        <button>SHOP NOW</button>
-                                    </a>
-                                </div>
-                            </div>
+                        <div class="slider slider-nav bttm_inner">
+                            <div class="best_categories_content">
+								<h2>Cotton Flex</h2>
+								<p>Flex cotton fabric is woven with pale and durable cotton and flex yarns. It can be used all over year round. Absolutely comfortable and durable fabrics can be used to designs ethnics, blouses, mens kurta, dresses, and more.</p>
+								<a href="<?= $this->Url->build(['_name' => 'search', 'cotton+flex']) ?>">
+									<button>SHOP NOW</button>
+								</a>
+							</div>
+                            <div class="best_categories_content">
+								<h2>Dupatta</h2>
+								<p>Dupatta is a symbol of modesty, while that symbolism still continues, many today wear it as a decorative accessory. The dupatta is worn in many regional styles across the world.</p>
+								<a href="<?= $this->Url->build(['_name' => 'category', 'scarves-and-stoles']) ?>">
+									<button>SHOP NOW</button>
+								</a>
+							</div>
+                            <div class="best_categories_content">
+								<h2>Ikats</h2>
+								<p>Ikats are created as patterns using resist dyeing techniques on yarns. This innovative technique, with its south east asian origins is defined regionally by geography and design language. Ikats are just one more of India's vast heritage of textiles.</p>
+								<a href="<?= $this->Url->build(['_name' => 'search', 'ikats']) ?>">
+									<button>SHOP NOW</button>
+								</a>
+							</div>
+                            <div class="best_categories_content">
+								<h2>Satins</h2>
+								<p>Satin is actually a weave and not a natural fiber like silk. Fiber is the actual thread from which the material is made and weave is how you make it. Traditionally, satin will have both a glossy side and a dull side.</p>
+								<a href="<?= $this->Url->build(['_name' => 'search', 'satin']) ?>">
+									<button>SHOP NOW</button>
+								</a>
+							</div>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-5 col-xs-5 mob_pad_0">
-                        <div id="sync4" class="owl-carousel owl-theme bttm_inner">
-                            <div class="item">
-                                <div class="best_categories_content">
-                                    <h2>Linen Fabrics</h2>
-                                    <p>A natural fiber just like cotton, linen is derived from the flax plant. It is very strong, lightweight and breathable making it a popular choice in summers.</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'linen']) ?>">
-                                        <button>SHOP NOW</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="best_categories_content">
-                                    <h2>Thread Embroidery</h2>
-                                    <p>Thread embroideries which are created to bring so much beauty to the fabric. These will be perfect for your wardrobe with their trendy patterns and latest designs.</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/embroideries']) ?>">
-                                        <button>SHOP NOW</button>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="best_categories_content">
-                                    <h2>Tussar</h2>
-                                    <p>Tussar is a fabric made only in India, its rich and textured look, makes it distinctive! Printed tussar is perfect for kurtas and sarees and even better to gift.</p>
-                                    <a href="<?= $this->Url->build(['_name' => 'search', 'tussar']) ?>">
-                                        <button>SHOP NOW</button>
-                                    </a>
-                                </div>
-                            </div>
-
+                        <div class="slider-nav_1 bttm_inner">
+                            <div class="best_categories_content">
+								<h2>Linen Fabrics</h2>
+								<p>A natural fiber just like cotton, linen is derived from the flax plant. It is very strong, lightweight and breathable making it a popular choice in summers.</p>
+								<a href="<?= $this->Url->build(['_name' => 'search', 'linen']) ?>">
+									<button>SHOP NOW</button>
+								</a>
+							</div>
+                            <div class="best_categories_content">
+								<h2>Thread Embroidery</h2>
+								<p>Thread embroideries which are created to bring so much beauty to the fabric. These will be perfect for your wardrobe with their trendy patterns and latest designs.</p>
+								<a href="<?= $this->Url->build(['_name' => 'category', 'cotton/embroideries']) ?>">
+									<button>SHOP NOW</button>
+								</a>
+							</div>
+                            <div class="best_categories_content">
+								<h2>Tussar</h2>
+								<p>Tussar is a fabric made only in India, its rich and textured look, makes it distinctive! Printed tussar is perfect for kurtas and sarees and even better to gift.</p>
+								<a href="<?= $this->Url->build(['_name' => 'search', 'tussar']) ?>">
+									<button>SHOP NOW</button>
+								</a>
+							</div>
                         </div>
                     </div>
                     <div class="col-md-7 col-xs-7 mob_pad_0">
-                        <div id="sync3" class="owl-carousel owl-theme bttm_inner">
-                            <div class="item">
-                                <div class="best_categories_img">
-                                    <?= $this->Html->image('linen.jpg', ['class' => 'img-responsive']) ?>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="best_categories_img">
-                                    <?= $this->Html->image('thread-Embroidery.jpg', ['class' => 'img-responsive']) ?>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="best_categories_img">
-                                    <?= $this->Html->image('tussar.jpg', ['class' => 'img-responsive']) ?>
-                                </div>
-                            </div>
+                        <div class="bttm_inner slider-for_1">
+							<div class="best_categories_img">
+								<?= $this->Html->image('linen.jpg', ['class' => 'img-responsive']) ?>
+							</div>
+						
+							<div class="best_categories_img">
+								<?= $this->Html->image('thread-Embroidery.jpg', ['class' => 'img-responsive']) ?>
+							</div>
+						
+							<div class="best_categories_img">
+								<?= $this->Html->image('tussar.jpg', ['class' => 'img-responsive']) ?>
+							</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row on_mob_show">
                 <div class="mob_pad_0">
-                    <div class="owl-carousel all_product owl-theme bttm_inner">
+                    <div class="all_product bttm_inner">
                         <div class="item">
                             <div class="dis_flx">
                                 <div class="best_categories_img">
@@ -309,8 +280,44 @@ if (isset($page)) {
         <div class="container-fluid">
             <div class="row">
                 <h2>Recommended for you<span></span></h2>
-                <div class="owl-carousel owl-theme arrived_store_carousel">
-                    <?= $this->Element('product', ['products' => $bestSellers]) ?>
+                <div class="arrived_store_carousel">
+                    <!--<?= $this->Element('product', ['products' => $bestSellers]) ?>-->
+					<div class="item">
+                        <div class="arrived_hover">
+                           <a href="/product/printed-rayon-fabric-4398820"><img src="img/lazyload.gif" data-src="https://www.hpsingh.com/media/Th_4398820-(4).jpg" height="320px" width="480px" alt="" class="img-responsive lazyload"></a>
+                           <p><button><a class="add-to-wishlist" href="/wishlist/add/printed-rayon-fabric-4398820">ADD TO WISHLIST</a></button><button><a href="/product/printed-rayon-fabric-4398820">VIEW PRODUCT</a></button></p>
+                        </div>
+                        <a href="/product/printed-rayon-fabric-4398820">
+                           <p><em>Printed Rayon Fabric-4398820</em><em><span></span><span>₹280.00 / Mtr</span></em></p>
+                        </a>
+                     </div>
+                     <div class="item">
+                        <div class="arrived_hover">
+                           <a href="/product/cotton-lurex-butta-4665722"><img src="/img/lazyload.gif" data-src="https://www.hpsingh.com/media/Th_41128321-(4).jpg" height="320px" width="480px" alt="" class="img-responsive lazyload"></a>
+                           <p><button><a class="add-to-wishlist" href="/wishlist/add/cotton-lurex-butta-4665722">ADD TO WISHLIST</a></button><button><a href="/product/cotton-lurex-butta-4665722">VIEW PRODUCT</a></button></p>
+                        </div>
+                        <a href="/product/cotton-lurex-butta-4665722">
+                           <p><em>Cotton Lurex Butta-4665722</em><em><span></span><span>₹220.00 / Mtr</span></em></p>
+                        </a>
+                     </div>
+                     <div class="item">
+                        <div class="arrived_hover">
+                           <a href="/product/cotton-lurex-stripes-4706721"><img src="/img/lazyload.gif" data-src="https://www.hpsingh.com/media/Th_4706721-(4).jpg" height="320px" width="480px" alt="" class="img-responsive lazyload"></a>
+                           <p><button><a class="add-to-wishlist" href="/wishlist/add/cotton-lurex-stripes-4706721">ADD TO WISHLIST</a></button><button><a href="/product/cotton-lurex-stripes-4706721">VIEW PRODUCT</a></button></p>
+                        </div>
+                        <a href="/product/cotton-lurex-stripes-4706721">
+                           <p><em>Cotton Lurex Stripes-4706721</em><em><span></span><span>₹140.00 / Mtr</span></em></p>
+                        </a>
+                     </div>
+                     <div class="item">
+                        <div class="arrived_hover">
+                           <a href="/product/cotton-lurex-stripes-448921"><img src="/img/lazyload.gif" data-src="https://www.hpsingh.com/media/Th_448921-(4).jpg" height="320px" width="480px" alt="" class="img-responsive lazyload"></a>
+                           <p><button><a class="add-to-wishlist" href="/wishlist/add/cotton-lurex-stripes-448921">ADD TO WISHLIST</a></button><button><a href="/product/cotton-lurex-stripes-448921">VIEW PRODUCT</a></button></p>
+                        </div>
+                        <a href="/product/cotton-lurex-stripes-448921">
+                           <p><em>Cotton Lurex Stripes-448921</em><em><span></span><span>₹100.00 / Mtr</span></em></p>
+                        </a>
+                     </div>
                 </div>
             </div>
         </div>
@@ -436,7 +443,7 @@ if (isset($page)) {
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Florals</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>Floral prints are a evergreen print available in different styles i.e.
                                                 gardens, botanicals, chintz, retro etc.</p>
@@ -456,7 +463,7 @@ if (isset($page)) {
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Abstracts</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>Abstract print is art that does not attempt to represent an accurate
                                                 depiction of a visual reality but instead use shapes,</p>
@@ -480,7 +487,7 @@ if (isset($page)) {
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Watercolour Effects</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>Let the colours of nature in its true flair and patterns fill your
                                                 wardrobe this season</p>
@@ -504,7 +511,7 @@ if (isset($page)) {
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Conversationals</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>Conversational prints are classified as any print design with a
                                                 recognizable</p>
@@ -527,7 +534,7 @@ if (isset($page)) {
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Stripes</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>Striped pattern is a line or band printed on the fabric, it can be
                                                 available in many forms i.e.</p>
@@ -549,7 +556,7 @@ if (isset($page)) {
                                 </div>
                                 <div class="prints_contant root_content">
                                     <h2>Animal Prints</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>An entire collection inspired with the most beautiful creations of our
                                                 planet,</p>
@@ -572,7 +579,7 @@ if (isset($page)) {
 
 
             <div class="mobile_root_visible">
-                <div class="owl-carousel fabric_slider owl-theme bttm_inner wow fadeInUp">
+                <div class="fabric_slider bttm_inner">
                     <div class="item">
                         <div class="mobile_root_visible1">
                             <a href="<?= $this->Url->build(['_name' => 'search', 'abstracts']) ?>">
@@ -641,11 +648,11 @@ if (isset($page)) {
         <div class="container-fluid">
             <div class="row">
                 <h2>Just arrived in store <span></span></h2>
-                <div class="owl-carousel owl-theme arrived_store_carousel">
+                <div class="arrived_store_carousel">
                     <?= $this->Element('product', ['products' => $newArrived]) ?>
-                </div>
-            </div>
-        </div>
+				</div>
+			</div>
+		</div>
     </section>
 
 
@@ -671,7 +678,7 @@ if (isset($page)) {
                             <div class="root_area">
                                 <div class="root_content">
                                     <h2>Kalamkari</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>Kalamkari is one of the most traditional art form of India. Our
                                                 extraordinary hand painted and block printed fabrics.</p>
@@ -702,7 +709,7 @@ if (isset($page)) {
                             <div class="root_area">
                                 <div class="root_content">
                                     <h2>Ikats</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>Finest tye and dye fabric in India is available in distinctive patterns.
                                                 From lovely summer dresses</p>
@@ -730,7 +737,7 @@ if (isset($page)) {
                             <div class="root_area">
                                 <div class="root_content">
                                     <h2>Ajrak</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>Inspired by Mughal and Sindhi culture, our online collection of Ajrak
                                                 fabric is something to vouch for!</p>
@@ -760,7 +767,7 @@ if (isset($page)) {
                             <div class="root_area">
                                 <div class="root_content">
                                     <h2>Shibori</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>Explore from vast collection of Indie picks of Shibori fabric. Our
                                                 impeccable designs on fabrics</p>
@@ -790,7 +797,7 @@ if (isset($page)) {
                             <div class="root_area">
                                 <div class="root_content">
                                     <h2>Hand Block</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>Take your pick from our wide range of hand block printed fabrics with eye
                                                 catching designs and exciting colors.</p>
@@ -828,7 +835,7 @@ if (isset($page)) {
                             <div class="root_area">
                                 <div class="root_content">
                                     <h2>Handspun</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>We offer finest hand-woven natural fiber cloth - Khadi. Our commendable
                                                 range of fabrics is amazing.</p>
@@ -865,7 +872,7 @@ if (isset($page)) {
                             <div class="root_area">
                                 <div class="root_content">
                                     <h2>Cotton Indigo</h2>
-                                    <div class="owl-carousel owl-theme story_carousel2">
+                                    <div class="story_carousel2">
                                         <div class="item">
                                             <p>Indigo is a beautiful rich colour that has been used throughout
                                                 history.The beauty</p>
@@ -904,7 +911,7 @@ if (isset($page)) {
                     </div>
                 </div>
                 <div class="mobile_root_visible">
-                    <div class="owl-carousel fabric_root owl-theme bttm_inner wow fadeInUp">
+                    <div class="fabric_root bttm_inner wow fadeInUp">
                         <div class="item">
                             <div class="mobile_root_visible1">
                                 <a href="<?= $this->Url->build(['_name' => 'search', 'kalamkari']) ?>">
@@ -956,22 +963,24 @@ if (isset($page)) {
                             </div>
                         </div>
                     </div>
-                    <div class="mobile_root_visible1 mobile_root_visible2 mrg_bttm wow fadeInUp">
-                        <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+indigo']) ?>">
-                            <?= $this->Html->image('static/indigo2.jpg', ['class' => 'img-responsive']) ?>
-                            <div>
-                                <h2>Cotton Indigo</h2>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="mobile_root_visible1 mobile_root_visible2 mrg_bttm wow fadeInUp">
-                        <a href="<?= $this->Url->build(['_name' => 'search', 'khadi']) ?>">
-                            <?= $this->Html->image('static/handspun2.jpg', ['class' => 'img-responsive']) ?>
-                            <div>
-                                <h2>Handspun</h2>
-                            </div>
-                        </a>
-                    </div>
+					<div class="d_flex">
+						<div class="mobile_root_visible1 mobile_root_visible2 mrg_bttm wow fadeInUp">
+							<a href="<?= $this->Url->build(['_name' => 'search', 'cotton+indigo']) ?>">
+								<?= $this->Html->image('static/indigo2.jpg', ['class' => 'img-responsive']) ?>
+								<div>
+									<h2>Cotton Indigo</h2>
+								</div>
+							</a>
+						</div>
+						<div class="mobile_root_visible1 mobile_root_visible2 mrg_bttm wow fadeInUp">
+							<a href="<?= $this->Url->build(['_name' => 'search', 'khadi']) ?>">
+								<?= $this->Html->image('static/handspun2.jpg', ['class' => 'img-responsive']) ?>
+								<div>
+									<h2>Handspun</h2>
+								</div>
+							</a>
+						</div>
+					</div>
                 </div>
 
             </div>
@@ -1121,8 +1130,44 @@ if (isset($page)) {
         <div class="container-fluid">
             <div class="row">
                 <h2>Recommended for you<span></span></h2>
-                <div class="owl-carousel owl-theme arrived_store_carousel">
-                    <?= $this->Element('product', ['products' => $bestSellers]) ?>
+                <div class="arrived_store_carousel">
+                    <!--<?= $this->Element('product', ['products' => $bestSellers]) ?>-->
+					<div class="item">
+                        <div class="arrived_hover">
+                           <a href="/product/printed-rayon-fabric-4398820"><img src="img/lazyload.gif" data-src="https://www.hpsingh.com/media/Th_4398820-(4).jpg" height="320px" width="480px" alt="" class="img-responsive lazyload"></a>
+                           <p><button><a class="add-to-wishlist" href="/wishlist/add/printed-rayon-fabric-4398820">ADD TO WISHLIST</a></button><button><a href="/product/printed-rayon-fabric-4398820">VIEW PRODUCT</a></button></p>
+                        </div>
+                        <a href="/product/printed-rayon-fabric-4398820">
+                           <p><em>Printed Rayon Fabric-4398820</em><em><span></span><span>₹280.00 / Mtr</span></em></p>
+                        </a>
+                     </div>
+                     <div class="item">
+                        <div class="arrived_hover">
+                           <a href="/product/cotton-lurex-butta-4665722"><img src="/img/lazyload.gif" data-src="https://www.hpsingh.com/media/Th_41128321-(4).jpg" height="320px" width="480px" alt="" class="img-responsive lazyload"></a>
+                           <p><button><a class="add-to-wishlist" href="/wishlist/add/cotton-lurex-butta-4665722">ADD TO WISHLIST</a></button><button><a href="/product/cotton-lurex-butta-4665722">VIEW PRODUCT</a></button></p>
+                        </div>
+                        <a href="/product/cotton-lurex-butta-4665722">
+                           <p><em>Cotton Lurex Butta-4665722</em><em><span></span><span>₹220.00 / Mtr</span></em></p>
+                        </a>
+                     </div>
+                     <div class="item">
+                        <div class="arrived_hover">
+                           <a href="/product/cotton-lurex-stripes-4706721"><img src="/img/lazyload.gif" data-src="https://www.hpsingh.com/media/Th_4706721-(4).jpg" height="320px" width="480px" alt="" class="img-responsive lazyload"></a>
+                           <p><button><a class="add-to-wishlist" href="/wishlist/add/cotton-lurex-stripes-4706721">ADD TO WISHLIST</a></button><button><a href="/product/cotton-lurex-stripes-4706721">VIEW PRODUCT</a></button></p>
+                        </div>
+                        <a href="/product/cotton-lurex-stripes-4706721">
+                           <p><em>Cotton Lurex Stripes-4706721</em><em><span></span><span>₹140.00 / Mtr</span></em></p>
+                        </a>
+                     </div>
+                     <div class="item">
+                        <div class="arrived_hover">
+                           <a href="/product/cotton-lurex-stripes-448921"><img src="/img/lazyload.gif" data-src="https://www.hpsingh.com/media/Th_448921-(4).jpg" height="320px" width="480px" alt="" class="img-responsive lazyload"></a>
+                           <p><button><a class="add-to-wishlist" href="/wishlist/add/cotton-lurex-stripes-448921">ADD TO WISHLIST</a></button><button><a href="/product/cotton-lurex-stripes-448921">VIEW PRODUCT</a></button></p>
+                        </div>
+                        <a href="/product/cotton-lurex-stripes-448921">
+                           <p><em>Cotton Lurex Stripes-448921</em><em><span></span><span>₹100.00 / Mtr</span></em></p>
+                        </a>
+                     </div>
                 </div>
             </div>
         </div>
@@ -1134,7 +1179,7 @@ if (isset($page)) {
             <div class="container">
                 <div class="row">
                     <h2>Instagram <span></span></h2>
-                    <div class="owl-carousel owl-theme story_carousel wow fadeInUp">
+                    <div class="story_carousel wow fadeInUp">
                         <?php foreach ($mygrams as $mygram) : ?>
                             <div class="item">
                                 <a href="<?= !empty($mygram->uri) ? $mygram->uri : 'javascript:void()' ?>">
@@ -1185,291 +1230,232 @@ if (isset($page)) {
 
 <?php $this->Html->scriptStart(['block' => true]) ?>
 
+$('.fabric_slider, .fabric_root').slick({
+           dots:false,
+           infinite: true,
+           loop:true,
+           speed: 500,
+           slidesToShow: 3,
+           slidesToScroll: 3,
+           autoplay:true,
+           autoplaySpeed: 2000,
+           arrows: true,
 
-$('.home_banner').owlCarousel({
-loop:true,
-margin:10,
-nav:false,
-items:2,
-autoplay: 3000,
-smartSpeed: 1000,
-dots:true,
-animateIn: 'fadeIn',
-animateOut: 'fadeOut',
-responsive: {
-0: {
-items: 1,
+           responsive: [{
+             breakpoint: 600,
+             settings: {
+               slidesToShow: 3,
+               slidesToScroll:1
+             }
+           },
+           {
+              breakpoint: 400,
+              settings: {
+                 arrows: true,
+                 dots:false,
+                 slidesToShow:3,
+                 slidesToScroll:1,
+                
 
-},
-768: {
-items: 1,
+              }
+           }]
+       });
 
-},
-992: {
-items:1,
+$(document).ready(function(){
+	$('.home_banner, .story_carousel2').slick({
+	  slidesToShow: 1,
+	  fade: true,
+	  autoplay:true,
+	  dots:true,
+	  prevArrow: false,
+	nextArrow: false
+	});
+  });
 
-
-}
-}
+$('.story_carousel').slick({
+  centerMode: true,
+   autoplay:false,
+  centerPadding: '0',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        centerPadding:false,
+        slidesToShow: 1,
+        
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode:false,
+        centerPadding:false,
+        slidesToShow: 1
+      }
+    }
+  ]
 });
 
 
-
-$('.bestsellers_carousel').owlCarousel({
-loop:true,
-margin:40,
-dots:false,
-nav:true,
-mouseDrag:false,
-navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-autoplay:false,
-responsive: {
-0: {
-items: 1,
-stagePadding: 20,
-margin:15,
-nav:false
-},
-768: {
-items: 3,
-nav: true,
-},
-992: {
-items:1,
-nav: true,
-
-}
-}
+$('.all_product').slick({
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        slidesToShow: 3,
+        dots:true,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        centerPadding: '0px',
+        arrows: false,
+        slidesToShow: 1,
+        dots:true,
+      }
+    }
+  ]
 });
 
-$('.bestsellers_carousel_1').owlCarousel({
-loop:true,
-margin:40,
-slideTransition: 'linear',
-navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+      $('.fabric_carousel, .fabric_tab2').slick({
+           dots:false,
+           infinite: true,
+           loop:true,
+           speed: 500,
+           slidesToShow: 6,
+           slidesToScroll: 6,
+           autoplay:true,
+           autoplaySpeed: 2000,
+           arrows: true,
 
-responsive: {
-0: {
-items: 1,
-stagePadding: 20,
-margin:15,
-nav:false
-},
-768: {
-items: 3,
-nav: true,
-},
-992: {
-items:1,
-nav: true,
+           responsive: [{
+             breakpoint: 600,
+             settings: {
+               slidesToShow: 5,
+               slidesToScroll: 5
+             }
+           },
+           {
+              breakpoint: 400,
+              settings: {
+                 arrows: true,
+                 dots:false,
+                 slidesToShow: 5,
+                 slidesToScroll: 5,
+                
 
-}
-}
-});
+              }
+           }]
+       });
 
+    $('.slider-for').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   fade: true,
+   asNavFor: '.slider-nav'
+ });
+$('.slider-nav').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   asNavFor: '.slider-for',
+   dots: false,
+   arrows: true,
+   nav:false,
+   focusOnSelect: true,
+   responsive: [
+     {
+       breakpoint: 400,
+       settings: {
+       slidesToShow: 1,
+       centerMode: false,
+       slidesToScroll: 1
+       }
+     },
+   ]
+   
+ });
 
-$('.all_product').owlCarousel({
-loop:true,
-margin:10,
-items:2,
-autoplay: 3000,
-smartSpeed: 1000,
-dots:true,
-responsive: {
-0: {
-items: 1,
-
-},
-768: {
-items: 3,
-
-},
-992: {
-items:2,
-
-
-}
-}
-});
-
-
-$('.fabric_root').owlCarousel({
-loop:true,
-margin: 15,
-nav: true,
-autoplay: 3000,
-smartSpeed: 1000,
-navText: ['<?= $this->Html->image('arrow1.png') ?>', '<?= $this->Html->image('arrow2.png') ?>'],
-responsive: {
-0: {
-items: 3,
-},
-768: {
-items: 3
-},
-992: {
-items: 1
-}
-}
-});
+ $('a[data-slide]').click(function(e) {
+   e.preventDefault();
+   var slideno = $(this).data('slide');
+   $('.slider-nav').slick('slickGoTo', slideno - 1);
+ });
 
 
-$('.fabric_tab2').owlCarousel({
-loop: true,
-margin: 15,
-nav: true,
-autoplay: false,
-navText: ['<img src="/img/arrow1.png" alt="" />', '<img src="/img/arrow2.png" alt="" />'],
-responsive: {
-0: {
-items: 4,
-stagePadding: 20
-},
-768: {
-items: 4
-},
-992: {
-items: 6
-}
-}
-});
+ $('.slider-for_1').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   fade: true,
+   asNavFor: '.slider-nav_1'
+ });
+ $('.slider-nav_1').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   asNavFor: '.slider-for_1',
+   dots: false,
+   arrows: true,
+   nav:false,
+   focusOnSelect: true,
+   responsive: [
+     {
+       breakpoint: 400,
+       settings: {
+       slidesToShow: 1,
+       centerMode: false,
+       slidesToScroll: 1
+       }
+     },
+   ]
+   
+ });
 
-$('.fabric_carousel').owlCarousel({
-loop: true,
-autoHeight: true,
-margin: 15,
-autoplay: false,
-nav: true,
-items: 4,
-navText: ['<img src="/img/arrow1.png" alt="" />', '<img src="/img/arrow2.png" alt="" />'],
-responsive: {
-0: {
-items: 4.3,
-nav: false,
-stagePadding: 11,
-},
-768: {
-items: 4,
-},
-992: {
-items: 6
-}
-}
-});
-
-$('.arrived_store_carousel').owlCarousel({
-loop:true,
-margin: 15,
-nav: true,
-autoplay:false,
-navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-responsive: {
-0: {
-items: 1.1,
-stagePadding: 20,
-},
-768: {
-items: 2,
-margin:10,
-},
-992: {
-items: 3
-},
-1199: {
-items: 3,
-
-}
-}
-});
+ $('a[data-slide]').click(function(e) {
+   e.preventDefault();
+   var slideno = $(this).data('slide');
+   $('.slider-nav_1').slick('slickGoTo', slideno - 1);
+ });
 
 
-$('.fabric_slider').owlCarousel({
-loop:true,
-margin: 15,
-nav: true,
-autoplay: 3000,
-smartSpeed: 1000,
-navText: ['<?= $this->Html->image('arrow1.png') ?>', '<?= $this->Html->image('arrow2.png') ?>'],
-responsive: {
-0: {
-items: 3,
-},
-768: {
-items: 3
-},
-992: {
-items: 1
-}
-}
-});
+ $('.arrived_store_carousel').slick({
+           dots:false,
+           infinite: true,
+           loop:true,
+           speed: 500,
+           slidesToShow: 3,
+           slidesToScroll: 3,
+           autoplay:true,
+           autoplaySpeed: 2000,
+           arrows: true,
 
+           responsive: [{
+             breakpoint: 600,
+             settings: {
+               slidesToShow: 1,
+               arrows:false,
+               slidesToScroll:1,
+               
+             }
+           },
+           {
+              breakpoint: 400,
+              settings: {
+                 arrows:false,
+                 dots:false,
+                 slidesToShow:1,
+                 slidesToScroll:1,
+                
 
-$('.story_carousel2').owlCarousel({
-margin: 10,
-loop:false,
-nav: true,
-navText: ['<i class="fa fa-angle-left"></i> Previous', 'Continue Reading <i class="fa fa-angle-right"></i>'],
-autoplay: false,
-animateIn: 'fadeIn',
-animateOut: 'fadeOut',
-responsive: {
-0: {
-items: 1
-}
-}
-});
-
-
-/* home_about_carousel*/
-$('.home_about_carousel').owlCarousel({
-loop: false,
-margin:15,
-nav: true,
-//autoplay:true,
-//autoplayTimeout:2000,
-autoplaySpeed: 2000,
-slideBy: 3,
-navText: ['', ''],
-responsive: {
-0: {
-items: 1,
-loop: false,
-margin: 15,
-stagePadding: 20
-},
-768: {
-items: 3
-},
-992: {
-items: 3
-}
-}
-});
-
-
-$('.story_carousel').owlCarousel({
-loop: true,
-margin: 5,
-nav: true,
-//autoplay:true,
-//autoplayTimeout:2000,
-autoplaySpeed: 2000,
-navText: ['<?= $this->Html->image('arrow1.png') ?>', '<?= $this->Html->image('arrow2.png') ?>'],
-responsive: {
-0: {
-items: 1,
-loop:true,
-margin: 15,
-stagePadding: 20,
-nav:false,
-},
-768: {
-items: 3,
-center: true
-}
-}
-});
-
+              }
+           }]
+       });
 
 $(document).ready(function () {
 $(".banner_tab ul>li, .root ul>li").click(function () {
@@ -1479,21 +1465,17 @@ $(this).siblings().removeClass('active');
 });
 
 $(document).ready(function () {
-$(".fabric1").click(function () {
-$(".fabric_icon").addClass('active');
-$(".fabric_icon2").removeClass('active');
-//$(".fabric_icon3").removeClass('active');
-});
-$(".fabric2").click(function () {
-$(".fabric_icon").removeClass('active');
-$(".fabric_icon2").addClass('active');
-//$(".fabric_icon3").removeClass('active');
-});
-/*$(".fabric3").click(function(){
-$(".fabric_icon").removeClass('active');
-$(".fabric_icon2").removeClass('active');
-$(".fabric_icon3").addClass('active');
-}); */
+	$(".fabric1").click(function () {
+	$(".fabric_icon").addClass('active');
+	$(".fabric_icon2").removeClass('active');
+	<!--$(".fabric_icon3").removeClass('active');-->
+	});
+	$(".fabric2").click(function () {
+	$(".fabric_icon").removeClass('active');
+	$(".fabric_icon2").addClass('active');
+	<!--$(".fabric_icon3").removeClass('active');-->
+	});
+	
 });
 
 

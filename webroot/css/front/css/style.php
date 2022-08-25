@@ -12,6 +12,8 @@ include( "header.css");
 include( "footer.css");
 include( "font.css");
 include( "owl.carousel.css");
+include( "slick.css");
+include( "thems.css");
 include( "style.css");
 include( "responsive.css");
 ob_end_flush();
