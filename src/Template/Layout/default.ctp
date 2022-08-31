@@ -97,7 +97,7 @@
     <?= $this->Html->script('front/aos') ?>
     <?= $this->Html->script('front/smoothScroll.min') ?>
     <!--<?= $this->Html->script('front/owl.carousel') ?>-->
-    <!--<?= $this->Html->script('front/hpsingh') ?>-->
+    <?= $this->Html->script('front/hpsingh') ?>
     <?= $this->Html->script('front/zoom.min') ?>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="text/javascript">
