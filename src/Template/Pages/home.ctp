@@ -46,14 +46,15 @@ if (isset($page)) {
                     <div class="tab-content">
                         <div class="fabric_icon active">
                             <div class="fabric_carousel wow fadeInRight">
-                                <?php foreach ($categories as $category) : ?>
+                                <?php foreach ($categories as $category) : 
+									if($category->media->url) { ?>
                                     <div class="item">
                                         <a href="<?= (!empty($category->url)) ? $category->url : $this->Url->build(['_name' => 'category', $category->slug]) ?>">
                                             <?= $this->Media->the_image('full', $category->media->url, ['alt' => $category->media->alt, 'class' => 'img-responsive,']) ?>
                                             <p><?= strtoupper($category->name) ?></p>
                                         </a>
                                     </div>
-                                <?php endforeach; ?>
+								<?php } endforeach; ?>
                             </div>
                         </div>
                         <div class="fabric_icon2">
