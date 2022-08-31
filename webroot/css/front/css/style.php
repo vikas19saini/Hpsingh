@@ -16,5 +16,6 @@ include( "slick.css");
 include( "thems.css");
 include( "style.css");
 include( "responsive.css");
+include("new-sliders-css.css");
 ob_end_flush();
 ?>
