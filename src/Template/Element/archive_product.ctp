@@ -1,7 +1,11 @@
 <?php ?>
 
 <?php foreach ($products as $product) : ?>
-	<div class="view_product <?= (($category->slug == 'combination-sets') ? 'joda_product' : '')?>">
+	<?php if(isset($category->slug) && !empty($category->slug)){ ?>
+		<div class="view_product <?= (($category->slug == 'combination-sets') ? 'joda_product' : '')?>">
+	<?php } else {?>
+		<div class="view_product">
+	<?php }?>
         <?php if (!$product->in_stock) : ?>
             <label class="stock-msg">Out of stock</label>
         <?php endif; ?>

@@ -624,22 +624,24 @@ if (isset($page)) {
                         </div>
                     </div>
                 </div>
-                <div class="mobile_root_visible1 mobile_root_visible2 wow fadeInUp">
-                    <a href="<?= $this->Url->build(['_name' => 'search', 'conversationals']) ?>">
-                        <?= $this->Html->image('static/Conversationals2.jpg', ['class' => 'img-responsive']) ?>
-                        <div>
-                            <h2>Conversationals</h2>
-                        </div>
-                    </a>
-                </div>
-                <div class="mobile_root_visible1 mobile_root_visible2 wow fadeInUp">
-                    <a href="<?= $this->Url->build(['_name' => 'search', 'watercolour']) ?>">
-                        <?= $this->Html->image('static/watercolor_effects2.jpg', ['class' => 'img-responsive']) ?>
-                        <div>
-                            <h2>Watercolour effects</h2>
-                        </div>
-                    </a>
-                </div>
+				<div class = "d_flex">
+					<div class="mobile_root_visible1 mobile_root_visible2 wow fadeInUp">
+						<a href="<?= $this->Url->build(['_name' => 'search', 'conversationals']) ?>">
+							<?= $this->Html->image('static/Conversationals2.jpg', ['class' => 'img-responsive']) ?>
+							<div>
+								<h2>Conversationals</h2>
+							</div>
+						</a>
+					</div>
+					<div class="mobile_root_visible1 mobile_root_visible2 wow fadeInUp">
+						<a href="<?= $this->Url->build(['_name' => 'search', 'watercolour']) ?>">
+							<?= $this->Html->image('static/watercolor_effects2.jpg', ['class' => 'img-responsive']) ?>
+							<div>
+								<h2>Watercolour effects</h2>
+							</div>
+						</a>
+					</div>
+				</div>
             </div>
         </div>
     </section>
