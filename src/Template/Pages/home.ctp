@@ -325,7 +325,7 @@ if (isset($page)) {
     </section>
 
 
-	<section class="arrived_store best_categories jodas_c desk_view">
+	<!--<section class="arrived_store best_categories jodas_c desk_view">
                <div class="container">
                   <div class="row">
                      <h2>Joda By HPSingh<span></span></h2>
@@ -349,7 +349,7 @@ if (isset($page)) {
                   </div>  
          
          </div>
-    </section>
+    </section>-->
 									  
     <section class="home_about_section">
         <div class="container-fluid">
@@ -373,7 +373,7 @@ if (isset($page)) {
             </div>
         </div>
     </section>
-	
+	<!--
 	<section class="best_categories jodas_c mob_view">
             <div class="container">
                <div class="row">
@@ -402,7 +402,7 @@ if (isset($page)) {
          
       </div>
       </div>
-    </section>											   
+    </section>-->											   
 
     <?php if ($deals) : ?>
         <section class="deals">
