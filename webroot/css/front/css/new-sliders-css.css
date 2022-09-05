@@ -146,7 +146,7 @@
     
     @media screen and (max-width:767px) {
 
-        .arrived_store_carousel .slick-slide, .story_carousel .slick-slide{
+        .arrived_store_carousel .slick-slide, .story_carousel .slick-slide, .all_product .slick-slide{
             margin: 0 10px;
         }
         
