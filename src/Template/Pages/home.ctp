@@ -320,7 +320,7 @@ if (isset($page)) {
 	<section class="arrived_store best_categories jodas_c desk_view">
                <div class="container">
                   <div class="row">
-                     <h2>Joda's By HPSingh<span></span></h2>
+                     <h2>Joda By HPSingh<span></span></h2>
                   </div>
                <div class="jodas_b">
             <div class="mob_pad_0">
@@ -369,7 +369,7 @@ if (isset($page)) {
 	<section class="best_categories jodas_c mob_view">
             <div class="container">
                <div class="row">
-                  <h2>Joda's By HPSingh<span></span></h2>
+                  <h2>Joda By HPSingh<span></span></h2>
                </div>
             <div class="jodas_b">
          <div class="mob_pad_0">
