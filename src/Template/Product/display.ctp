@@ -107,11 +107,23 @@ $jsonMetaData = [
                     <div class="product_details_left">
                         <?php $medias = $product->media; ?>
                         <div class="product_d">
-                            <div class="owl-carousel owl-theme marquee">
+                            <!--<div class="owl-carousel owl-theme marquee">
                                 <?php $count = 0;
                                 foreach ($medias as $media) : ?>
                                     <div class="item" data-img="<?= $this->Media->get_the_image_url('full', $media->url) ?>">
                                         <img src="/img/lazyload.gif" data-src="<?= $this->Media->get_the_image_url('full', $media->url) ?>" height="476px" width="700px" alt="<?= $product->featured_image->alt ?>" class="img-responsive lazyload productThumbs" data-toggle="modal" data-target="#productZoom" data-pos="<?= $count ?>">
+                                        <?php // $this->Media->the_image('full', $media->url, ['class' => 'img-responsive productThumbs', 'alt' => $media->alt, 'height' => '476px', 'width' => '700px', 'data-toggle' => "modal", 'data-target' => '#productZoom', 'data-pos' => $count])
+                                        ?>
+                                    </div>
+                                <?php $count++;
+                                endforeach; ?>
+                            </div>-->
+							
+							<div class="product-slide marquee">
+                                <?php $count = 0;
+                                foreach ($medias as $media) : ?>
+                                    <div class="" data-img="<?= $this->Media->get_the_image_url('full', $media->url) ?>">
+                                        <img src="/img/lazyload.gif" data-src="<?= $this->Media->get_the_image_url('full', $media->url) ?>"  alt="<?= $product->featured_image->alt ?>" class="img-responsive" data-toggle="modal" data-target="#productZoom" data-pos="<?= $count ?>" data-sizes="auto">
                                         <?php // $this->Media->the_image('full', $media->url, ['class' => 'img-responsive productThumbs', 'alt' => $media->alt, 'height' => '476px', 'width' => '700px', 'data-toggle' => "modal", 'data-target' => '#productZoom', 'data-pos' => $count])
                                         ?>
                                     </div>
@@ -274,6 +286,39 @@ $jsonMetaData = [
     </div>
 
     <?php $this->Html->scriptStart(['block' => true]) ?>
+		
+		$('.product-slide').slick({
+         slidesToShow: 1,
+         infinite: true,
+         fade: true,
+         autoplay:true,
+         dots:true,
+         arrows: true,
+         prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+         nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+        });
+        responsive: [{
+           breakpoint: 600,
+           settings: {
+             slidesToShow: 1,
+             arrows:false,
+             slidesToScroll:1,
+             dots:true,
+             
+           }
+         },
+         {
+            breakpoint: 400,
+            settings: {
+               arrows:false,
+               dots:true,
+               slidesToShow:1,
+               slidesToScroll:1,
+              
+
+            }
+         }]
+						
     $(".marquee").owlCarousel({
     loop:true,
     margin:10,
