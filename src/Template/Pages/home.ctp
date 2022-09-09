@@ -1326,38 +1326,8 @@ $('.all_product').slick({
   ]
 });
 
-      $('.fabric_carousel, .fabric_tab2').slick({
-           dots:false,
-           infinite: true,
-           loop:true,
-           speed: 500,
-           slidesToShow: 6,
-           slidesToScroll: 6,
-           autoplay:true,
-           autoplaySpeed: 2000,
-           arrows: true,
-
-           responsive: [{
-             breakpoint: 600,
-             settings: {
-               slidesToShow: 5,
-               slidesToScroll: 5
-             }
-           },
-           {
-              breakpoint: 400,
-              settings: {
-                 arrows: true,
-                 dots:false,
-                 slidesToShow: 5,
-                 slidesToScroll: 5,
-                
-
-              }
-           }]
-       });
-
-    $('.slider-for').slick({
+     
+ $('.slider-for').slick({
    slidesToShow: 1,
    slidesToScroll: 1,
    arrows: false,
