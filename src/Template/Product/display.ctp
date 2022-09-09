@@ -123,7 +123,8 @@ $jsonMetaData = [
                                 <?php $count = 0;
                                 foreach ($medias as $media) : ?>
                                     <div class="" data-img="<?= $this->Media->get_the_image_url('full', $media->url) ?>">
-                                        <img src="/img/lazyload.gif" data-src="<?= $this->Media->get_the_image_url('full', $media->url) ?>"  alt="<?= $product->featured_image->alt ?>" class="img-responsive" data-toggle="modal" data-target="#productZoom" data-pos="<?= $count ?>" data-sizes="auto">
+                                        <img src="/img/lazyload.gif" data-src="<?= $this->Media->get_the_image_url('full', $media->url) ?>" height="476px" width="700px" alt="<?= $product->featured_image->alt ?>" 
+										class="img-responsive  lazyload productThumbs" data-toggle="modal" data-target="#productZoom" data-pos="<?= $count ?>" >
                                         <?php // $this->Media->the_image('full', $media->url, ['class' => 'img-responsive productThumbs', 'alt' => $media->alt, 'height' => '476px', 'width' => '700px', 'data-toggle' => "modal", 'data-target' => '#productZoom', 'data-pos' => $count])
                                         ?>
                                     </div>
@@ -318,104 +319,39 @@ $jsonMetaData = [
 
             }
          }]
-						
-    $(".marquee").owlCarousel({
-    loop:true,
-    margin:10,
-    autoplay:false,
-    smartSpeed: 1000,
-    nav:true,
-    items: 1,
-    navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-    responsive: {
-    0: {
-    items: 1,
-    dots:true,
-    },
-    768: {
-    items: 1,
-    dots:false,
-    },
-    992: {
-    items: 1,
-    dots:false,
-    }
-    }
-
-    });
-
-    $('.marquee2').owlCarousel({
-    loop: true,
-    margin: 0,
-    nav: true,
-    navText: ['<?= $this->Html->image('arrow1.png') ?>', '<?= $this->Html->image('arrow2.png') ?>'],
-    responsive: {
-    0: {
-    items: 1
-    },
-    768: {
-    items: 1
-    },
-    992: {
-    items: 0
-    }
-    }
-    });
-    $('.arrived_store_carousel').owlCarousel({
-    loop:true,
-    margin: 15,
-    nav: true,
-    autoplay:false,
-    navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-    responsive: {
-    0: {
-    items: 1.1,
-    stagePadding: 20,
-    },
-    768: {
-    items: 2,
-    margin:10,
-    },
-    992: {
-    items: 3
-    },
-    1199: {
-    items: 3,
-
-    }
-    }
-    });
-    $(document).ready(function () {
-    $(".marquee .owl-item.active.active>.item").click(function () {
-    var dynamicImg = $(this).attr("data-img");
-    $(".dynmaic_product").attr("src", dynamicImg);
-    })
-    });
-    $(document).ready(function () {
-    $(".popup_section2_img img").click(function () {
-    var dynamicImg2 = $(this).attr("data-img");
-    $(".dynamic_img").attr("src", dynamicImg2);
-    });
-    });
-    $(".productThumbs").click(function () {
-    var productThumbsPos = $(this).attr('data-pos');
-    $(".dynamic_img").attr('src', $('.productBigThumbs[data-pos='+productThumbsPos+']').attr('src'));
-    $(".productBigThumbs").removeClass('selected');
-    $('.productBigThumbs[data-pos=' + productThumbsPos + ']').addClass('selected');
-    $(".zoomImg").remove();
-    $("#large-image").zoom();
-    });
-    $(".productBigThumbs").click(function () {
-    var productBigThumbsPos = $(this).attr('data-pos');
-    $(".dynamic_img").attr('src', $(this).attr('src'));
-    $(".productBigThumbs").removeClass('selected');
-    $(this).addClass('selected');
-    $(".zoomImg").remove();
-    $("#large-image").zoom();
-    });
-    $("#productZoom").on("show", function () {
-    $("body").addClass("modal-open");
-    }).on("hidden", function () {
-    $("body").removeClass("modal-open")
-    });
+	
+		$(document).ready(function () {
+			$(".marquee .slick-slide.slick-current.slick-active").click(function () {
+			var dynamicImg = $(this).attr("data-img");
+			$(".dynmaic_product").attr("src", dynamicImg);
+			})
+		});
+		$(document).ready(function () {
+			$(".popup_section2_img img").click(function () {
+			var dynamicImg2 = $(this).attr("data-img");
+			$(".dynamic_img").attr("src", dynamicImg2);
+			});
+		});
+		$(".productThumbs").click(function () {
+			var productThumbsPos = $(this).attr('data-pos');
+			$(".dynamic_img").attr('src', $('.productBigThumbs[data-pos='+productThumbsPos+']').attr('src'));
+			$(".productBigThumbs").removeClass('selected');
+			$('.productBigThumbs[data-pos=' + productThumbsPos + ']').addClass('selected');
+			$(".zoomImg").remove();
+			$("#large-image").zoom();
+		});
+		$(".productBigThumbs").click(function () {
+			var productBigThumbsPos = $(this).attr('data-pos');
+			$(".dynamic_img").attr('src', $(this).attr('src'));
+			$(".productBigThumbs").removeClass('selected');
+			$(this).addClass('selected');
+			$(".zoomImg").remove();
+			$("#large-image").zoom();
+		});
+		$("#productZoom").on("show", function () {
+			$("body").addClass("modal-open");
+		}).on("hidden", function () {
+			$("body").removeClass("modal-open")
+		});
+		
     <?php $this->Html->scriptEnd() ?>
