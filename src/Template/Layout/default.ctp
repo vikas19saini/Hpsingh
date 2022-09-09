@@ -33,6 +33,8 @@
         <?= $this->Html->css('front/css/thems') ?>									
         <?= $this->Html->css('front/css/style') ?>
         <?= $this->Html->css('front/css/responsive') ?>
+		<?= $this->Html->css('front/css/new-sliders-css') ?>
+
     <?php endif; ?>
 
     <?= $this->Html->script('front/lazysizes.min') ?>
