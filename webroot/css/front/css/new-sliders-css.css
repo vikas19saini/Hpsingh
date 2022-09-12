@@ -1,5 +1,7 @@
 /* Add new css start */
 
+.product-slide .slick-slide img{cursor: zoom-in;}
+
 .product-slide .slick-slide a img{width: 100%;}
 
 .product-slide .slick-prev:before, .product-slide .slick-next:before{content: none !important;}
