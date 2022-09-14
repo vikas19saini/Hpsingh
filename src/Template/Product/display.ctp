@@ -255,7 +255,7 @@ $jsonMetaData = [
         <div class="container-fluid">
             <div class="row">
                 <h2>You May Also Like<span></span></h2>
-                <div class="owl-carousel owl-theme arrived_store_carousel">
+                <div class="arrived_store_carousel">
                     <?= $this->Element('product', ['products' => $recommendedProducts]) ?>
                 </div>
 
@@ -287,6 +287,39 @@ $jsonMetaData = [
     </div>
 
     <?php $this->Html->scriptStart(['block' => true]) ?>
+		
+		$('.arrived_store_carousel').slick({
+			 dots:false,
+			 infinite: true,
+			 loop:true,
+			 speed: 500,
+			 slidesToShow: 3,
+			 slidesToScroll: 3,
+			 autoplay:true,
+			 autoplaySpeed: 2000,
+			 arrows: true,
+
+			 responsive: [{
+			   breakpoint: 600,
+			   settings: {
+				 slidesToShow: 1,
+				 arrows:false,
+				 slidesToScroll:1,
+				 
+			   }
+			 },
+			 {
+				breakpoint: 400,
+				settings: {
+				   arrows:false,
+				   dots:false,
+				   slidesToShow:1,
+				   slidesToScroll:1,
+				  
+
+				}
+			 }]
+		});
 		
 		$('.product-slide').slick({
          slidesToShow: 1,
