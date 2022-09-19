@@ -18,8 +18,8 @@ if (isset($page)) {
                 <?php foreach ($sliders as $slider) : ?>
                     <div class="item">
                         <a href="<?= $slider->uri ?>">
-                            <?= $this->Media->the_image('full', $slider->media->url, ['alt' => $slider->media->alt,]) ?>
-                            <?= $this->Media->the_image('full', $slider->mobile_media->url, ['alt' => $slider->mobile_media->alt, 'class' => 'mobile_banner']) ?>
+                            <?= $this->Media->the_image('full', $slider->media->url, ['alt' => $slider->media->alt, 'class' => "img-responsive", 'data-sizes' => "auto"]) ?>
+                            <?= $this->Media->the_image('full', $slider->mobile_media->url, ['alt' => $slider->mobile_media->alt, 'class' => 'mobile_banner scarve-dupattas', 'data-sizes'=>"auto"]) ?>
                         </a>
                     </div>
                 <?php endforeach; ?>
