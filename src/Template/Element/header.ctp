@@ -160,7 +160,7 @@
                                                     Pieces</a>
                                             </h4>
 											<h4 style="display: flex;">
-												<a href="<?= $this->Url->build(['_name' => 'category', 'combination-sets']) ?>">Joda's By HPSingh</a>
+												<a href="<?= $this->Url->build(['_name' => 'category', 'combination-sets']) ?>">Joda By HPSingh</a>
 												<div class="new_bttn">New</div>
 											</h4>
                                         </div>
@@ -485,7 +485,7 @@
         </li>
 		<li>
 			<a href="<?= $this->Url->build(['_name' => 'category','combination-sets']) ?>">
-				<h4>Joda's By HPSingh <button type="button" class="new_bttn">New</button>
+				<h4>Joda By HPSingh <button type="button" class="new_bttn">New</button>
 					<p>An extensive collection of ready-to-stitch indian ethnic co-ord fabrics, especially curated to look your best.</p>
 				</h4>
 			</a>
