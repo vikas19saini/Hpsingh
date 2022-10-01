@@ -5,7 +5,8 @@ namespace App\Controller\Component;
 use Cake\Controller\Component;
 use Cake\Http\Client;
 
-class GeolocationComponent extends Component {
+class GeolocationComponent extends Component
+{
 
     protected $_defaultConfig = [];
     private $ip_lookup_apis = [
@@ -13,17 +14,20 @@ class GeolocationComponent extends Component {
         'http://ip-api.com/json/%s',
     ];
 
-    public function initialize(array $config) {
+    public function initialize(array $config)
+    {
         parent::initialize($config);
 
         $this->setDefaultCurrency();
     }
 
-    public function setDefaultCurrency() {
+    public function setDefaultCurrency()
+    {
 
         $country = \Cake\ORM\TableRegistry::getTableLocator()->get('Currencies');
 
-        $country_code = $this->__getVisitorCountryCode();
+        /* $country_code = $this->__getVisitorCountryCode(); */
+        $country_code = 'IN';
 
         $this->request->getSession()->write('Config.countryCode', $country_code);
 
@@ -32,18 +36,18 @@ class GeolocationComponent extends Component {
             if (!$this->request->getSession()->check('Config.defaultCurrency')) {
                 if (!$country_code) {
                     $defaultCurrency = $country->find('all', [
-                                'conditions' => ['is_default' => 'yes']
-                            ])->first();
+                        'conditions' => ['is_default' => 'yes']
+                    ])->first();
                 } else {
                     $defaultCurrency = $country->find('all', [
-                                'conditions' => ['country_code' => $country_code]
-                            ])->first();
+                        'conditions' => ['country_code' => $country_code]
+                    ])->first();
                 }
 
                 if (!$defaultCurrency) {
                     $defaultCurrency = $country->find('all', [
-                                'conditions' => ['country_code' => 'US'],
-                            ])->first();
+                        'conditions' => ['country_code' => 'US'],
+                    ])->first();
                 }
 
                 $this->request->getSession()->write('Config.defaultCurrency', $defaultCurrency);
@@ -51,7 +55,8 @@ class GeolocationComponent extends Component {
         }
     }
 
-    private function __getVisitorCountryCode() {
+    private function __getVisitorCountryCode()
+    {
 
         try {
             $http = new Client();
@@ -86,5 +91,4 @@ class GeolocationComponent extends Component {
             return false;
         }
     }
-
 }
