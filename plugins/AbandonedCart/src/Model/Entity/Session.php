@@ -13,7 +13,8 @@ use Cake\ORM\Entity;
  * @property string|resource $data
  * @property int $expires
  */
-class Session extends Entity {
+class Session extends Entity
+{
 
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -28,16 +29,19 @@ class Session extends Entity {
         'created' => true,
         'modified' => true,
         'data' => true,
-        'expires' => true
+        'expires' => true,
+        'notified' => true
     ];
     private $_session = [];
 
-    function __construct(array $properties = array(), array $options = array()) {
+    function __construct(array $properties = array(), array $options = array())
+    {
         parent::__construct($properties, $options);
         $this->_getSessionData($properties['data']);
     }
 
-    protected function _getEmailAddress() {
+    protected function _getEmailAddress()
+    {
 
         if (!array_key_exists('Auth', $this->_session)) {
             return '';
@@ -46,7 +50,8 @@ class Session extends Entity {
         return $this->_session['Auth']['User']->email;
     }
 
-    protected function _getCustomerName() {
+    protected function _getCustomerName()
+    {
         if (!array_key_exists('Auth', $this->_session)) {
             return 'Visitor';
         }
@@ -54,7 +59,8 @@ class Session extends Entity {
         return $this->_session['Auth']['User']->name;
     }
 
-    protected function _getCartTotal() {
+    protected function _getCartTotal()
+    {
         if (array_key_exists('Cart', $this->_session)) {
             if (count($this->_session['Cart']['Products']) <= 0) {
                 return null;
@@ -65,15 +71,18 @@ class Session extends Entity {
         return null;
     }
 
-    protected function _getDefaultCurrency() {
+    protected function _getDefaultCurrency()
+    {
         return $this->_session['Config']['defaultCurrency'];
     }
-    
-    protected function _getCartDetails(){
+
+    protected function _getCartDetails()
+    {
         return $this->_session['Cart']['CartDetails'];
     }
 
-    protected function _getProducts() {
+    protected function _getProducts()
+    {
         if (array_key_exists('Cart', $this->_session)) {
             $products_in_cart = $this->_session['Cart']['Products'];
 
@@ -81,7 +90,7 @@ class Session extends Entity {
                 return [null, null];
             }
 
-            $products_ids = array_map(function($product) {
+            $products_ids = array_map(function ($product) {
                 return $product['product_id'];
             }, $products_in_cart);
 
@@ -93,7 +102,8 @@ class Session extends Entity {
         return [null, null];
     }
 
-    private function _getSessionData($encodedSessionData = '') {
+    private function _getSessionData($encodedSessionData = '')
+    {
 
         $encodedSessionData = stream_get_contents($encodedSessionData);
 
@@ -120,5 +130,4 @@ class Session extends Entity {
         $this->_session = $decodedData;
         return true;
     }
-
 }

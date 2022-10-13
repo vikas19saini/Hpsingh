@@ -28,13 +28,17 @@ class NotifyShell extends Shell
     {
         $this->loadModel('AbandonedCart.Sessions');
 
-        $start_date = (new \DateTime('-1 hours'))->format('Y-m-d H:i:s');
+        /* $start_date = (new \DateTime('-1 hours'))->format('Y-m-d H:i:s');
         $end_date = (new \DateTime())->format('Y-m-d H:i:s');
 
         $sessions = $this->Sessions->find('all', [
             'conditions' => function ($q) use ($start_date, $end_date) {
                 return $q->between('created', $start_date, $end_date);
             },
+        ]); */
+
+        $sessions = $this->Sessions->find('all', [
+            'conditions' => ['notified !=' => 1]
         ]);
 
         foreach ($sessions as $session) {
@@ -47,8 +51,11 @@ class NotifyShell extends Shell
                     'currency' => $session->default_currency,
                 ];
 
-                if (!empty($cartDetails['email']))
+                if (!empty($cartDetails['email'])) {
                     $this->getMailer('AbandonedCart.Notify')->send('notifyCustomer', [$cartDetails]);
+                    $sessionUpdate = $this->Session->patchEntity($session, ['notified' => 1]);
+                    $this->Sessions->save($sessionUpdate);
+                }
             }
         }
     }
