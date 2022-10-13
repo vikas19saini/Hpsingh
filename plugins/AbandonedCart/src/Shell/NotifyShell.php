@@ -43,7 +43,7 @@ class NotifyShell extends Shell
 
 
         foreach ($sessions as $session) {
-            print_r($session);
+            print_r($session->id);
             if (!empty($session->cart_total)) {
                 $cartDetails = [
                     'products' => $session->products,
@@ -54,7 +54,7 @@ class NotifyShell extends Shell
                 ];
 
                 if (!empty($cartDetails['email'])) {
-                    $this->getMailer('AbandonedCart.Notify')->send('notifyCustomer', [$cartDetails]);
+                    // $this->getMailer('AbandonedCart.Notify')->send('notifyCustomer', [$cartDetails]);
                 }
             }
 
