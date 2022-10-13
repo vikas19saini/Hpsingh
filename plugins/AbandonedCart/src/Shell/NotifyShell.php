@@ -53,10 +53,11 @@ class NotifyShell extends Shell
 
                 if (!empty($cartDetails['email'])) {
                     $this->getMailer('AbandonedCart.Notify')->send('notifyCustomer', [$cartDetails]);
-                    $sessionUpdate = $this->Session->patchEntity($session, ['notified' => 1]);
-                    $this->Sessions->save($sessionUpdate);
                 }
             }
+
+            $sessionUpdate = $this->Session->patchEntity($session, ['notified' => 1]);
+            $this->Sessions->save($sessionUpdate);
         }
     }
 }
