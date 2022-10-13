@@ -41,9 +41,9 @@ class NotifyShell extends Shell
             'conditions' => ['notified !=' => 1]
         ]);
 
-        print_r($sessions);
 
         foreach ($sessions as $session) {
+            print_r($session);
             if (!empty($session->cart_total)) {
                 $cartDetails = [
                     'products' => $session->products,
