@@ -38,7 +38,7 @@ class NotifyShell extends Shell
         ]); */
 
         $sessions = $this->Sessions->find('all', [
-            'conditions' => ['notified !=' => 1]
+            'conditions' => ['notified IS' => NULL]
         ]);
 
 
