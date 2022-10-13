@@ -58,8 +58,8 @@ class NotifyShell extends Shell
                 }
             }
 
-            $sessionUpdate = $this->Session->patchEntity($session, ['notified' => 1]);
-            $this->Sessions->save($sessionUpdate);
+            /* $sessionUpdate = $this->Session->patchEntity($session, ['notified' => 1]); */
+            $this->Sessions->updateAll(['id' => $session->id], ['notified' => 1]);
         }
     }
 }
