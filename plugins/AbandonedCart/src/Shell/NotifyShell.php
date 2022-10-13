@@ -43,7 +43,6 @@ class NotifyShell extends Shell
 
 
         foreach ($sessions as $session) {
-            print_r($session->id);
             if (!empty($session->cart_total)) {
                 $cartDetails = [
                     'products' => $session->products,
@@ -59,7 +58,9 @@ class NotifyShell extends Shell
             }
 
             /* $sessionUpdate = $this->Session->patchEntity($session, ['notified' => 1]); */
-            $this->Sessions->updateAll(['id' => $session->id], ['notified' => 1]);
+            //$this->Sessions->updateAll(['id' => $session->id], ['notified' => 1]);
+            $session->notified = 1;
+            $this->Sessions->save($session);
         }
     }
 }
