@@ -41,6 +41,7 @@ class NotifyShell extends Shell
             'conditions' => ['notified IS' => NULL]
         ]);
 
+        $customerNotified = [];
 
         foreach ($sessions as $session) {
             if (!empty($session->cart_total)) {
@@ -52,7 +53,8 @@ class NotifyShell extends Shell
                     'currency' => $session->default_currency,
                 ];
 
-                if (!empty($cartDetails['email'])) {
+                if (!empty($cartDetails['email']) && !in_array($cartDetails['email'], $customerNotified)) {
+                    array_push($customerNotified, $cartDetails['email']);
                     $this->getMailer('AbandonedCart.Notify')->send('notifyCustomer', [$cartDetails]);
                 }
             }
