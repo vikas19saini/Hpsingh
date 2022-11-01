@@ -21,7 +21,7 @@ class GeolocationComponent extends Component
         $this->setDefaultCurrency();
     }
 
-    public function setDefaultCurrency()
+    private function setDefaultCurrency()
     {
 
         $country = \Cake\ORM\TableRegistry::getTableLocator()->get('Currencies');
@@ -29,9 +29,9 @@ class GeolocationComponent extends Component
         /* $country_code = $this->__getVisitorCountryCode(); */
         $country_code = "IN";
 
-        $this->request->clientIp();
+        $this->request->getSession()->write('Config.countryCode', $country_code);
+
         if ($this->request->getParam('prefix') !== 'hpadmin') {
-            $this->request->getSession()->write('Config.countryCode', $country_code);
             if (!$this->request->getSession()->check('Config.defaultCurrency')) {
                 if (!$country_code) {
                     $defaultCurrency = $country->find('all', [
