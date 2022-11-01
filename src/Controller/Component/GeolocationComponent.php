@@ -29,7 +29,7 @@ class GeolocationComponent extends Component
         /* $country_code = $this->__getVisitorCountryCode(); */
         $country_code = "IN";
 
-
+        $this->request->clientIp();
         if ($this->request->getParam('prefix') !== 'hpadmin') {
             $this->request->getSession()->write('Config.countryCode', $country_code);
             if (!$this->request->getSession()->check('Config.defaultCurrency')) {
