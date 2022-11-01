@@ -57,8 +57,7 @@ class NotifyShell extends Shell
                 }
             }
 
-            $session->notified = 1;
-            $this->Sessions->save($session);
+            $this->Sessions->query()->update()->set(['notified' => 1])->where(['id' => $session->id])->execute();
         }
     }
 }
