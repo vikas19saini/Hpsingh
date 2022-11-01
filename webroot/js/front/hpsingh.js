@@ -1072,9 +1072,9 @@ $(function () {
     });
 });
 
-window.addEventListener('load', e => {
+/* window.addEventListener('load', e => {
     registerSW();
-});
+}); */
 
 async function registerSW() {
     if ('serviceWorker' in navigator) {
