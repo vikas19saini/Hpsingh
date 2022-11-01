@@ -50,9 +50,6 @@ class GeolocationComponent extends Component
                     ])->first();
                 }
 
-                print_r($defaultCurrency);
-                exit;
-
                 $this->request->getSession()->write('Config.defaultCurrency', $defaultCurrency);
             }
         }
