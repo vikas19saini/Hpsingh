@@ -27,6 +27,8 @@ class GeolocationComponent extends Component
         $country = \Cake\ORM\TableRegistry::getTableLocator()->get('Currencies');
 
         $country_code = $this->__getVisitorCountryCode();
+        echo $country_code;
+        exit;
         /* $country_code = 'IN'; */
 
         $this->request->getSession()->write('Config.countryCode', $country_code);
