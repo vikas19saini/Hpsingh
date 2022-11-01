@@ -27,20 +27,20 @@ class OrdersController extends AppController
         $event = new Event('Controller.Cart.afterOrder', $this, ['user_id' => $order->user_id]);
         $this->getEventManager()->dispatch($event);
         // End
-		
-		// Facebook Purchase API
-		$product = array();
-		foreach($order['products'] as $prod){
-			$product[] = array(
-							'id' => $prod['id'],
-							'quantity' => $prod['_joinData']['quantity'],
-							'delivery_category' => 'home_delivery'
-						);
-		}
-		$events = new Event('Facebook.Conversion.facebookPurchase', $this, ['product' => $product, 'request' => $this->request, 'order' => $order]);
-		$this->getEventManager()->dispatch($events);
-		// End
-		
+
+        // Facebook Purchase API
+        $product = array();
+        foreach ($order['products'] as $prod) {
+            $product[] = array(
+                'id' => $prod['id'],
+                'quantity' => round($prod['_joinData']['quantity']),
+                'delivery_category' => 'home_delivery'
+            );
+        }
+        $events = new Event('Facebook.Conversion.facebookPurchase', $this, ['product' => $product, 'request' => $this->request, 'order' => $order]);
+        $this->getEventManager()->dispatch($events);
+        // End
+
         $showAnalytics = true;
         $this->set(compact('order', 'showAnalytics'));
     }
