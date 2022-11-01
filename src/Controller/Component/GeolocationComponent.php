@@ -28,7 +28,7 @@ class GeolocationComponent extends Component
 
         $country_code = $this->__getVisitorCountryCode();
 
-        $this->request->getSession()->write('Config.countryCode', $country_code);
+        $this->request->getSession()->write('Config.countryCode', 'IN'/* $country_code */);
 
         if ($this->request->getParam('prefix') !== 'hpadmin') {
             if (!$this->request->getSession()->check('Config.defaultCurrency')) {
