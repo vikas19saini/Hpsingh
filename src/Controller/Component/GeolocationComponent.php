@@ -57,8 +57,6 @@ class GeolocationComponent extends Component
     private function __getVisitorCountryCode()
     {
 
-        return 'IN';
-
         try {
             $http = new Client();
 
