@@ -27,13 +27,14 @@ class GeolocationComponent extends Component
         $country = \Cake\ORM\TableRegistry::getTableLocator()->get('Currencies');
 
         /* $country_code = $this->__getVisitorCountryCode(); */
-        $country_code = "IND";
+        $country_code = "IN";
 
         $this->request->getSession()->write('Config.countryCode', $country_code);
 
         if ($this->request->getParam('prefix') !== 'hpadmin') {
 
             if (!$this->request->getSession()->check('Config.defaultCurrency')) {
+                echo "Called";
                 if (!$country_code) {
                     $defaultCurrency = $country->find('all', [
                         'conditions' => ['is_default' => 'yes']
