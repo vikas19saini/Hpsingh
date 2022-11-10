@@ -24,7 +24,8 @@ class GeolocationComponent extends Component
     public function setDefaultCurrency()
     {
 
-        $country = \Cake\ORM\TableRegistry::getTableLocator()->get('Currencies');
+        /* $country = \Cake\ORM\TableRegistry::getTableLocator()->get('Currencies'); */
+        $country = 'IN';
 
         if ($this->request->getParam('prefix') !== 'hpadmin') {
 
