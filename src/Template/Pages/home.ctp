@@ -139,7 +139,7 @@ if (isset($page)) {
                             <div class="item">
                                 <div class="best_categories_content">
                                     <h2>Satins</h2>
-                                    <p>Satin is actually a weave and not a natural fiber like silk. Fiber is the actual thread from which the material is made and weave is how you make it. Traditionally, satin will have both a glossy side and a dull side.</p>
+                                    <p>Silk satin plain fabric is a silk-based fabric with a Satin weave. Silk has a smooth, silky feel that is not slippery. Silk's absorbency makes it pleasant to wear in warm weather and when exercising. Widely used in the production of clothing.</p>
                                     <a href="<?= $this->Url->build(['_name' => 'search', 'satin']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
@@ -173,7 +173,7 @@ if (isset($page)) {
                             <div class="item">
                                 <div class="best_categories_content">
                                     <h2>Tussar</h2>
-                                    <p>Tussar is a fabric made only in India, its rich and textured look, makes it distinctive! Printed tussar is perfect for kurtas and sarees and even better to gift.</p>
+                                    <p>Tussar silk fabric with a plain weave has a silk foundation. Tussar silk is woven into marvels that edify you while adding a contemporary touch. carefully constructed from tough tussar cloth. suitable for using to make dresses.</p>
                                     <a href="<?= $this->Url->build(['_name' => 'search', 'tussar']) ?>">
                                         <button>SHOP NOW</button>
                                     </a>
@@ -317,32 +317,32 @@ if (isset($page)) {
     </section>
 
 
-	<section class="arrived_store best_categories jodas_c desk_view">
-               <div class="container">
-                  <div class="row">
-                     <h2>Joda By HPSingh<span></span></h2>
-                  </div>
-               <div class="jodas_b">
-            <div class="mob_pad_0">
-               <div class="top_head_sec view_best_categories">
-                     <div class="best_categories_img ">
-                       <?= $this->Html->image('joda_duppata.jpg', ['class' => 'img-responsive']) ?>
-                   </div>
-               </div>
+    <section class="arrived_store best_categories jodas_c desk_view">
+        <div class="container">
+            <div class="row">
+                <h2>Joda By HPSingh<span></span></h2>
             </div>
-            <div class="mob_pad_0">
-               <div class="bttm_inner">
-                     <div class="best_categories_content">
-                        <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
-                        <a href="<?= $this->Url->build(['_name' => 'category','combination-sets']) ?>"><button>View Collection</button></a>
-                     </div>
-                  </div>
-                  </div>
-                  </div>  
-         
-         </div>
+            <div class="jodas_b">
+                <div class="mob_pad_0">
+                    <div class="top_head_sec view_best_categories">
+                        <div class="best_categories_img ">
+                            <?= $this->Html->image('joda_duppata.jpg', ['class' => 'img-responsive']) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob_pad_0">
+                    <div class="bttm_inner">
+                        <div class="best_categories_content">
+                            <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
+                            <a href="<?= $this->Url->build(['_name' => 'category', 'combination-sets']) ?>"><button>View Collection</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
-									  
+
     <section class="home_about_section">
         <div class="container-fluid">
             <div class="row">
@@ -365,36 +365,36 @@ if (isset($page)) {
             </div>
         </div>
     </section>
-	
-	<section class="best_categories jodas_c mob_view">
-            <div class="container">
-               <div class="row">
-                  <h2>Joda By HPSingh<span></span></h2>
-               </div>
+
+    <section class="best_categories jodas_c mob_view">
+        <div class="container">
+            <div class="row">
+                <h2>Joda By HPSingh<span></span></h2>
+            </div>
             <div class="jodas_b">
-         <div class="mob_pad_0">
-            <div class="top_head_sec view_best_categories">
-                  <div class="best_categories_img ">
-                    <?= $this->Html->image('joda_duppata.jpg', ['class' => 'img-responsive']) ?>
+                <div class="mob_pad_0">
+                    <div class="top_head_sec view_best_categories">
+                        <div class="best_categories_img ">
+                            <?= $this->Html->image('joda_duppata.jpg', ['class' => 'img-responsive']) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob_pad_0">
+                    <div class="bttm_inner">
+                        <div class="best_categories_content">
+                            <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
+                            <a href="<?= $this->Url->build(['_name' => 'category', 'combination-sets']) ?>"><button>VIEW COLLECTION</button></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-         </div>
-         <div class="mob_pad_0">
-            <div class="bttm_inner">
-                  <div class="best_categories_content">
-                     <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
-                     <a href="<?= $this->Url->build(['_name' => 'category','combination-sets']) ?>"><button>VIEW COLLECTION</button></a>
-                  </div>
-               </div>
-               </div>
-               </div>  
-      
-         <div class="jodas_p">
-            <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
-         
-      </div>
-      </div>
-    </section>											   
+
+            <div class="jodas_p">
+                <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
+
+            </div>
+        </div>
+    </section>
 
     <?php if ($deals) : ?>
         <section class="deals">
