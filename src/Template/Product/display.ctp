@@ -15,6 +15,10 @@
         #productZoom .popup_section2 {
             background-color: transparent !important;
         }
+
+        .product_details_left .product_d .marquee .owl-stage-outer .owl-stage .owl-item .item img.joda-class-css {
+            height: auto !important;
+        }
     }
 
     .joda-class-css {
