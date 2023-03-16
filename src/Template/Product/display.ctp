@@ -16,6 +16,10 @@
             background-color: transparent !important;
         }
     }
+
+    .joda-class-css {
+        height: auto !important;
+    }
 </style>
 <?php
 
@@ -55,6 +59,8 @@ if (!empty($categoryPath)) {
         array_push($pathCate, $category->name);
     }
 }
+
+$isJoda = in_array('Joda by HPSingh', $pathCate);
 
 // for tag page
 if ($this->request->getParam('action') === 'tag')
@@ -111,7 +117,7 @@ $jsonMetaData = [
                                 <?php $count = 0;
                                 foreach ($medias as $media) : ?>
                                     <div class="item" data-img="<?= $this->Media->get_the_image_url('full', $media->url) ?>">
-                                        <img src="/img/lazyload.gif" data-src="<?= $this->Media->get_the_image_url('full', $media->url) ?>" height="476px" width="700px" alt="<?= $product->featured_image->alt ?>" class="img-responsive lazyload productThumbs" data-toggle="modal" data-target="#productZoom" data-pos="<?= $count ?>">
+                                        <img src="/img/lazyload.gif" data-src="<?= $this->Media->get_the_image_url('full', $media->url) ?>" height="476px" width="700px" alt="<?= $product->featured_image->alt ?>" class="img-responsive lazyload productThumbs <?= $isJoda ? "joda-class-css" : "" ?>" data-toggle="modal" data-target="#productZoom" data-pos="<?= $count ?>">
                                         <?php // $this->Media->the_image('full', $media->url, ['class' => 'img-responsive productThumbs', 'alt' => $media->alt, 'height' => '476px', 'width' => '700px', 'data-toggle' => "modal", 'data-target' => '#productZoom', 'data-pos' => $count])
                                         ?>
                                     </div>
@@ -146,11 +152,11 @@ $jsonMetaData = [
                                 <li>Width</li>
                                 <li><?= $product->width ?></li>
                             <?php endif; ?>
-							
-							<?php if (!empty($product->length)) : ?>
+
+                            <?php if (!empty($product->length)) : ?>
                                 <li>Length</li>
                                 <li><?= $product->length ?></li>
-                            <?php endif; ?>				   
+                            <?php endif; ?>
 
                             <?php if (!empty($product->count)) : ?>
                                 <li>Count</li>
