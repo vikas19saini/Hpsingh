@@ -18,7 +18,8 @@
     }
 
     .joda-class-css {
-        height: auto !important;
+        width: auto !important;
+        margin: 0 auto !important;
     }
 </style>
 <?php
