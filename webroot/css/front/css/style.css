@@ -12365,7 +12365,7 @@ button.deliver_change_button {
 
     .product_details_left .product_d .marquee .owl-stage-outer .owl-stage .owl-item .item img{
         object-fit: cover;
-        height: 310px !important;
+        height: 310px;
         object-position: left;
     }
 

@@ -159,7 +159,7 @@
                                                 <a href="<?= $this->Url->build(['_name' => 'category', 'cut-pieces']) ?>">Cut
                                                     Pieces</a>
                                             </h4>
-											<!--<h4 style="display: flex;">
+											<h4 style="display: flex;">
 												<a href="<?= $this->Url->build(['_name' => 'category', 'combination-sets']) ?>">Joda By HPSingh</a>
 												<div class="new_bttn">New</div>
 											</h4>-->

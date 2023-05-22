@@ -57,11 +57,15 @@
             gtag('config', 'UA-105800906-1');
             gtag('config', 'AW-835074064');
             <?php if (isset($showAnalytics)) : ?>
+
                 gtag('event', 'conversion', {
-                    'send_to': 'AW-835074064/sUMuCIvM7PMBEJDwmI4D',
-                    'value': '<?= $order->grand_total ?>',
-                    'currency': 'INR'
+                    'send_to': 'AW-835074064/VvRXCIr02tcDEJDwmI4D',
+                    'value': <?= $order->grand_total ?>,
+                    'currency': 'INR',
+                    'transaction_id': ''
                 });
+
+
             <?php endif; ?>
         </script>
         <script>

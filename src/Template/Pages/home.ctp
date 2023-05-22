@@ -100,63 +100,78 @@ if (isset($page)) {
                     </div>
 
                     <div class="col-md-5 col-xs-5 mob_pad_0">
-                        <div class="slider slider-nav bttm_inner">
-                            <div class="best_categories_content">
-								<h2>Cotton Flex</h2>
-								<p>Flex cotton fabric is woven with pale and durable cotton and flex yarns. It can be used all over year round. Absolutely comfortable and durable fabrics can be used to designs ethnics, blouses, mens kurta, dresses, and more.</p>
-								<a href="<?= $this->Url->build(['_name' => 'search', 'cotton+flex']) ?>">
-									<button>SHOP NOW</button>
-								</a>
-							</div>
-                            <div class="best_categories_content">
-								<h2>Dupatta</h2>
-								<p>Dupatta is a symbol of modesty, while that symbolism still continues, many today wear it as a decorative accessory. The dupatta is worn in many regional styles across the world.</p>
-								<a href="<?= $this->Url->build(['_name' => 'category', 'scarves-and-stoles']) ?>">
-									<button>SHOP NOW</button>
-								</a>
-							</div>
-                            <div class="best_categories_content">
-								<h2>Ikats</h2>
-								<p>Ikats are created as patterns using resist dyeing techniques on yarns. This innovative technique, with its south east asian origins is defined regionally by geography and design language. Ikats are just one more of India's vast heritage of textiles.</p>
-								<a href="<?= $this->Url->build(['_name' => 'search', 'ikats']) ?>">
-									<button>SHOP NOW</button>
-								</a>
-							</div>
-                            <div class="best_categories_content">
-								<h2>Satins</h2>
-								<p>Satin is actually a weave and not a natural fiber like silk. Fiber is the actual thread from which the material is made and weave is how you make it. Traditionally, satin will have both a glossy side and a dull side.</p>
-								<a href="<?= $this->Url->build(['_name' => 'search', 'satin']) ?>">
-									<button>SHOP NOW</button>
-								</a>
-							</div>
-                            
+                        <div id="sync2" class="owl-carousel owl-theme bttm_inner">
+                            <div class="item">
+                                <div class="best_categories_content">
+                                    <h2>Cotton Flex</h2>
+                                    <p>Flex cotton fabric is woven with pale and durable cotton and flex yarns. It can be used all over year round. Absolutely comfortable and durable fabrics can be used to designs ethnics, blouses, mens kurta, dresses, and more.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'cotton+flex']) ?>">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="best_categories_content">
+                                    <h2>Dupatta</h2>
+                                    <p>Dupatta is a symbol of modesty, while that symbolism still continues, many today wear it as a decorative accessory. The dupatta is worn in many regional styles across the world.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'category', 'scarves-and-stoles']) ?>">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="best_categories_content">
+                                    <h2>Ikats</h2>
+                                    <p>Ikats are created as patterns using resist dyeing techniques on yarns. This innovative technique, with its south east asian origins is defined regionally by geography and design language. Ikats are just one more of India's vast heritage of textiles.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'ikats']) ?>">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="best_categories_content">
+                                    <h2>Satins</h2>
+                                    <p>Silk satin plain fabric is a silk-based fabric with a Satin weave. Silk has a smooth, silky feel that is not slippery. Silk's absorbency makes it pleasant to wear in warm weather and when exercising. Widely used in the production of clothing.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'satin']) ?>">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-5 col-xs-5 mob_pad_0">
-                        <div class="slider-nav_1 bttm_inner">
-                            <div class="best_categories_content">
-								<h2>Linen Fabrics</h2>
-								<p>A natural fiber just like cotton, linen is derived from the flax plant. It is very strong, lightweight and breathable making it a popular choice in summers.</p>
-								<a href="<?= $this->Url->build(['_name' => 'search', 'linen']) ?>">
-									<button>SHOP NOW</button>
-								</a>
-							</div>
-                            <div class="best_categories_content">
-								<h2>Thread Embroidery</h2>
-								<p>Thread embroideries which are created to bring so much beauty to the fabric. These will be perfect for your wardrobe with their trendy patterns and latest designs.</p>
-								<a href="<?= $this->Url->build(['_name' => 'category', 'cotton/embroideries']) ?>">
-									<button>SHOP NOW</button>
-								</a>
-							</div>
-                            <div class="best_categories_content">
-								<h2>Tussar</h2>
-								<p>Tussar is a fabric made only in India, its rich and textured look, makes it distinctive! Printed tussar is perfect for kurtas and sarees and even better to gift.</p>
-								<a href="<?= $this->Url->build(['_name' => 'search', 'tussar']) ?>">
-									<button>SHOP NOW</button>
-								</a>
-							</div>
+                        <div id="sync4" class="owl-carousel owl-theme bttm_inner">
+                            <div class="item">
+                                <div class="best_categories_content">
+                                    <h2>Linen Fabrics</h2>
+                                    <p>A natural fiber just like cotton, linen is derived from the flax plant. It is very strong, lightweight and breathable making it a popular choice in summers.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'linen']) ?>">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="best_categories_content">
+                                    <h2>Thread Embroidery</h2>
+                                    <p>Thread embroideries which are created to bring so much beauty to the fabric. These will be perfect for your wardrobe with their trendy patterns and latest designs.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'category', 'cotton/embroideries']) ?>">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="best_categories_content">
+                                    <h2>Tussar</h2>
+                                    <p>Tussar silk fabric with a plain weave has a silk foundation. Tussar silk is woven into marvels that edify you while adding a contemporary touch. carefully constructed from tough tussar cloth. suitable for using to make dresses.</p>
+                                    <a href="<?= $this->Url->build(['_name' => 'search', 'tussar']) ?>">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="col-md-7 col-xs-7 mob_pad_0">
@@ -325,32 +340,32 @@ if (isset($page)) {
     </section>
 
 
-	<!--<section class="arrived_store best_categories jodas_c desk_view">
-               <div class="container">
-                  <div class="row">
-                     <h2>Joda By HPSingh<span></span></h2>
-                  </div>
-               <div class="jodas_b">
-            <div class="mob_pad_0">
-               <div class="top_head_sec view_best_categories">
-                     <div class="best_categories_img ">
-                       <?= $this->Html->image('joda_duppata.jpg', ['class' => 'img-responsive']) ?>
-                   </div>
-               </div>
+    <section class="arrived_store best_categories jodas_c desk_view">
+        <div class="container">
+            <div class="row">
+                <h2>Joda By HPSingh<span></span></h2>
             </div>
-            <div class="mob_pad_0">
-               <div class="bttm_inner">
-                     <div class="best_categories_content">
-                        <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
-                        <a href="<?= $this->Url->build(['_name' => 'category','combination-sets']) ?>"><button>View Collection</button></a>
-                     </div>
-                  </div>
-                  </div>
-                  </div>  
-         
-         </div>
-    </section>-->
-									  
+            <div class="jodas_b">
+                <div class="mob_pad_0">
+                    <div class="top_head_sec view_best_categories">
+                        <div class="best_categories_img ">
+                            <?= $this->Html->image('joda_duppata.jpg', ['class' => 'img-responsive']) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob_pad_0">
+                    <div class="bttm_inner">
+                        <div class="best_categories_content">
+                            <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
+                            <a href="<?= $this->Url->build(['_name' => 'category', 'combination-sets']) ?>"><button>View Collection</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <section class="home_about_section">
         <div class="container-fluid">
             <div class="row">
@@ -373,36 +388,36 @@ if (isset($page)) {
             </div>
         </div>
     </section>
-	<!--
-	<section class="best_categories jodas_c mob_view">
-            <div class="container">
-               <div class="row">
-                  <h2>Joda By HPSingh<span></span></h2>
-               </div>
+
+    <section class="best_categories jodas_c mob_view">
+        <div class="container">
+            <div class="row">
+                <h2>Joda By HPSingh<span></span></h2>
+            </div>
             <div class="jodas_b">
-         <div class="mob_pad_0">
-            <div class="top_head_sec view_best_categories">
-                  <div class="best_categories_img ">
-                    <?= $this->Html->image('joda_duppata.jpg', ['class' => 'img-responsive']) ?>
+                <div class="mob_pad_0">
+                    <div class="top_head_sec view_best_categories">
+                        <div class="best_categories_img ">
+                            <?= $this->Html->image('joda_duppata.jpg', ['class' => 'img-responsive']) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob_pad_0">
+                    <div class="bttm_inner">
+                        <div class="best_categories_content">
+                            <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
+                            <a href="<?= $this->Url->build(['_name' => 'category', 'combination-sets']) ?>"><button>VIEW COLLECTION</button></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-         </div>
-         <div class="mob_pad_0">
-            <div class="bttm_inner">
-                  <div class="best_categories_content">
-                     <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
-                     <a href="<?= $this->Url->build(['_name' => 'category','combination-sets']) ?>"><button>VIEW COLLECTION</button></a>
-                  </div>
-               </div>
-               </div>
-               </div>  
-      
-         <div class="jodas_p">
-            <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
-         
-      </div>
-      </div>
-    </section>-->											   
+
+            <div class="jodas_p">
+                <p>An extensive collection of ready-to-stitch Indian ethnic co-ord fabrics, especially curated to look your best.</p>
+
+            </div>
+        </div>
+    </section>
 
     <?php if ($deals) : ?>
         <section class="deals">
