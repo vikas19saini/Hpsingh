@@ -6,3 +6,4 @@ config/*.env
 vendor/
 webroot/files/
 config/paths.php
+webroot/analyticReport/*
