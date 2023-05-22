@@ -323,25 +323,25 @@
                                     Furnishing</a>
                             </li>
                         </ul>
-                        <h4>Big Fat Weddings</h4>
+                        <h4><a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding']) ?>">Big Fat Weddings</a></h4>
                         <ul>
                             <li>
-                                <a href="<?= $this->Url->build(['_name' => 'search', 'embroideries']) ?>">Embroideries</a>
+                                <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/embroideries1']) ?>">Embroideries</a>
                             </li>
                             <li>
-                                <a href="<?= $this->Url->build(['_name' => 'search', 'embroidery+work']) ?>">Kurta</a>
+                            <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/kurta']) ?>">Kurta</a>
                             </li>
                             <li>
-                                <a href="<?= $this->Url->build(['_name' => 'search', 'kurta']) ?>">Lehenga</a>
+                            <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/lehenga']) ?>">Lehenga</a>
                             </li>
                             <li>
-                                <a href="<?= $this->Url->build(['_name' => 'search', 'lehenga']) ?>">Sherwani & Achkan</a>
+                            <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/sherwani-achkan']) ?>">Sherwani & Achkan</a>
                             </li>
                             <li>
-                                <a href="<?= $this->Url->build(['_name' => 'search', 'sherwani']) ?>">Suiting</a>
+                            <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/suiting']) ?>">Suiting</a>
                             </li>
                             <li>
-                                <a href="<?= $this->Url->build(['_name' => 'search', 'suiting']) ?>">Turban</a>
+                            <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/turban']) ?>">Turban</a>
                             </li>
                         </ul>
                     </div>
