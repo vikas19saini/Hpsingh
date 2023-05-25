@@ -2,34 +2,6 @@
 
 $bestSellers = [
     [
-        'name' => 'Cotton Flex',
-        'img' => 'cotton-flex.jpg',
-        'term' => 'cotton+flex',
-        '_name'=> 'search',
-        'desc' => 'Flex cotton fabric is woven with pale and durable cotton and flex yarns. It can be used all over year round. Absolutely comfortable and durable fabrics can be used to designs ethnics, blouses, mens kurta, dresses, and more.'
-    ],
-    [
-        'name' => 'Dupatta',
-        'img' => 'duppata.png',
-        'term' => 'scarves-and-stoles',
-        '_name' => 'category',
-        'desc' => 'Dupatta is a symbol of modesty, while that symbolism still continues, many today wear it as a decorative accessory. The dupatta is worn in many regional styles across the world.'
-    ],
-    [
-        'name' => 'Ikats',
-        'img' => 'ikats.jpg',
-        'term' => 'ikats',
-        '_name' => 'search',
-        'desc' => 'Ikats are created as patterns using resist dyeing techniques on yarns. This innovative technique, with its south east asian origins is defined regionally by geography and design language. Ikats are just one more of India\'s vast heritage of textiles.'
-    ],
-    [
-        'name' => 'Satins',
-        'img' => 'satins.jpg',
-        'term' => 'satin',
-        '_name' => 'search',
-        'desc' => 'Silk satin plain fabric is a silk-based fabric with a Satin weave. Silk has a smooth, silky feel that is not slippery. Silk\'s absorbency makes it pleasant to wear in warm weather and when exercising. Widely used in the production of clothing.'
-    ],
-    [
         'name' => 'Linen Fabrics',
         'img' => 'linen.jpg',
         'term' => 'linen',
@@ -73,7 +45,7 @@ $bestSellers = [
     ]
 ];
 
-$sections = array_chunk($bestSellers, 5);
+$sections = array_chunk($bestSellers, 3);
 
 ?>
 

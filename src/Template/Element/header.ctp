@@ -326,22 +326,22 @@
                         <h4><a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding']) ?>">Big Fat Weddings</a></h4>
                         <ul>
                             <li>
-                                <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/embroideries1']) ?>">Embroideries</a>
+                                <a href="<?= $this->Url->build(['_name' => 'search', 'embroideries']) ?>">Embroideries</a>
                             </li>
                             <li>
-                            <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/kurta']) ?>">Kurta</a>
+                            <a href="<?= $this->Url->build(['_name' => 'search', 'kurta']) ?>">Kurta</a>
                             </li>
                             <li>
-                            <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/lehenga']) ?>">Lehenga</a>
+                            <a href="<?= $this->Url->build(['_name' => 'search', 'lehenga']) ?>">Lehenga</a>
                             </li>
                             <li>
-                            <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/sherwani-achkan']) ?>">Sherwani & Achkan</a>
+                            <a href="<?= $this->Url->build(['_name' => 'search', 'sherwani']) ?>">Sherwani & Achkan</a>
                             </li>
                             <li>
-                            <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/suiting']) ?>">Suiting</a>
+                            <a href="<?= $this->Url->build(['_name' => 'search', 'suiting']) ?>">Suiting</a>
                             </li>
                             <li>
-                            <a href="<?= $this->Url->build(['_name' => 'category', 'big-fat-wedding/turban']) ?>">Turban</a>
+                            <a href="<?= $this->Url->build(['_name' => 'search', 'turban']) ?>">Turban</a>
                             </li>
                         </ul>
                     </div>
