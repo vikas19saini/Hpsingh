@@ -228,11 +228,12 @@
 
             </ul>
         </div>
-        <h4 class="accordion-toggle">CONTACT INFO</h4>
-        <div class="accordion-content footer_menu1">
-            <p><?= \Cake\Core\Configure::read('Store.address') ?></p>
-            <p>Phone: <em><?= \Cake\Core\Configure::read('Store.contact') ?></em></p>
-            <p>Email: <a href="mailto:<?= \Cake\Core\Configure::read('Store.email') ?>"><?= \Cake\Core\Configure::read('Store.email') ?></a>
+        <h4 class="accordion-toggle active">CONTACT INFO</h4>
+        <div class="accordion-content footer_menu1" style="display:block">
+            <p><b>Business Name:</b> H P Singh Private Limited<!-- <?= \Cake\Core\Configure::read('Store.address') ?> --></p>
+            <p><b>Buisness Address:</b> 111, 82-83 Vaikunth House, Nehru Place, New Delhi -110019<!-- <?= \Cake\Core\Configure::read('Store.address') ?> --></p>
+            <p><b>Phone:</b> <em>9810277756<!-- <?= \Cake\Core\Configure::read('Store.contact') ?> --></em></p>
+            <p><b>Email:</b> <a href="mailto:accounts@hpsingh.com">accounts@hpsingh.com<!-- <?= \Cake\Core\Configure::read('Store.email') ?> --></a>
             </p>
         </div>
     </div>
