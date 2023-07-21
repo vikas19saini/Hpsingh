@@ -100,10 +100,11 @@
                 </div>
                 <div class="footer_menu1">
                     <h2>CONTACT INFO</h2>
-                    <p><?= \Cake\Core\Configure::read('Store.address') ?></p>
-                    <p>Phone: <em><?= \Cake\Core\Configure::read('Store.contact') ?></em></p>
-                    <p>Email: <a href="mailto:<?= \Cake\Core\Configure::read('Store.email') ?>"><?= \Cake\Core\Configure::read('Store.email') ?></a>
-                    </p>
+                    <p><b>Business Name:</b> H P Singh Private Limited<!-- <?= \Cake\Core\Configure::read('Store.address') ?> --></p>
+            <p><b>Buisness Address:</b> 111, 82-83 Vaikunth House, Nehru Place, New Delhi -110019<!-- <?= \Cake\Core\Configure::read('Store.address') ?> --></p>
+            <p><b>Phone:</b> <em>9810277756<!-- <?= \Cake\Core\Configure::read('Store.contact') ?> --></em></p>
+            <p><b>Email:</b> <a href="mailto:accounts@hpsingh.com">accounts@hpsingh.com<!-- <?= \Cake\Core\Configure::read('Store.email') ?> --></a>
+            </p>
                 </div>
                 <div class="footer_menu1">
                     <div class="social_icon_footer">
