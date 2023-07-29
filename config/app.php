@@ -397,7 +397,7 @@ return [
         'taxClass' => 'GST',
         'tax' => 5,
         'supportEmail' => 'raghav@hpsingh.com',
-        'supportContact' => '011-46614444',
+        'supportContact' => '+919711073447',
         'supportWhatsapp' => '+919711073447',
         'url' => 'https://www.hpsingh.com', // Using this url in shell script
         'minCodAmount' => 60,
