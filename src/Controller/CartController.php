@@ -278,7 +278,7 @@ class CartController extends AppController
     }
 
     // Saving new order in database
-    private function __saveOrder($billing_address_id, $shipping_address_id, $payment_method, $gst)
+    private function __saveOrder($shipping_address_id, $billing_address_id, $payment_method, $gst)
     {
         $this->loadModel('Orders');
         $this->loadModel('Addresses');
