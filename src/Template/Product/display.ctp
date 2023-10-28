@@ -216,6 +216,7 @@ $jsonMetaData = [
                                     <?= $product->short_description ?>
                                 </p>
                             <?php endif; ?>
+                            <p style="margin-top: 30px">Due to the different monitor and light effects, the actual color of the item might be slightly different from the color shown in the pictures.</p>
                         </div>
                         <div class="product-enquiry">
                             <h4>Need help with this product?</h4>
