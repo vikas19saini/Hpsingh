@@ -189,7 +189,7 @@ $jsonMetaData = [
                             <?php endif; ?>
 
                             <?php if (!empty($product->price_text)) : ?>
-                                <li>Price</li>
+                                <li>M.R.P. & Tax Included</li>
                                 <li><?= $product->price_text ?></li>
                             <?php endif; ?>
                         </ul>
@@ -216,6 +216,8 @@ $jsonMetaData = [
                                     <?= $product->short_description ?>
                                 </p>
                             <?php endif; ?>
+
+                            <h2>Disclaimer</h2>
                             <p style="margin-top: 30px">Due to the different monitor and light effects, the actual color of the item might be slightly different from the color shown in the pictures.</p>
                         </div>
                         <div class="product-enquiry">
