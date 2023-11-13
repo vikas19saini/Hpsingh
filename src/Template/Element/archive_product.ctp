@@ -21,7 +21,7 @@
         </div>
         <a href="<?= $this->Url->build(['_name' => 'product', $product->slug]) ?>">
             <p><em><?= ucfirst($product->name) ?></em>
-                <?= $this->Product->price($product) ?>
+                <?= $this->Product->price($product) ?> (Tax Included)
             </p>
         </a>
     </div>

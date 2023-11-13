@@ -189,8 +189,8 @@ $jsonMetaData = [
                             <?php endif; ?>
 
                             <?php if (!empty($product->price_text)) : ?>
-                                <li>M.R.P. & Tax Included</li>
-                                <li><?= $product->price_text ?></li>
+                                <li>MRP (Incl. of All Taxes)</li>
+                                <li>INR. <?= $product->price_text ?></li>
                             <?php endif; ?>
                         </ul>
                         <form class="delivery_option" onsubmit="return false;">
