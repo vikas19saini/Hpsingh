@@ -230,7 +230,7 @@ $jsonMetaData = [
                                         <span>Mon - Sat | 10 AM to 7 PM</span>
                                     </div>
                                 </a>
-                                <a target="_blank" href="https://api.whatsapp.com/send?phone=<?= \Cake\Core\Configure::read('Store.supportWhatsapp') ?>">
+                                <a target="_blank" href="https://wa.me/<?= \Cake\Core\Configure::read('Store.supportWhatsapp') ?>">
                                     <div>
                                         <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                         <p>Chat with us on WhatsApp</p>
